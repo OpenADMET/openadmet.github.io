@@ -1,7 +1,10 @@
----
-layout: single
-permalink: /members/
-title: "Members"
-description: "OpenADMET Personnel"
-layout: members
----
++++
+description = "Members of the OpenADMET Consortium"
+title = "OpenADMET Members"
+layout = "single"
+permalink = "/members/"
++++
+
+# Members
+
+A full list of our members is coming soon.
