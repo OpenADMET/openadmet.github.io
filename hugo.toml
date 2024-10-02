@@ -2,3 +2,37 @@ baseURL = 'https://openadmet.org/'
 languageCode = 'en-us'
 title = 'OpenADMET'
 theme = 'kube'
+description = "OpenADMET does blah blah blah"
+publishDir = "./public"
+pygmentsCodefences = true
+pygmentsStyle = "colorful"
+
+[Params]
+  RSSLink = "/index.xml"
+  author = "OpenADMET" # add your company name
+  github = "" # add your github profile name
+  twitter = "" # add your twitter profile
+  email = "myemail@myaddress.xxx"
+
+[[menu.main]]
+    name = "Members"
+    weight = -100
+    url = "/members/"
+    identifier = "members"
+[[menu.main]]
+    name = "Blog"
+    weight = -100
+    url = "/blog/"
+    identifier = "blog"
+
+
+[[menu.main]]
+    name = "Datasets"
+    weight = -100
+    url = "/datasets/"
+    identifier = "dataset"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
