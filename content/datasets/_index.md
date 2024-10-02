@@ -1,5 +1,8 @@
 +++
-description = "OpenADMET Datasets"
+description = "Datasets from the OpenADMet Consortium"
+title = "OpenADMET Datasets"
+layout = "single"
+permalink = "/datasets/"
 +++
 
 # Datasets
