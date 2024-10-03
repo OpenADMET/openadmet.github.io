@@ -32,6 +32,25 @@ pygmentsStyle = "colorful"
     url = "/datasets/"
     identifier = "dataset"
 
+[[menu.main]]
+    name = "News"
+    weight = -100
+    url = "/news/"
+    identifier = "news"
+
+[[menu.main]]
+    name = "Publications"
+    weight = -100
+    url = "/publications/"
+    identifier = "publications"
+
+[[menu.main]]
+    name = "About Us"
+    weight = -100
+    url = "/about/"
+    identifier = "about"
+
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

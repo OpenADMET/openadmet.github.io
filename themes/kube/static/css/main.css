@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
       top: 0;
       left: 50%;
       margin-left: -20px;
-      background: #6c43d2; }
+      background: #4709e3; }
 
 #intro {
   margin-top: 56px;
@@ -304,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 400px;
   margin: 24px auto 60px auto;
   padding: 32px;
-  background: #7b3333;
+  background: #ceaeae;
   border: 1px solid rgba(0, 0, 0, 0.08); }
   #contents.wide {
     max-width: none;
@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
       left: 0;
       content: counter(count, decimal-leading-zero);
       font-size: 13px;
-      color: rgba(0, 0, 0, 0.3); }
+      color: rgba(177, 95, 95, 0.3); }
     #contents a:hover {
       -moz-transition: all linear 0.2s;
       transition: all linear 0.2s;
