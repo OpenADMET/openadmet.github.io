@@ -1,5 +1,5 @@
 +++
-description = "Datasets from the OpenADMet Consortium"
+description = "Datasets from the OpenADMET Consortium"
 title = "OpenADMET Datasets"
 layout = "single"
 permalink = "/datasets/"
