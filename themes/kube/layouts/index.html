@@ -1,0 +1,23 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+
+<div id="main">
+  <div id="hero">
+    <h1>{{.Title}}</h1>
+    <p>{{.Description}}</p>
+  </div>
+  <div id="main" class="center">
+    {{ .Content }}
+  </div>
+  
+  <!-- <a href="https://static1.squarespace.com/static/530562f9e4b06fd3c041e221/t/61788fa74126c33373345e2f/1635291049659/ASAP+-+Overall+component.pdf"><img src="https://asapdiscovery.org/img/asap-diagram.jpg" alt="ASAP is organized into a series of successive stages of the drug discovery pipeline."></a> -->
+
+  <div id="hero">
+    <h5>An <a href="https://arpa-h.gov/">ARPA-H funded project (Grant Number:XXXX)</a></h5>
+  </div>  
+
+
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}
