@@ -16,12 +16,14 @@
 
 <ul>
 {{ range $.Site.Data.members }}
+  {{if .active}}
   {{ if in .role "Principal Investigator" }}
   <div class="row gutters">
     {{ partial "person" . }}
   </div>
   {{ end }}
 {{ end }}
+{{ end}}
 </ul>
 
 
