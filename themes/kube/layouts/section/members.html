@@ -23,7 +23,7 @@
   </div>
   {{ end }}
 {{ end }}
-{{ end}}
+{{ end }}
 </ul>
 
 
@@ -46,9 +46,11 @@
 
 <ul>
 {{ range $.Site.Data.members }}
+{{if .active}}
   {{ if in .role "Co-Investigator" }}
     {{ partial "person" . }}
   {{ end }}
+{{ end }}
 {{ end }}
 </ul>
 
@@ -60,11 +62,13 @@
 
 <ul>
 {{ range $.Site.Data.members }}
+  {{if .active}}
   {{ if not (in $other_roles .role) }}
     {{ if not (in .lab "Administrative Core") }}
       {{ partial "person" . }}
     {{ end }}
   {{ end }}
+{{ end }}
 {{ end }}
 </ul>
 
