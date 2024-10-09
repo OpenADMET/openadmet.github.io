@@ -52,7 +52,7 @@
 
 
 <!-- Investigators -->
-
+<!-- 
 <h2>Co-Investigators</h2>
 
 <ul>
@@ -63,7 +63,7 @@
   {{ end }}
 {{ end }}
 {{ end }}
-</ul>
+</ul> -->
 
 
 <h2>Octant Bio team</h2>
@@ -88,7 +88,7 @@
 {{ range $.Site.Data.members }}
   {{if .active}}
   {{ if not (in $other_roles .role) }}
-    {{ if not (in .lab "Administrative Core") }}
+    {{ if not (in .institution "Octant Bio") }}
       {{ partial "person" . }}
     {{ end }}
   {{ end }}
