@@ -1,6 +1,6 @@
 +++
 description = "Publications from the OpenADMET Consortium"
-title = "Publications"
+title = "OpenADMET Publications"
 layout = "single"
 permalink = "/publications/"
 +++

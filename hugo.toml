@@ -10,9 +10,9 @@ pygmentsStyle = "colorful"
 [Params]
   RSSLink = "/index.xml"
   author = "OpenADMET" # add your company name
-  github = "" # add your github profile name
+  github = "https://github.com/OpenADMET" # add your github profile name
   twitter = "" # add your twitter profile
-  email = "myemail@myaddress.xxx"
+  email = "hugo.macdermott-opeskin@omsf.io"
 
 [[menu.main]]
     name = "Members"

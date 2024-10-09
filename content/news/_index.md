@@ -1,5 +1,5 @@
 +++
-description = "News"
+description = "OpenADMET News"
 title = "News"
 layout = "single"
 permalink = "/news/"
