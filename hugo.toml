@@ -16,19 +16,20 @@ pygmentsStyle = "colorful"
 
 [[menu.main]]
     name = "Members"
-    weight = -100
+    weight = -170
     url = "/members/"
     identifier = "members"
+
 [[menu.main]]
     name = "Blog"
-    weight = -100
+    weight = 100
     url = "/blog/"
     identifier = "blog"
 
 
 [[menu.main]]
     name = "Datasets"
-    weight = -100
+    weight = -150
     url = "/datasets/"
     identifier = "dataset"
 
@@ -45,11 +46,10 @@ pygmentsStyle = "colorful"
     identifier = "publications"
 
 [[menu.main]]
-    name = "About Us"
-    weight = -100
-    url = "/about/"
-    identifier = "about"
-
+    name = "Jobs"
+    weight = -200
+    url = "/jobs/"
+    identifier = "jobs"
 
 [markup]
   [markup.goldmark]
