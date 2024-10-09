@@ -1,6 +1,6 @@
 +++
 description = "Seeking talented scientists for the OpenADMET Consortium"
 title = "OpenADMET Jobs"
-layout = "single"
+layout = "jobs"
 permalink = "/jobs/"
 +++
