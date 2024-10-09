@@ -1,10 +1,10 @@
-name: John Appleseed
-role: "Principal Investigator; XXXX"
-title: Co-Founder
-institution: Science Inc
-img: image.jpg
+name: Rick Sanchez
+role: "Principal Investigator"
+title: Founder
+institution: Science
+img: rick_sanchez.jpeg
 webpage: "example.com"
-description: Example description
+description: Smartest man in the universe
 google_scholar: https://scholar.google.com
 ORCID: 1234-5678-9101-1121
 twitter: blah
