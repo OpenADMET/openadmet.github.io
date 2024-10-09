@@ -14,6 +14,7 @@
 
 <h2>Principal Investigators</h2>
 
+
 <ul>
 {{ range $.Site.Data.members }}
   {{if .active}}
@@ -32,6 +33,13 @@
 <h2>Project Leads</h2>
 
 <ul>
+
+  {{ range $.Site.Data.members }}
+  {{ if in .role "Project Director" }}
+    {{ partial "person" . }}
+  {{ end }}
+{{ end }}
+
 {{ range $.Site.Data.members }}
   {{ if in .role "Project Lead" }}
     {{ partial "person" . }}
