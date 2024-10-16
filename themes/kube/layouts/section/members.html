@@ -12,6 +12,23 @@
 
 <!-- Investigators -->
 
+<h2>Program Director</h2>
+
+
+<ul>
+{{ range $.Site.Data.members }}
+  {{if .active}}
+  {{ if in .role "Program Director" }}
+    {{ partial "person" . }}
+  {{ end }}
+{{ end }}
+{{ end }}
+</ul>
+
+
+
+<!-- Investigators -->
+
 <h2>Principal Investigators</h2>
 
 
@@ -80,7 +97,7 @@
 
 <!-- Scientists -->
 {{ $scientist_roles := slice "Scientist" "Scientific Coordinator" "Post Doc" "Research Assistant" "Other Personnel" }}
-{{ $other_roles := slice "Principal Investigator" "Project Lead" "Core Lead" "Co-Investigator" "External Scientific Advisory Board Member" "Internal Scientific Advisory Board Member" "Project Director" }}
+{{ $other_roles := slice "Principal Investigator" "Project Lead" "Core Lead" "Co-Investigator" "External Scientific Advisory Board Member" "Internal Scientific Advisory Board Member" "Program Director" "Program Director, Principal Investigator" }}
 
 <h2>Scientists and Collaborators</h2>
 
