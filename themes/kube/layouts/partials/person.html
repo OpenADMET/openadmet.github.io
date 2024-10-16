@@ -14,8 +14,6 @@
       <b>{{ .role }}</b><br>
       {{ .title }}, {{ .institution }}<br>
       {{ .email }}<br>
-      {{ if in .lab "P" }} <span class="label success">{{ .lab }}</span><br> {{ end }}
-      {{ if in .lab "Core" }} <span class="label warning">{{ .lab }}</span><br> {{ end }}
       {{ with .webpage }} web: <a href={{ . }}>{{ . }}</a><br> {{ end }}
       {{ with .ORCID }} ORCID: <a href="https://orcid.org/{{ . }}">{{ . }}</a> {{ end }}
       {{ with .google_scholar }} | <a href="{{ . }}">Google Scholar</a> {{ end }}
