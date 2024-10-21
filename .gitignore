@@ -11,3 +11,6 @@ __pycache__/
 */*/.DS_Store
 
 public/
+
+# gen files from hugo
+resources/_gen/

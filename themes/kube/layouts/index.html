@@ -11,22 +11,23 @@
     {{ .Content }}
   </div>
   
-  <!-- <a href="https://static1.squarespace.com/static/530562f9e4b06fd3c041e221/t/61788fa74126c33373345e2f/1635291049659/ASAP+-+Overall+component.pdf"><img src="https://asapdiscovery.org/img/asap-diagram.jpg" alt="ASAP is organized into a series of successive stages of the drug discovery pipeline."></a> -->
-
+  <div>
+  <center>
+  {{ $asset := resources.Get "/avoidome_dmpk_structures.png" }}
+  {{ $img := $asset.Fit "1000x600" }}
+  <figure>
+    <img alt="Structural proteins in the AVOID-OME" src="{{ $img.RelPermalink }}" />
+  </figure>
+  </center>
+  </div>
 
 <!-- want to get involved -->
   <div id="hero">
     <hr>
-    <p>If you would like to get involved contact us <a href="mailto:saumya.krishnan@ucsf.edu">here</a> 
+    <h4>If you would like to get involved contact us <a href="mailto:saumya.krishnan@ucsf.edu">here</a> </h4> 
+    <h4><a href="https://pelosi.house.gov/news/press-releases/pelosi-announces-305-million-ucsf-research-drug-side-effect-prevention">Congressional Support for OpenADMET</a> </h4>
+    <h4>An <a href="https://arpa-h.gov/">ARPA-H funded project (Grant Number: 1AY1AX000035-01)</a></h4> 
   </div>
-  </div>
-  <div id="hero">
-    <p><a href="https://pelosi.house.gov/news/press-releases/pelosi-announces-305-million-ucsf-research-drug-side-effect-prevention">Congressional Support for OpenADMET</a></p>
-  </div>  
-  <div id="hero">
-    <h5>An <a href="https://arpa-h.gov/">ARPA-H funded project (Grant Number: 1AY1AX000035-01)</a></h5>
-  </div>  
-
 
 </div>
 {{ end }}
