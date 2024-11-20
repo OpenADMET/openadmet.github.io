@@ -28,6 +28,13 @@ pygmentsStyle = "colorful"
 
 
 [[menu.main]]
+    name = "Get Involved"
+    weight = -190
+    url = "/get_involved/"
+    identifier = "get_involved"
+
+
+[[menu.main]]
     name = "Datasets"
     weight = -150
     url = "/datasets/"
