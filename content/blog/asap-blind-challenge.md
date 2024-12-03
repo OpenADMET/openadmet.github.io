@@ -24,7 +24,7 @@ Participants will work on real-world data from ASAP Discovery’s antiviral prog
 Each task uses experimental data from world-class institutions like the Weizmann Institute, the University of Oxford, and industry standard contract research organisations.
 
 ## How to Participate
-The competition runs January 13 to March 10, 2025. Follow along and participate the competition page on [Polaris](https://polarishub.io/competitions). Champions will present at the NIH AViDD ASAP [Open Science Forum](https://asapdiscovery.org/forum), and everyone is invited to help co-author the final publication. Join individually or form teams—collaboration is encouraged!
+The competition runs January 13 to March 10, 2025. Follow along and participate on the competition page on [Polaris](https://polarishub.io/competitions). Champions will present at the NIH AViDD ASAP [Open Science Forum](https://asapdiscovery.org/forum), and everyone is invited to help co-author the final publication. Join individually or form teams—collaboration is encouraged!
 Learn more and dive into the challenge details here. Open science thrives on community effort. We can’t wait to see how your creativity and expertise will shape the future of antiviral drug discovery!
 
 
