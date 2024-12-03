@@ -13,7 +13,9 @@ This challenge aligns perfectly with OMSF’s and OpenADMET's missions, leveragi
 
 ## The Challenge
 
-Participants will work on real-world data from ASAP Discovery’s antiviral programs targeting SARS-CoV-2 and MERS-CoV main proteases (Mpro). The challenge includes three sub-tasks:
+Participants will work on real-world data from ASAP Discovery’s antiviral programs targeting SARS-CoV-2 and MERS-CoV main proteases (Mpro).
+
+The challenge includes three sub-tasks:
 
 **Potency Prediction:** Forecast drug potency for a blind compound set.
 
@@ -23,8 +25,12 @@ Participants will work on real-world data from ASAP Discovery’s antiviral prog
 
 Each task uses experimental data from world-class institutions like the Weizmann Institute, the University of Oxford, and industry standard contract research organisations.
 
+The [Polaris blog post](https://polarishub.io/blog/antiviral-competition) announcing the challenge is a great place to get started.
+
 ## How to Participate
-The competition runs January 13 to March 10, 2025. Follow along and participate on the competition page on [Polaris](https://polarishub.io/competitions). Champions will present at the NIH AViDD ASAP [Open Science Forum](https://asapdiscovery.org/forum), and everyone is invited to help co-author the final publication. Join individually or form teams—collaboration is encouraged!
-Learn more and dive into the challenge details here. Open science thrives on community effort. We can’t wait to see how your creativity and expertise will shape the future of antiviral drug discovery!
+The competition runs January 13 to March 10, 2025. Champions will present at the NIH AViDD ASAP [Open Science Forum](https://asapdiscovery.org/forum), and everyone is invited to help co-author the final publication. Join individually or form teams—collaboration is encouraged!
+Learn more and dive into the challenge details [here](https://polarishub.io/competitions).
+
+Open science thrives on community effort. We can’t wait to see how your creativity and expertise will shape the future of antiviral drug discovery!
 
 
