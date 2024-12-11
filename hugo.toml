@@ -28,16 +28,11 @@ pygmentsStyle = "colorful"
 
 
 [[menu.main]]
-    name = "Datasets"
+    name = "Datasets and Models"
     weight = -150
-    url = "/datasets/"
-    identifier = "dataset"
+    url = "/datasets_and_models/"
+    identifier = "datasets_and_models"
 
-[[menu.main]]
-    name = "News"
-    weight = -100
-    url = "/news/"
-    identifier = "news"
 
 [[menu.main]]
     name = "Publications"
