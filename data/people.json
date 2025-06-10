@@ -1,0 +1,265 @@
+{
+  "director": {
+    "cardWidth": "full",
+    "title": "Program Director",
+    "folks": [
+      {
+        "portrait": "/images/people/james_fraser.jpeg",
+        "name": "James Fraser",
+        "function": "Program Director, Principal Investigator",
+        "description": "Chair and Professor. Department of Bioengineering and Therapeutic Sciences, UCSF, University of California San Francisco",
+        "social": "[Linkedin](https://www.linkedin.com/in/jamessfraser/)",
+        "affiliation": "University of California San Francisco",
+        "id": "fraser"
+      }
+    ]
+  },
+  "pis": {
+    "cardWidth": "full",
+    "title": "Principal Investigators",
+    "folks": [
+      {
+        "portrait": "/images/people/andrej_sali.jpeg",
+        "name": "Andrej Sali",
+        "function": "Principal Investigator",
+        "description": "Professor, Department of Bioengineering and Therapeutic Sciences, UCSF, University of California San Francisco",
+        "social": "[Linkedin](https://www.linkedin.com/in/andrej-sali-113470273/)",
+        "affiliation": "University of California San Francisco",
+        "id": "sali"
+      },
+      {
+        "portrait": "/images/people/brian_shoichet.jpeg",
+        "name": "Brian Shoichet",
+        "function": "Principal Investigator",
+        "description": "Professor, Department of Pharmaceutical Chemistry, UCSF, University of California San Francisco",
+        "social": "[Linkedin](https://www.linkedin.com/in/brian-shoichet-0024061/)",
+        "affiliation": "University of California San Francisco",
+        "id": "shoichet"
+      },
+      {
+        "portrait": "/images/people/james_fraser.jpeg",
+        "name": "James Fraser",
+        "function": "Program Director, Principal Investigator",
+        "description": "Chair and Professor. Department of Bioengineering and Therapeutic Sciences, UCSF, University of California San Francisco",
+        "social": "[Linkedin](https://www.linkedin.com/in/jamessfraser/)",
+        "affiliation": "University of California San Francisco",
+        "id": "fraser"
+      },
+      {
+        "portrait": "/images/people/john_chodera.jpeg",
+        "name": "John D. Chodera",
+        "function": "Principal Investigator",
+        "description": "Associate Member, Sloan Kettering Institute",
+        "social": "[Linkedin](https://www.linkedin.com/in/john-chodera-5287a8120/)",
+        "affiliation": "Memorial Sloan Kettering Cancer Center",
+        "id": "chodera"
+      },
+      {
+        "portrait": "/images/people/rada_savic.jpeg",
+        "name": "Rada Savic",
+        "function": "Principal Investigator",
+        "description": "Professor, Department of Bioengineering and Therapeutic Sciences, UCSF, University of California San Francisco",
+        "social": "[Linkedin](https://www.linkedin.com/in/rada-savic-9748459/)",
+        "affiliation": "University of California San Francisco",
+        "id": "savic"
+      },
+      {
+        "portrait": "/images/people/sri_kosuri.jpeg",
+        "name": "Sri Kosuri",
+        "function": "Principal Investigator",
+        "description": "CEO, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/sri-kosuri-14486a142/)",
+        "affiliation": "Octant",
+        "id": "kosuri"
+      },
+      {
+        "portrait": "/images/people/willow_coyote_maestas.jpeg",
+        "name": "Willow Coyote-Maestas",
+        "function": "Principal Investigator",
+        "description": "Assistant Professor, Department of Bioengineering and Therapeutic Sciences, UCSF, University of California San Francisco",
+        "social": "[Linkedin]()",
+        "affiliation": "University of California San Francisco",
+        "id": "maestas"
+      }
+    ]
+  },
+  "project_leads": {
+    "cardWidth": "full",
+    "title": "Project Leads",
+    "folks": [
+      {
+        "portrait": "/images/people/ryan_renslow.jpeg",
+        "name": "Ryan Renslow",
+        "function": "Project Lead",
+        "description": "Project Director, Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/ryan-renslow/)",
+        "affiliation": "Open Molecular Software Foundation",
+        "id": "renslow"
+      },
+      {
+        "portrait": "/images/people/sam_krishnan.jpeg",
+        "name": "Sam Krishnan",
+        "function": "Project Lead",
+        "description": "Scientific Project & Program Manager, University of California San Francisco",
+        "social": "[Linkedin](https://www.linkedin.com/in/samgkrishnan/)",
+        "affiliation": "University of California San Francisco",
+        "id": "krishnan"
+      },
+      {
+        "portrait": "/images/people/steven_edgar.jpeg",
+        "name": "Steven Edgar",
+        "function": "Project Lead",
+        "description": "Head of Platform Analytical, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/steven-edgar/)",
+        "affiliation": "Octant",
+        "id": "edgar"
+      }
+    ]
+  },
+  "collaborators": {
+    "cardWidth": "full",
+    "title": "Open Molecular Software Foundation Team",
+    "folks": [
+      {
+        "portrait": "/images/people/ryan_renslow.jpeg",
+        "name": "Ryan Renslow",
+        "function": "Project Lead",
+        "description": "Project Director, Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/ryan-renslow/)",
+        "affiliation": "Open Molecular Software Foundation",
+        "id": "renslow"
+      },
+      {
+        "portrait": "/images/people/hugo_macdermott_opeskin.jpeg",
+        "name": "Hugo MacDermott-Opeskin",
+        "function": "Technical Lead",
+        "description": "Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/hugo-macdermott-opeskin/)",
+        "affiliation": "Open Molecular Software Foundation",
+        "id": "opeskin"
+      },
+      {
+        "portrait": "/images/people/mallory_tollefson.jpeg",
+        "name": "Mallory Tollefson",
+        "function": "Business and Project Manager",
+        "description": "Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/mallory-tollefson-ph-d-5ba812149/)",
+        "affiliation": "Open Molecular Software Foundation",
+        "id": "tollefson"
+      },
+      {
+        "portrait": "/images/people/devany_west.jpg",
+        "name": "Devany West",
+        "function": "Scientist",
+        "description": "Postdoctoral Researcher, Memorial Sloane Kettering Cancer Center",
+        "social": "[Linkedin](https://www.linkedin.com/in/devany-west-08b534123/)",
+        "affiliation": "Open Molecular Software Foundation",
+        "id": "west"
+      },
+      {
+        "portrait": "/images/people/kate_huddleston.jpg",
+        "name": "Kate Huddleston",
+        "function": "Research Software Engineer",
+        "description": "Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/khuddzu/)",
+        "affiliation": "Open Molecular Software Foundation",
+        "id": "huddleston"
+      },
+      {
+        "portrait": "/images/people/sean_colby.jpeg",
+        "name": "Sean Colby",
+        "function": "Senior Scientist",
+        "description": "Senior Scientist, Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/sean-m-colby/)",
+        "affiliation": "Open Molecular Software Foundation",
+        "id": "colby"
+      },
+      {
+        "portrait": "/images/people/cynthia_xu.jpeg",
+        "name": "Cynthia Xu",
+        "function": "Research Software Engineer",
+        "description": "Research Software Engineer, Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/cynthiaxuxu/)",
+        "affiliation": "Open Molecular Software Foundation",
+        "id": "xu"
+      },
+      {
+        "portrait": "/images/people/zachary_baker.jpeg",
+        "name": "Zachary Baker",
+        "function": "Community Manager",
+        "description": "Community Manager, Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/zachary-j-baker/)",
+        "affiliation": "Open Molecular Software Foundation",
+        "id": "baker"
+      }
+    ]
+  },
+  "octant": {
+    "cardWidth": "full",
+    "title": "Octant Bio team",
+    "folks": [
+      {
+        "portrait": "/images/people/angela_xiao.jpeg",
+        "name": "Angela Xiao",
+        "function": "Assistant Controller",
+        "description": "Assistant Controller, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/angelaxiao1/)",
+        "affiliation": "Octant",
+        "id": "xiao"
+      },
+      {
+        "portrait": "/images/people/lizvette_ayala_valdez.jpeg",
+        "name": "Lizvette Ayala-Valdez",
+        "function": "Automation Engineer",
+        "description": "Automation Engineer, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/lizvette-ayala-valdez/)",
+        "affiliation": "Octant",
+        "id": "valdez"
+      },
+      {
+        "portrait": "/images/people/marco_falcioni.jpeg",
+        "name": "Marco Falcioni",
+        "function": "Senior Software Engineer",
+        "description": "Senior Software Engineer, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/marcofalcioni/)",
+        "affiliation": "Octant",
+        "id": "falcioni"
+      },
+      {
+        "portrait": "/images/people/nathaniel_luis.jpeg",
+        "name": "Nathaniel Luis",
+        "function": "Octant Apprentice",
+        "description": "Octant Apprentice, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/nathaniel-luis/)",
+        "affiliation": "Octant",
+        "id": "luis"
+      },
+      {
+        "portrait": "/images/people/robert_warneford_thompson.jpeg",
+        "name": "Robert Warneford-Thompson",
+        "function": "Scientist",
+        "description": "Scientist, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/robert-warneford-thomson-51b274253/)",
+        "affiliation": "Octant",
+        "id": "luis"
+      },
+      {
+        "portrait": "/images/people/sri_kosuri.jpeg",
+        "name": "Sri Kosuri",
+        "function": "Principal Investigator",
+        "description": "CEO, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/sri-kosuri-14486a142/)",
+        "affiliation": "Octant",
+        "id": "kosuri"
+      },
+      {
+        "portrait": "/images/people/steven_edgar.jpeg",
+        "name": "Steven Edgar",
+        "function": "Project Lead",
+        "description": "Head of Platform Analytical, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/steven-edgar/)",
+        "affiliation": "Octant",
+        "id": "edgar"
+      }
+    ]
+  }}
