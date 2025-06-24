@@ -1,6 +1,6 @@
 # OpenADMET website
 
-This repository contains the source code for the OpenADMET website, which is built using [Hugo](https://gohugo.io/) and hosted on Github Pages.
+This repository contains the source code for the OpenADMET website, which is built using [Hugo](https://gohugo.io/) and can be deployed to both GitHub Pages. We are using Cloudflare Pages to handle preview deployments of changes.
 
 
 ## Preview the website locally
@@ -21,11 +21,20 @@ Web Server is available at //localhost:1313/ (bind address 127.0.0.1)
 
 ## Deploying
 
+### GitHub Pages (Current)
 Deploying is handled by a Github actions (see the `.github/workflows/gh-pages.yml` file). Commits/PRs into the `main` branch will trigger a new build. Once built, the action will push the content to the `gh-pages` branch, which the website is now served from.
 
+### Cloudflare Pages (Optional)
+The repository is also configured for Cloudflare Pages deployment with automatic PR previews. This provides:
+- **PR Previews**: Every pull request gets a unique preview URL for testing changes
+- **Cleanup**: Automatic removal of old preview deployments when PRs are closed
 
+#### Cloudflare Workflows
+- `build-pr.yaml` - Builds Hugo site for PR previews
+- `stage-cloudflare.yaml` - Deploys PR previews to Cloudflare staging
+- `cleanup-cloudflare.yaml` - Cleans up old preview deployments
 
-## Developer Guide 
+## Developer Guide
 
 ### Adding new members
 
