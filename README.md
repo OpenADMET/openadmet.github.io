@@ -1,6 +1,6 @@
 # OpenADMET website
 
-This repository contains the source code for the OpenADMET website, which is built using [Hugo](https://gohugo.io/) and can be deployed to both GitHub Pages. We are using Cloudflare Pages to handle preview deployments of changes.
+This repository contains the source code for the OpenADMET website, which is built using [Hugo](https://gohugo.io/) and is deployed to GitHub Pages. We are using Cloudflare Pages to handle preview deployments of changes.
 
 
 ## Preview the website locally
