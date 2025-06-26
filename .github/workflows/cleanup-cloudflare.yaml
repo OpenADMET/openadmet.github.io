@@ -6,7 +6,6 @@ on:
 
 jobs:
   cleanup-staging:
-    if: ${{ github.repository == vars.MAIN_REPO }}
     uses: omsf/static-site-tools/.github/workflows/cleanup-cloudflare.yaml@main
     with:
       pr_number: ${{ github.event.pull_request.number }}
