@@ -1,6 +1,6 @@
 baseURL = 'https://openadmet.org/'
 languageCode = 'en-us'
-title = 'OpenADMET'
+title = 'OpenADMET Test'
 theme = 'kube'
 description = "OpenADMET does blah blah blah"
 publishDir = "./public"
