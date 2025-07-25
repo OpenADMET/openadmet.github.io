@@ -88,13 +88,13 @@
     "title": "Project Leads",
     "folks": [
       {
-        "portrait": "/images/people/ryan_renslow.jpeg",
-        "name": "Ryan Renslow",
+        "portrait": "/images/people/karmen_condicjurkic.jpg",
+        "name": "Karmen Condic-Jurkic",
         "function": "Project Lead",
-        "description": "Project Director, Open Molecular Software Foundation",
-        "social": "[Linkedin](https://www.linkedin.com/in/ryan-renslow/)",
+        "description": "Interim Project Director, Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/karmen-condic-jurkic/)",
         "affiliation": "Open Molecular Software Foundation",
-        "id": "renslow"
+        "id": "condic-jurkic"
       },
       {
         "portrait": "/images/people/sam_krishnan.jpeg",
@@ -121,13 +121,13 @@
     "title": "Open Molecular Software Foundation Team",
     "folks": [
       {
-        "portrait": "/images/people/ryan_renslow.jpeg",
-        "name": "Ryan Renslow",
+        "portrait": "/images/people/karmen_condicjurkic.jpg",
+        "name": "Karmen Condic-Jurkic",
         "function": "Project Lead",
-        "description": "Project Director, Open Molecular Software Foundation",
-        "social": "[Linkedin](https://www.linkedin.com/in/ryan-renslow/)",
+        "description": "Interim Project Director, Open Molecular Software Foundation",
+        "social": "[Linkedin](https://www.linkedin.com/in/karmen-condic-jurkic/)",
         "affiliation": "Open Molecular Software Foundation",
-        "id": "renslow"
+        "id": "condic-jurkic"
       },
       {
         "portrait": "/images/people/hugo_macdermott_opeskin.jpeg",
@@ -139,7 +139,7 @@
         "id": "opeskin"
       },
       {
-        "portrait": "/images/people/mallory_tollefson.jpeg",
+        "portrait": "/images/people/mallory_tollefson.jpg",
         "name": "Mallory Tollefson",
         "function": "Business and Project Manager",
         "description": "Open Molecular Software Foundation",
@@ -199,6 +199,87 @@
     "title": "Octant Bio team",
     "folks": [
       {
+        "portrait": "/images/people/naomi_handly.jpg",
+        "name": "Naomi Handly",
+        "function": "Vice President of Platform",
+        "description": "Vice President of Platform, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/lnaomihandly/)",
+        "affiliation": "Octant",
+        "id": "handly"
+      },
+      {
+        "portrait": "/images/people/ana_lindahl.jpg",
+        "name": "Ana Lindahl",
+        "function": "Mass Spectrometry Scientist",
+        "description": "Mass Spectrometry Scientist, Octant Bio",
+        "social": "[Linkedin]()",
+        "affiliation": "Octant",
+        "id": "lindahl"
+      },
+      {
+        "portrait": "/images/people/calvin_hawe.jpg",
+        "name": "Calvin Hawe",
+        "function": "Research Associate",
+        "description": "Research Associate, Octant Bio",
+        "social": "[Linkedin]()",
+        "affiliation": "Octant",
+        "id": "hawe"
+      },
+      {
+        "portrait": "/images/people/scott_simpkins.jpg",
+        "name": "Scott Simpkins",
+        "function": "Data Scientist",
+        "description": "Data Scientist, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/swsimpkins/)",
+        "affiliation": "Octant",
+        "id": "simpkins"
+      },
+      {
+        "portrait": "/images/people/yuning_shen.jpg",
+        "name": "Yuning Shen",
+        "function": "Discovery Chemist",
+        "description": "Discovery Chemist, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/yuning-shen-586bba217/)",
+        "affiliation": "Octant",
+        "id": "shen"
+      },
+      {
+        "portrait": "/images/people/brian_jiang.jpg",
+        "name": "Brian Jiang",
+        "function": "Research Associate",
+        "description": "Research Associate, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/jiangbryan/)",
+        "affiliation": "Octant",
+        "id": "jiang"
+      },
+      {
+        "portrait": "/images/people/sam_sabaat.jpg",
+        "name": "Sam Sabaat",
+        "function": "Research Associate",
+        "description": "Research Associate, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/sabaat/)",
+        "affiliation": "Octant",
+        "id": "sabaat"
+      },
+      {
+        "portrait": "/images/people/kyle_kovary.jpg",
+        "name": "Kyle Kovary",
+        "function": "Data Scientist",
+        "description": "Data Scientist, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/kylekovary/)",
+        "affiliation": "Octant",
+        "id": "kovary"
+      },
+      {
+        "portrait": "/images/people/saulo_deoliveira.jpg",
+        "name": "Saulo de Oliveira",
+        "function": "Data Scientist",
+        "description": "Data Scientist, Octant Bio",
+        "social": "[Linkedin](https://www.linkedin.com/in/saulodeoliveira/)",
+        "affiliation": "Octant",
+        "id": "deoliveira"
+      },
+      {
         "portrait": "/images/people/angela_xiao.jpeg",
         "name": "Angela Xiao",
         "function": "Assistant Controller",
@@ -206,15 +287,6 @@
         "social": "[Linkedin](https://www.linkedin.com/in/angelaxiao1/)",
         "affiliation": "Octant",
         "id": "xiao"
-      },
-      {
-        "portrait": "/images/people/lizvette_ayala_valdez.jpeg",
-        "name": "Lizvette Ayala-Valdez",
-        "function": "Automation Engineer",
-        "description": "Automation Engineer, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/lizvette-ayala-valdez/)",
-        "affiliation": "Octant",
-        "id": "valdez"
       },
       {
         "portrait": "/images/people/marco_falcioni.jpeg",
