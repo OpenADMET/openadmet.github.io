@@ -28,6 +28,8 @@
   </url><url>
     <loc>http://localhost:1313/community/blogs/asapxpolarisxadmet_blindchallenge/</loc>
   </url><url>
+    <loc>http://localhost:1313/community/events/blind-challenges/</loc>
+  </url><url>
     <loc>http://localhost:1313/community/blogs/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
@@ -35,6 +37,8 @@
     <loc>http://localhost:1313/community/</loc>
   </url><url>
     <loc>http://localhost:1313/community/events/</loc>
+  </url><url>
+    <loc>http://localhost:1313/about/projects/</loc>
   </url><url>
     <loc>http://localhost:1313/community/jobboard/</loc>
   </url><url>

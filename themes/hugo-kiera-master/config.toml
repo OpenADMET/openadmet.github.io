@@ -37,6 +37,12 @@ section = ["HTML", "RSS", "JSON"]
             parent = "about"
             weight = 20
           [[menu.main]]
+            identifier = "projects"
+            name = "Projects"
+            url = "/about/projects"
+            parent = "about"
+            weight = 20
+          [[menu.main]]
             identifier = "contact"
             name = "Contact"
             url = "/about/contact"

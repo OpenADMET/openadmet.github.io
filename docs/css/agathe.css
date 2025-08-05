@@ -166,6 +166,7 @@ header {
   align-items: end;
   justify-content: space-between;
   position: sticky;
+  flex-wrap: wrap;
   top: 0px;
   border-bottom: 2px solid gray;
   border-top: 10px solid var(--color-une);
@@ -179,6 +180,7 @@ header .logo {
 }
 header .logo img {
   width: 80%;
+  max-width: 300px;
 }
 header nav {
   width: 65%;

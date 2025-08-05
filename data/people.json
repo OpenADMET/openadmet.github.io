@@ -109,26 +109,5 @@
         "id": "baker"
       }
     ]
-  },
-  "affiliated": {
-    "cardWidth": "full",
-    "title": "Affiliated Projects and Partners",
-    "folks": [
-      {
-        "name": "ARPA-H AVOID-OME",
-        "affiliation": "ARPA-H",
-        "id": "ARPA-H"
-      },
-      {
-        "name": "Schrodinger",
-        "affiliation": "Gates Foundation - Schrodinger",
-        "id": "Schrodinger"
-      },
-      {
-        "name": "OpenAMR",
-        "affiliation": "Gates Foundation",
-        "id": "OpenAMR"
-      }
-    ]
   }
 }
