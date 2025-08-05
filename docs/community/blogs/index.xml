@@ -88,7 +88,7 @@
        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
        
        <guid>http://localhost:1313/resources/publications/</guid>
-       <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/avoidome.png&#34; alt=&#34;Avoidome&#34; /&gt;&lt;/p&gt;&lt;p&gt;No publications yet. Check back soon.&lt;/p&gt;</description>
+       <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/avoidome.png&#34; alt=&#34;Avoidome&#34; /&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://chemrxiv.org/engage/chemrxiv/article-details/6878bef4fc5f0acb52a813f5&#34;&gt;A Computational Community Blind Challenge on Pan-Coronavirus Drug Discovery Data&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;</description>
      </item>
    
  </channel>

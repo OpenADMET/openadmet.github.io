@@ -22,6 +22,8 @@
   </url><url>
     <loc>http://localhost:1313/about/contact/</loc>
   </url><url>
+    <loc>http://localhost:1313/community/jobboard/oad-rse/</loc>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/community/blogs/asapxpolarisxadmet_blindchallenge/</loc>
@@ -43,8 +45,6 @@
     <loc>http://localhost:1313/community/events/past-events/</loc>
   </url><url>
     <loc>http://localhost:1313/resources/publications/</loc>
-  </url><url>
-    <loc>http://localhost:1313/community/jobboard/oad-rse/</loc>
   </url><url>
     <loc>http://localhost:1313/resources/</loc>
   </url><url>

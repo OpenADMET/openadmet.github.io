@@ -25,56 +25,6 @@
             {{ end }}
         </div>
     </section>
-    <section class="pis">
-        <h1>{{ .Site.Data.people.pis.title }}</h1>
-        <div class="gridflex">
-            {{ range .Site.Data.people.pis.folks }}
-            <div class="grid-item">
-                {{ if .portrait }}
-                <figure><img src="{{ .portrait }}" alt=""></figure>
-                {{ end }}
-                <h3>{{ .name }}</h3>
-                <p class="project">{{ .function | markdownify }}</p>
-                {{ if .description }}
-                <button class="button" onclick="laPetiteFunction('{{ .id }}')">Read bio <img src="/images/read-bio.svg">
-                </button>
-                {{ end }}
-                <div style="display:none;" id="{{ .id }}" class="generalclass">
-                    <p class="job-description">{{ .description | markdownify }}</p>
-                </div>
-                <p class="project">{{ .social | markdownify }} {{ if .git }}
-                    <span class="git"><img src="/images/git.svg">{{ .git }}</span>
-                    {{ end }} </p>
-                <p>{{ .affiliation | markdownify }}</p>
-            </div>
-            {{ end }}
-        </div>
-    </section>
-    <section class="project_leads">
-        <h1>{{ .Site.Data.people.project_leads.title }}</h1>
-        <div class="gridflex">
-            {{ range .Site.Data.people.project_leads.folks }}
-            <div class="grid-item">
-                {{ if .portrait }}
-                <figure><img src="{{ .portrait }}" alt=""></figure>
-                {{ end }}
-                <h3>{{ .name }}</h3>
-                <p class="project">{{ .function | markdownify }}</p>
-                {{ if .description }}
-                <button class="button" onclick="laPetiteFunction('{{ .id }}')">Read bio <img src="/images/read-bio.svg">
-                </button>
-                {{ end }}
-                <div style="display:none;" id="{{ .id }}" class="generalclass">
-                    <p class="job-description">{{ .description | markdownify }}</p>
-                </div>
-                <p class="project">{{ .social | markdownify }} {{ if .git }}
-                    <span class="git"><img src="/images/git.svg">{{ .git }}</span>
-                    {{ end }} </p>
-                <p>{{ .affiliation | markdownify }}</p>
-            </div>
-            {{ end }}
-        </div>
-    </section>
     <section class="collaborators">
         <h1>{{ .Site.Data.people.collaborators.title }}</h1>
         <div class="gridflex">
@@ -100,10 +50,10 @@
             {{ end }}
         </div>
     </section>
-    <section class="octant">
-        <h1>{{ .Site.Data.people.octant.title }}</h1>
+    <section class="affiliated">
+        <h1>{{ .Site.Data.people.affiliated.title }}</h1>
         <div class="gridflex">
-            {{ range .Site.Data.people.octant.folks }}
+            {{ range .Site.Data.people.affiliated.folks }}
             <div class="grid-item">
                 {{ if .portrait }}
                 <figure><img src="{{ .portrait }}" alt=""></figure>
@@ -125,7 +75,6 @@
             {{ end }}
         </div>
     </section>
-
 </div>
 <script>
     function laPetiteFunction(divid) {

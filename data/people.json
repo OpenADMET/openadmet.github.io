@@ -1,41 +1,8 @@
 {
   "director": {
     "cardWidth": "full",
-    "title": "Program Director",
+    "title": "Principle Investigators",
     "folks": [
-      {
-        "portrait": "/images/people/james_fraser.jpeg",
-        "name": "James Fraser",
-        "function": "Program Director, Principal Investigator",
-        "description": "Chair and Professor. Department of Bioengineering and Therapeutic Sciences, UCSF, University of California San Francisco",
-        "social": "[Linkedin](https://www.linkedin.com/in/jamessfraser/)",
-        "affiliation": "University of California San Francisco",
-        "id": "fraser"
-      }
-    ]
-  },
-  "pis": {
-    "cardWidth": "full",
-    "title": "Principal Investigators",
-    "folks": [
-      {
-        "portrait": "/images/people/andrej_sali.jpeg",
-        "name": "Andrej Sali",
-        "function": "Principal Investigator",
-        "description": "Professor, Department of Bioengineering and Therapeutic Sciences, UCSF, University of California San Francisco",
-        "social": "[Linkedin](https://www.linkedin.com/in/andrej-sali-113470273/)",
-        "affiliation": "University of California San Francisco",
-        "id": "sali"
-      },
-      {
-        "portrait": "/images/people/brian_shoichet.jpeg",
-        "name": "Brian Shoichet",
-        "function": "Principal Investigator",
-        "description": "Professor, Department of Pharmaceutical Chemistry, UCSF, University of California San Francisco",
-        "social": "[Linkedin](https://www.linkedin.com/in/brian-shoichet-0024061/)",
-        "affiliation": "University of California San Francisco",
-        "id": "shoichet"
-      },
       {
         "portrait": "/images/people/james_fraser.jpeg",
         "name": "James Fraser",
@@ -55,15 +22,6 @@
         "id": "chodera"
       },
       {
-        "portrait": "/images/people/rada_savic.jpeg",
-        "name": "Rada Savic",
-        "function": "Principal Investigator",
-        "description": "Professor, Department of Bioengineering and Therapeutic Sciences, UCSF, University of California San Francisco",
-        "social": "[Linkedin](https://www.linkedin.com/in/rada-savic-9748459/)",
-        "affiliation": "University of California San Francisco",
-        "id": "savic"
-      },
-      {
         "portrait": "/images/people/sri_kosuri.jpeg",
         "name": "Sri Kosuri",
         "function": "Principal Investigator",
@@ -71,48 +29,6 @@
         "social": "[Linkedin](https://www.linkedin.com/in/sri-kosuri-14486a142/)",
         "affiliation": "Octant",
         "id": "kosuri"
-      },
-      {
-        "portrait": "/images/people/willow_coyote_maestas.jpeg",
-        "name": "Willow Coyote-Maestas",
-        "function": "Principal Investigator",
-        "description": "Assistant Professor, Department of Bioengineering and Therapeutic Sciences, UCSF, University of California San Francisco",
-        "social": "[Linkedin]()",
-        "affiliation": "University of California San Francisco",
-        "id": "maestas"
-      }
-    ]
-  },
-  "project_leads": {
-    "cardWidth": "full",
-    "title": "Project Leads",
-    "folks": [
-      {
-        "portrait": "/images/people/karmen_condicjurkic.jpg",
-        "name": "Karmen Condic-Jurkic",
-        "function": "Project Lead",
-        "description": "Interim Project Director, Open Molecular Software Foundation",
-        "social": "[Linkedin](https://www.linkedin.com/in/karmen-condic-jurkic/)",
-        "affiliation": "Open Molecular Software Foundation",
-        "id": "condic-jurkic"
-      },
-      {
-        "portrait": "/images/people/sam_krishnan.jpeg",
-        "name": "Sam Krishnan",
-        "function": "Project Lead",
-        "description": "Scientific Project & Program Manager, University of California San Francisco",
-        "social": "[Linkedin](https://www.linkedin.com/in/samgkrishnan/)",
-        "affiliation": "University of California San Francisco",
-        "id": "krishnan"
-      },
-      {
-        "portrait": "/images/people/steven_edgar.jpeg",
-        "name": "Steven Edgar",
-        "function": "Project Lead",
-        "description": "Head of Platform Analytical, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/steven-edgar/)",
-        "affiliation": "Octant",
-        "id": "edgar"
       }
     ]
   },
@@ -194,144 +110,25 @@
       }
     ]
   },
-  "octant": {
+  "affiliated": {
     "cardWidth": "full",
-    "title": "Octant Bio team",
+    "title": "Affiliated Projects and Partners",
     "folks": [
       {
-        "portrait": "/images/people/naomi_handly.jpg",
-        "name": "Naomi Handly",
-        "function": "Vice President of Platform",
-        "description": "Vice President of Platform, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/lnaomihandly/)",
-        "affiliation": "Octant",
-        "id": "handly"
+        "name": "ARPA-H AVOID-OME",
+        "affiliation": "ARPA-H",
+        "id": "ARPA-H"
       },
       {
-        "portrait": "/images/people/ana_lindahl.jpg",
-        "name": "Ana Lindahl",
-        "function": "Mass Spectrometry Scientist",
-        "description": "Mass Spectrometry Scientist, Octant Bio",
-        "social": "[Linkedin]()",
-        "affiliation": "Octant",
-        "id": "lindahl"
+        "name": "Schrodinger",
+        "affiliation": "Gates Foundation - Schrodinger",
+        "id": "Schrodinger"
       },
       {
-        "portrait": "/images/people/calvin_hawe.jpg",
-        "name": "Calvin Hawe",
-        "function": "Research Associate",
-        "description": "Research Associate, Octant Bio",
-        "social": "[Linkedin]()",
-        "affiliation": "Octant",
-        "id": "hawe"
-      },
-      {
-        "portrait": "/images/people/scott_simpkins.jpg",
-        "name": "Scott Simpkins",
-        "function": "Data Scientist",
-        "description": "Data Scientist, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/swsimpkins/)",
-        "affiliation": "Octant",
-        "id": "simpkins"
-      },
-      {
-        "portrait": "/images/people/yuning_shen.jpg",
-        "name": "Yuning Shen",
-        "function": "Discovery Chemist",
-        "description": "Discovery Chemist, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/yuning-shen-586bba217/)",
-        "affiliation": "Octant",
-        "id": "shen"
-      },
-      {
-        "portrait": "/images/people/brian_jiang.jpg",
-        "name": "Brian Jiang",
-        "function": "Research Associate",
-        "description": "Research Associate, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/jiangbryan/)",
-        "affiliation": "Octant",
-        "id": "jiang"
-      },
-      {
-        "portrait": "/images/people/sam_sabaat.jpg",
-        "name": "Sam Sabaat",
-        "function": "Research Associate",
-        "description": "Research Associate, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/sabaat/)",
-        "affiliation": "Octant",
-        "id": "sabaat"
-      },
-      {
-        "portrait": "/images/people/kyle_kovary.jpg",
-        "name": "Kyle Kovary",
-        "function": "Data Scientist",
-        "description": "Data Scientist, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/kylekovary/)",
-        "affiliation": "Octant",
-        "id": "kovary"
-      },
-      {
-        "portrait": "/images/people/saulo_deoliveira.jpg",
-        "name": "Saulo de Oliveira",
-        "function": "Data Scientist",
-        "description": "Data Scientist, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/saulodeoliveira/)",
-        "affiliation": "Octant",
-        "id": "deoliveira"
-      },
-      {
-        "portrait": "/images/people/angela_xiao.jpeg",
-        "name": "Angela Xiao",
-        "function": "Assistant Controller",
-        "description": "Assistant Controller, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/angelaxiao1/)",
-        "affiliation": "Octant",
-        "id": "xiao"
-      },
-      {
-        "portrait": "/images/people/marco_falcioni.jpeg",
-        "name": "Marco Falcioni",
-        "function": "Senior Software Engineer",
-        "description": "Senior Software Engineer, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/marcofalcioni/)",
-        "affiliation": "Octant",
-        "id": "falcioni"
-      },
-      {
-        "portrait": "/images/people/nathaniel_luis.jpeg",
-        "name": "Nathaniel Luis",
-        "function": "Octant Apprentice",
-        "description": "Octant Apprentice, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/nathaniel-luis/)",
-        "affiliation": "Octant",
-        "id": "luis"
-      },
-      {
-        "portrait": "/images/people/robert_warneford_thompson.jpeg",
-        "name": "Robert Warneford-Thompson",
-        "function": "Scientist",
-        "description": "Scientist, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/robert-warneford-thomson-51b274253/)",
-        "affiliation": "Octant",
-        "id": "luis"
-      },
-      {
-        "portrait": "/images/people/sri_kosuri.jpeg",
-        "name": "Sri Kosuri",
-        "function": "Principal Investigator",
-        "description": "CEO, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/sri-kosuri-14486a142/)",
-        "affiliation": "Octant",
-        "id": "kosuri"
-      },
-      {
-        "portrait": "/images/people/steven_edgar.jpeg",
-        "name": "Steven Edgar",
-        "function": "Project Lead",
-        "description": "Head of Platform Analytical, Octant Bio",
-        "social": "[Linkedin](https://www.linkedin.com/in/steven-edgar/)",
-        "affiliation": "Octant",
-        "id": "edgar"
+        "name": "OpenAMR",
+        "affiliation": "Gates Foundation",
+        "id": "OpenAMR"
       }
     ]
-  }}
+  }
+}
