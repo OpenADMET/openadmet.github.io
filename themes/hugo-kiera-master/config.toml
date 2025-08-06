@@ -1,0 +1,99 @@
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.55.0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
+
+[blackfriday]
+    extensions = ["hardLineBreak"]
+    
+[outputs]
+section = ["HTML", "RSS", "JSON"]
+
+    [menu]
+
+      [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 10
+          [[menu.main]]
+            identifier = "mission"
+            name = "Mission"
+            url = "/about/mission"
+            parent = "about"
+            weight = 10
+          [[menu.main]]
+            identifier = "people"
+            name = "People"
+            url = "/about/people"
+            parent = "about"
+            weight = 20
+          [[menu.main]]
+            identifier = "projects"
+            name = "Projects"
+            url = "/about/projects"
+            parent = "about"
+            weight = 20
+          [[menu.main]]
+            identifier = "contact"
+            name = "Contact"
+            url = "/about/contact"
+            parent = "about"
+            weight = 30
+
+      [[menu.main]]
+        identifier = "community"
+        name = "Community"
+        url = "/community/"
+        weight = 30
+          [[menu.main]]
+            identifier = "blogs"
+            name = "Blogs"
+            url = "/community/blogs"
+            parent = "community"
+            weight = 10
+          [[menu.main]]
+            identifier = "events"
+            name = "Events"
+            url = "/community/events/"
+            parent = "community"
+            weight = 20
+          [[menu.main]]
+            identifier = "jobboard"
+            name = "Job Board"
+            url = "/community/Jobboard/"
+            parent = "community"
+            layout = "jobboard"
+            weight = 30
+          
+      [[menu.main]]
+        identifier = "resources"
+        name = "Resources"
+        url = "/resources/"
+        weight = 60
+          [[menu.main]]
+              identifier = "publications"
+              name = "Publications"
+              url = "/resources/publications/"
+              parent = "resources"
+              weight = 10
+          [[menu.main]]
+              identifier = "modelsanddata"
+              name = "Models And Data"
+              url = "/resources/modelsanddata/"
+              parent = "resources"
+              weight = 20
+          [[menu.main]]
+              identifier = "documentation"
+              name = "Documentation"
+              url = "/resources/documentation/"
+              parent = "resources"
+              weight = 30
