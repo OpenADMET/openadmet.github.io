@@ -54,6 +54,8 @@
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
+    <loc>http://localhost:1313/community/blogs/whatisopenadmet/</loc>
+  </url><url>
     <loc>http://localhost:1313/community/events/events-of-interest/</loc>
   </url>
 </urlset>
