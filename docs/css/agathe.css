@@ -137,7 +137,7 @@ a {
     font-family: var(--font-titre);
     color: var(--color-body);
     text-decoration: underline;
-    word-break: break-word;
+    word-break: keep-all;
 }
 a:hover,
 .people button:hover {

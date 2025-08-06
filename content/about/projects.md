@@ -13,12 +13,12 @@ part: 20
 
 ### Computational Prediction
 * Improving compound property prediction and structurally enabling key toxicity and distribution targets in collaboration with Schrodinger
-* Gates Foundation
+* [Gates Foundation](https://www.gatesfoundation.org/)
 
 ### OpenAMR
 * Improving property prediction for antimicrobials
-* Gates Foundation
+* [Gates Foundation](https://www.gatesfoundation.org/)
 
-### Astera
-* Scaling functional assays on Cyp metabolism and driving blind challenges
-* Astera
+### Scaling Metabolism
+* Scaling functional assays on CYP metabolism and driving blind challenges
+* [Astera](https://astera.org/)
