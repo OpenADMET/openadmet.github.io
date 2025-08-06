@@ -8,7 +8,7 @@ part: 20
 ---
 
 ### AVOID-OME
-* Building functional and structural datasets to better predict how metabolic anti-targets interact with and transform small molecule
+* Building functional and structural datasets to better predict how metabolic anti-targets interact with and transform small molecules
 * [ARPA-H Grant Number: 1AY1AX000035-01](https://arpa-h.gov/)
 
 ### Computational Prediction
