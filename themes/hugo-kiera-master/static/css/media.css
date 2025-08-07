@@ -211,7 +211,7 @@ footer .column-2 .social { margin: 1em 0; }
 
 
 @media only screen and (max-width: 600px) {
-    :is(.projects, .people,.events) .gridflex {
+    :is(.projects, .people,.events, .blogs) .gridflex {
         grid-template-columns: repeat(1,100%);
     }
     .projects .grid-item {
