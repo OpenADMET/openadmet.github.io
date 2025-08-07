@@ -10,7 +10,7 @@ weight: 10
 
 ## Our mission
 
-OpenADMET is an organization with the mission to build open predictive models of safety and toxicity for small molecules, to solve the common problem inherent across the field, improving humanity's ability to more reliably, cheaply, and effectively treat disease.
+OpenADMET is an organization with the mission to build open predictive models of safety and toxicity for small molecules to improve humanity's ability to more reliably, cheaply, and effectively treat disease.
 
 ### What is OpenADMET? 
 Read our [blog](/community/blogs/whatisopenadmet/) to learn more about our project.
