@@ -57,7 +57,7 @@ section = ["HTML", "RSS", "JSON"]
           [[menu.main]]
             identifier = "blogs"
             name = "Blogs"
-            url = "/community/blogs"
+            url = "https://openadmet.ghost.io/"
             parent = "community"
             weight = 10
           [[menu.main]]
