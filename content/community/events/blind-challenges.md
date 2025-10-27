@@ -11,9 +11,9 @@ part: 20
 
 ### ExpansionRx × OpenADMET Blind Challenge
 
-Blind challenges are a cornerstone for benchmarking and improving predictive modeling in molecular sciences. Following in the tradition of community efforts like CASP and other open benchmarking initiatives, this challenge invites researchers to test and refine AI-driven ADMET modeling approaches on a high-quality experimental dataset.
+Blind challenges are a cornerstone for benchmarking and improving predictive modeling in molecular sciences. Following in the tradition of community efforts like CASP and other open benchmarking initiatives, this challenge invites researchers to test and refine AI-driven ADMET modeling approaches on a high-quality experimental dataset. 
 
-OpenADMET, in collaboration with Expansion Therapeutics and Collaborative Drug Discovery (CDD Vault), is launching the ExpansionRx–OpenADMET Blind Challenge, focused on predicting key ADMET properties for small molecules using both traditional and machine learning approaches. Participants will gain access to carefully curated data through CDD Vault Public and Hugging Face, enabling transparent, reproducible evaluation of predictive performance.
+OpenADMET, in collaboration with Expansion Therapeutics and Collaborative Drug Discovery (CDD Vault), is launching the ExpansionRx–OpenADMET Blind Challenge on October 27th, 2025, focused on predicting key ADMET properties for small molecules using both traditional and machine learning approaches. Participants will gain access to carefully curated data through CDD Vault Public and Hugging Face, enabling transparent, reproducible evaluation of predictive performance. Submissions close on January 19th, 2026.
 
 This challenge exemplifies the OpenADMET mission: accelerating open, community-driven progress in the modeling of the “avoidome” — the molecular features that drive toxicity, metabolic instability, and off-target effects. We welcome participants from academia, biotech, pharma, and beyond to join this collaborative experiment in open science.
 
