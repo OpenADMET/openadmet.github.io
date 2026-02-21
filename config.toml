@@ -1,5 +1,4 @@
-baseURL = "https://omsf.io/"
+baseURL = "/"
 languageCode = "en-us"
-title = "OMSF"
-theme = "hugo-kiera-master"
+title = "OpenAdmet"
 publishDir = "public"
