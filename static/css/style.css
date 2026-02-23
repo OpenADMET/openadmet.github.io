@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6 {
 h1::after, h2::after {
     content: "";
     display: block;
-    background-color: #2f9ddb;
+    background-color: #c62828;
     height: 3px;
     margin: 20px 0;
     width: 70px;
