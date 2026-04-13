@@ -62,7 +62,13 @@
                     <a class="nav-link text-light" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#community">Community</a>
+                    <a class="nav-link text-light" href="#blindchallenges">Blind Challenges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#people">People</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#resources">Resources</a>
@@ -79,17 +85,163 @@
         </div>
     </div>
 </div>
-<div id="about" class="features py-5 bg-light">
+<div id="about" class="py-5 bg-light">
     <div class="container">
-        <div class="row pb-3 mb-3 pb-sm-1 mb-sm-1">
-            <div class="col-sm-12 col-lg-12">
-                <hr style="height:10px;border:none;color:#e53935;">
-                <h2 class="display-5 text-center">About</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9">
+                <hr style="height:10px;border:none;background-color:#e53935;opacity:1;">
+
+                <div class="text-center mb-4">
+                    <h2 class="display-5 fw-bold mb-3">About OpenADMET</h2>
+                    <p class="lead text-dark mb-0" style="max-width: 850px; margin: 0 auto;">
+                        OpenADMET is building open models and datasets for absorption, distribution,
+                        metabolism, excretion, and toxicity to make therapeutic development more
+                        reliable, affordable, and effective.
+                    </p>
+                </div>
+
+                <div class="bg-white shadow-sm rounded-4 p-4 p-md-5">
+                    <p class="mb-4 text-dark" style="font-size: 1.1rem; line-height: 1.8;">
+                        We are an open science effort focused on improving how the field predicts
+                        safety and toxicity for small molecules. By combining high-quality data
+                        generation, mechanistic insight, and machine learning, OpenADMET helps create
+                        more rigorous and useful ADMET models for the broader scientific community.
+                    </p>
+
+                    <p class="mb-0 text-dark" style="font-size: 1.05rem; line-height: 1.8;">
+                        Our work includes open datasets, predictive modeling, and community blind
+                        challenges designed to benchmark progress on realistic problems in drug
+                        discovery. We aim to build shared infrastructure that helps researchers better
+                        understand molecular properties and develop stronger predictive tools.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="row text-black text-center">
-            <p>OpenADMET is an organization with the mission to build open predictive models of safety and toxicity for small molecules to improve humanity's ability to more reliably, cheaply, and effectively treat disease.</p>
+    </div>
+</div>
+<div id="blindchallenges" class="news py-5">
+    <div class="container px-4 px-lg-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Blind Challenges</h1>
+            </div>
         </div>
+        <p>TODO</p>
+    </div>
+</div>
+<div id="blog" class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-10 text-center">
+                <hr style="height:10px;border:none;background-color:#e53935;opacity:1;">
+                <h2 class="display-5 fw-bold mb-3">Latest from the Blog</h2>
+                <p class="lead text-dark mb-0">
+                    Updates on blind challenges, new models, datasets, and lessons learned from the OpenADMET community.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">April 1, 2026</div>
+                        <h5 class="card-title fw-bold">Predicting PXR Induction - We have liftoff</h5>
+                        <p class="card-text text-dark flex-grow-1">
+                            Launch details for the PXR induction challenge, including the dataset, rules, and practical guidance for participants.
+                        </p>
+                        <a href="https://openadmet.ghost.io/predicting-pxr-induction-we-have-liftoff/" class="text-decoration-none fw-semibold mt-auto">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">March 26, 2026</div>
+                        <h5 class="card-title fw-bold">Lessons Learned from the OpenADMET-ExpansionRx Blind Challenge: Can We Trust Zero-Shot ADMET Predictions?</h5>
+                        <p class="card-text text-dark flex-grow-1">
+                            Reflections on the ExpansionRx challenge and what the results suggest about zero-shot ADMET prediction in practice.
+                        </p>
+                        <a href="https://openadmet.ghost.io/lessons-learned-from-the-openadmet-expansionrx-blind-challenge-can-we-trust-zero-shot-admet-predictions/" class="text-decoration-none fw-semibold mt-auto">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">March 17, 2026</div>
+                        <h5 class="card-title fw-bold">Announcing the next OpenADMET Blind Challenge: Predicting PXR Induction</h5>
+                        <p class="card-text text-dark flex-grow-1">
+                            An introduction to the next blind challenge and why blinded datasets remain important for realistic benchmarking.
+                        </p>
+                        <a href="https://openadmet.ghost.io/announcing-the-next-openadmet-blind-challenge-predicting-pxr-induction/" class="text-decoration-none fw-semibold mt-auto">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">March 10, 2026</div>
+                        <h5 class="card-title fw-bold">A Hot, Fresh, &amp; New Clearance Model</h5>
+                        <p class="card-text text-dark flex-grow-1">
+                            A look at OpenADMET’s clearance modeling work and the broader challenge of generalizing across chemical space.
+                        </p>
+                        <a href="https://openadmet.ghost.io/a-hot-fresh-new-clearance-model-2/" class="text-decoration-none fw-semibold mt-auto">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">March 1, 2026</div>
+                        <h5 class="card-title fw-bold">Building the OpenADMET Data Engine</h5>
+                        <p class="card-text text-dark flex-grow-1">
+                            A behind-the-scenes look at the infrastructure and strategy required to generate useful ADMET datasets at scale.
+                        </p>
+                        <a href="https://openadmet.ghost.io/building-the-openadmet-data-engine/" class="text-decoration-none fw-semibold mt-auto">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">February 4, 2026</div>
+                        <h5 class="card-title fw-bold">Lessons Learned from the OpenADMET - ExpansionRx Blind Challenge</h5>
+                        <p class="card-text text-dark flex-grow-1">
+                            Early takeaways from the ExpansionRx challenge, including what participants and organizers learned from the first round.
+                        </p>
+                        <a href="https://openadmet.ghost.io/lessons-learned-from-the-openadmet-expansionrx-blind-challenge/" class="text-decoration-none fw-semibold mt-auto">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="https://openadmet.ghost.io/" class="btn btn-danger btn-lg rounded-pill px-4">
+                View All Blog Posts
+            </a>
+        </div>
+    </div>
+</div>
+<div id="people" class="features py-5 bg-light">
+    <div class="container">
         <div class="row pb-3 mb-3 pb-sm-1 mb-sm-1">
             <div class="col-sm-12 col-lg-12">
                 <hr style="height:10px;border:none;color:#e53935;">
@@ -106,7 +258,7 @@
                                 <img src="/images/people/james_fraser.jpeg" alt="James Fraser">
                             </div>
                             <div class="name">
-                                James Fraser<br>
+                                James Fraser, Ph. D.<br>
                                 Program Director, Principal Investigator<br>
                                 <a href="https://www.linkedin.com/in/jamessfraser/">Linkedin</a><br>
                                 University of California San Francisco
@@ -123,7 +275,7 @@
                                 <img src="/images/people/john_chodera.jpeg" alt="John D. Chodera">
                             </div>
                             <div class="name">
-                                John D. Chodera<br>
+                                John D. Chodera, Ph. D.<br>
                                 Principal Investigator<br>
                                 <a href="https://www.linkedin.com/in/john-chodera-5287a8120/">Linkedin</a><br>
                                 Memorial Sloan Kettering Cancer Center
@@ -132,50 +284,181 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<div id="projects" class="qrcode py-5 bg-light">
-    <div class="container">
-        <div class="row pb-5">
-            <div class="col-12">
-                <h1 class="text-center">Funded Projects</h1>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/sri_kosuri.jpeg" alt="Sri Kosuri">
+                            </div>
+                            <div class="name">
+                                Sri Kosuri, Ph. D.<br>
+                                Principal Investigator<br>
+                                <a href="https://www.linkedin.com/in/sri-kosuri-14486a142/">Linkedin</a><br>
+                                Octant
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="row gx-4 gx-lg-5 d-flex justify-content-center pt-5">
+            <h2 class="card-title">Open Molecular Software Foundation Team</h2>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/pat_walters.jpeg" alt="Pat Walters">
+                            </div>
+                            <div class="name">
+                                Pat Walters, Ph. D.<br>
+                                Chief Scientist<br>
+                                <a href="https://www.linkedin.com/in/wpwalters/">Linkedin</a><br>
+                                Open Molecular Software Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/hugo_macdermott_opeskin.jpeg" alt="Hugo MacDermott-Opeskin">
+                            </div>
+                            <div class="name">
+                                Hugo MacDermott-Opeskin, Ph. D.<br>
+                                Technical Lead<br>
+                                <a href="https://www.linkedin.com/in/hugo-macdermott-opeskin/">Linkedin</a><br>
+                                Open Molecular Software Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/mallory_tollefson.jpeg" alt="Mallory Tollefson">
+                            </div>
+                            <div class="name">
+                                Mallory Tollefson, Ph. D.<br>
+                                Business and Project Manager<br>
+                                <a href="https://www.linkedin.com/in/mallory-tollefson-ph-d-5ba812149/">Linkedin</a><br>
+                                Open Molecular Software Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/devany_west.jpeg" alt="Devany West">
+                            </div>
+                            <div class="name">
+                                Devany West, Ph. D.<br>
+                                Scientist<br>
+                                <a href="https://www.linkedin.com/in/devany-west-08b534123/">Linkedin</a><br>
+                                Open Molecular Software Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/kate_huddleston.jpeg" alt="Kate Huddleston">
+                            </div>
+                            <div class="name">
+                                Kate Huddleston, Ph. D.<br>
+                                Research Software Engineer<br>
+                                <a href="https://www.linkedin.com/in/khuddzu/">Linkedin</a><br>
+                                Open Molecular Software Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/sean_colby.jpeg" alt="Sean Colby">
+                            </div>
+                            <div class="name">
+                                Sean Colby<br>
+                                Senior Scientist<br>
+                                <a href="https://www.linkedin.com/in/sean-m-colby/">Linkedin</a><br>
+                                Open Molecular Software Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/cynthia_xu.jpeg" alt="Cynthia Xu">
+                            </div>
+                            <div class="name">
+                                Cynthia Xu<br>
+                                Research Software Engineer<br>
+                                <a href="https://www.linkedin.com/in/cynthiaxuxu/">Linkedin</a><br>
+                                Open Molecular Software Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/maria_castellanos.jpeg" alt="Maria Castellanos">
+                            </div>
+                            <div class="name">
+                                Maria Castellanos, Ph. D.<br>
+                                Research Software Engineer<br>
+                                <a href="https://www.linkedin.com/in/mariacastellanos1/">Linkedin</a><br>
+                                Open Molecular Software Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="profile-container">
+                            <div class="circular-image">
+                                <img src="/images/people/jonathon_swain.jpeg" alt="Jonathon Swain">
+                            </div>
+                            <div class="name">
+                                Jonathon Swain, Ph. D.<br>
+                                Research Software Engineer<br>
+                                <a href="https://linkedin.com/in/jonathan-swain/?skipRedirect=true">Linkedin</a><br>
+                                Open Molecular Software Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="row gx-4 gx-lg-5 d-flex justify-content-center">
-            <div class="col-md-4 mb-5">
-                <h4>AVOID-OME</h4>
-                <p>Building functional and structural datasets to better predict how metabolic anti-targets interact with and transform small molecules</p>
-                <a href="https://arpa-h.gov/">ARPA-H Grant Number: 1AY1AX000035-01</a>
-            </div>
-            <div class="col-md-4 mb-5">
-                <h4>Computational Prediction</h4>
-                <p>Improving compound property prediction and structurally enabling key toxicity and distribution targets in collaboration with Schrodinger</p>
-                <a href="https://www.gatesfoundation.org/">Gates Foundation</a>
-            </div>
-            <div class="col-md-4 mb-5">
-                <h4>OpenAMR</h4>
-                <p>Improving property prediction for antimicrobials</p>
-                <a href="https://www.gatesfoundation.org/">Gates Foundation</a>
-            </div>
-            <div class="col-md-4 mb-5">
-                <h4>Scaling Metabolism</h4>
-                <p>Scaling functional assays on CYP metabolism and driving blind challenges</p>
-                <a href="https://astera.org/">Astera</a>
-            </div>
         </div>
-    </div>
-</div>
-<div id="community" class="news py-5">
-    <div class="container px-4 px-lg-5">
-        <!-- Content Row-->
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center">Community</h1>
-            </div>
-        </div>
-        <p>TODO</p>
     </div>
 </div>
 <div id="resources" class="teamarea py-3 bg-light">
@@ -194,7 +477,9 @@
         <div class="row">
             <div class="col-lg-6">
                 <h4 class="text-white">About us</h4>
-                <p>OpenADMET is an organization with the mission to build open predictive models of safety and toxicity for small molecules to improve humanity’s ability to more reliably, cheaply, and effectively treat disease.</p>
+                <p>OpenADMET is an organization with the mission to build open predictive models of safety and toxicity
+                    for small molecules to improve humanity’s ability to more reliably, cheaply, and effectively treat
+                    disease.</p>
             </div>
             <div class="col-lg-6">
                 <div>
