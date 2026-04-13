@@ -85,12 +85,11 @@
         </div>
     </div>
 </div>
-<div id="about" class="py-5 bg-light">
+<div id="about" class="features py-5 bg-light">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 col-xl-9">
+        <div class="row pb-3 mb-3 pb-sm-1 mb-sm-1">
+            <div class="col-sm-12 col-lg-12">
                 <hr style="height:10px;border:none;background-color:#e53935;opacity:1;">
-
                 <div class="text-center mb-4">
                     <h2 class="display-5 fw-bold mb-3">About OpenADMET</h2>
                     <p class="lead text-dark mb-0" style="max-width: 850px; margin: 0 auto;">
@@ -99,7 +98,11 @@
                         reliable, affordable, and effective.
                     </p>
                 </div>
+            </div>
+        </div>
 
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9">
                 <div class="bg-white shadow-sm rounded-4 p-4 p-md-5">
                     <p class="mb-4 text-dark" style="font-size: 1.1rem; line-height: 1.8;">
                         We are an open science effort focused on improving how the field predicts
@@ -119,14 +122,128 @@
         </div>
     </div>
 </div>
-<div id="blindchallenges" class="news py-5">
+<div id="blindchallenges" class="py-5 bg-white">
     <div class="container px-4 px-lg-5">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center">Blind Challenges</h1>
+        <div class="row pb-3 mb-3 pb-sm-1 mb-sm-1">
+            <div class="col-sm-12 col-lg-12">
+                <hr style="height:10px;border:none;background-color:#e53935;opacity:1;">
+                <div class="text-center mb-4">
+                    <h2 class="display-5 fw-bold mb-3">Blind Challenges</h2>
+                    <p class="lead text-dark mb-0">
+                        OpenADMET runs community blind challenges to benchmark predictive models on realistic drug discovery datasets.
+                        These challenges create rigorous, transparent tests of performance while helping release valuable datasets and methods to the broader community.
+                    </p>
+                </div>
             </div>
         </div>
-        <p>TODO</p>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-xl-10">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="d-flex flex-wrap align-items-center mb-3 gap-2">
+                            <span class="badge rounded-pill text-bg-danger px-3 py-2">Current Challenge</span>
+                            <span class="text-muted small">Challenge #3</span>
+                        </div>
+
+                        <h3 class="fw-bold mb-3">Predicting PXR Induction</h3>
+
+                        <p class="text-dark mb-4" style="line-height: 1.8;">
+                            Our current blind challenge focuses on human PXR induction, an important ADMET liability associated with drug-drug interactions, hepatotoxicity, and late-stage development risk.
+                            The challenge includes both an activity prediction track and a structure prediction track, built on a large OpenADMET-generated dataset designed to resemble realistic lead-optimization workflows.
+                        </p>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4">
+                                <div class="bg-light rounded-4 p-3 h-100">
+                                    <div class="fw-semibold mb-1">Activity Track</div>
+                                    <div class="text-muted small">Predict pEC50 values for a blinded test set of PXR-active compounds.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-light rounded-4 p-3 h-100">
+                                    <div class="fw-semibold mb-1">Structure Track</div>
+                                    <div class="text-muted small">Predict bound structures for PXR ligands.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-light rounded-4 p-3 h-100">
+                                    <div class="fw-semibold mb-1">Open Benchmarking</div>
+                                    <div class="text-muted small">Transparent evaluation on blinded experimental data.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="https://openadmet.ghost.io/predicting-pxr-induction-we-have-liftoff/" class="btn btn-danger rounded-pill px-4">
+                                View Current Challenge
+                            </a>
+                            <a href="https://openadmet.ghost.io/announcing-the-next-openadmet-blind-challenge-predicting-pxr-induction/" class="btn btn-outline-dark rounded-pill px-4">
+                                Read Announcement
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-10 text-center">
+                <h3 class="fw-bold mb-2">Past Challenges</h3>
+                <p class="text-muted mb-0">
+                    A growing archive of community challenges built around realistic experimental datasets.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">2025–2026</div>
+                        <h5 class="card-title fw-bold">ExpansionRx–OpenADMET Blind Challenge</h5>
+                        <p class="card-text text-dark flex-grow-1">
+                            A lead-optimization-style blind challenge based on real-world ADMET data from Expansion Therapeutics.
+                            Participants predicted nine ADMET endpoints using earlier-stage molecules to forecast late-stage compounds.
+                        </p>
+                        <div class="mb-3 small text-muted">
+                            370+ participants · 4,000+ submissions
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
+                            <a href="https://openadmet.ghost.io/expansionrx-openadmet-blind-challenge/" class="btn btn-sm btn-outline-dark rounded-pill">
+                                Announcement 1
+                            </a>
+                            <a href="https://openadmet.ghost.io/openadmet-expansionrx-blind-challenge/" class="btn btn-sm btn-outline-dark rounded-pill">
+                                Announcement 2
+                            </a>
+                            <a href="https://openadmet.ghost.io/openadmet-expansionrx-blind-challenge-2/" class="btn btn-sm btn-outline-dark rounded-pill">
+                                Midpoint Update
+                            </a>
+                            <a href="https://openadmet.ghost.io/the-openadmet-expansionrx-blind-challenge-has-come-to-an-end/" class="btn btn-sm btn-danger rounded-pill">
+                                Final Results
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">2025–2026</div>
+                        <h5 class="card-title fw-bold">ASAP-Polaris-OpenADMET Antiviral Challenge</h5>
+                        <p class="card-text text-dark flex-grow-1">
+                            An earlier OpenADMET-associated community blind challenge focused on pan-coronavirus drug discovery data, bringing together participants to evaluate computational methods on realistic potency and structure tasks.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
+                            <a href="https://pubs.acs.org/doi/10.1021/acs.jcim.5c02106" class="btn btn-sm btn-outline-dark rounded-pill">
+                                Read Publication
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div id="blog" class="py-5 bg-light">
@@ -309,7 +426,7 @@
                     <div class="card-body">
                         <div class="profile-container">
                             <div class="circular-image">
-                                <img src="/images/people/pat_walters.jpeg" alt="Pat Walters">
+                                <img src="/images/people/pat_walters.jpg" alt="Pat Walters">
                             </div>
                             <div class="name">
                                 Pat Walters, Ph. D.<br>
@@ -343,7 +460,7 @@
                     <div class="card-body">
                         <div class="profile-container">
                             <div class="circular-image">
-                                <img src="/images/people/mallory_tollefson.jpeg" alt="Mallory Tollefson">
+                                <img src="/images/people/mallory_tollefson.jpg" alt="Mallory Tollefson">
                             </div>
                             <div class="name">
                                 Mallory Tollefson, Ph. D.<br>
@@ -360,7 +477,7 @@
                     <div class="card-body">
                         <div class="profile-container">
                             <div class="circular-image">
-                                <img src="/images/people/devany_west.jpeg" alt="Devany West">
+                                <img src="/images/people/devany_west.jpg" alt="Devany West">
                             </div>
                             <div class="name">
                                 Devany West, Ph. D.<br>
@@ -377,7 +494,7 @@
                     <div class="card-body">
                         <div class="profile-container">
                             <div class="circular-image">
-                                <img src="/images/people/kate_huddleston.jpeg" alt="Kate Huddleston">
+                                <img src="/images/people/kate_huddleston.jpg" alt="Kate Huddleston">
                             </div>
                             <div class="name">
                                 Kate Huddleston, Ph. D.<br>
