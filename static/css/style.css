@@ -33,7 +33,7 @@ h1.text-center:after, h2.text-center:after {
 .hero::before {
     content: "";
     background-image: url('/images/Logo+Tagline.png');
-    background-size: 70%;
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
