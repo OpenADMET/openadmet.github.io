@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate">
+    <meta content="" name="author">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Publications — OpenAdmet</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --openadmet-red: #c0392b;
+            --openadmet-red-dark: #a93226;
+            --section-light: #f8f9fa;
+        }
+
+        .section-light { background-color: var(--section-light); }
+
+        .section-divider {
+            width: 120px;
+            height: 10px;
+            border: none;
+            background-color: var(--openadmet-red);
+            opacity: 1;
+            border-radius: 999px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .subsection-divider {
+            width: 80px;
+            height: 8px;
+            border: none;
+            background-color: var(--openadmet-red);
+            opacity: 1;
+            margin: 0 0 1rem 0;
+            border-radius: 999px;
+        }
+
+        .btn-openadmet {
+            background-color: var(--openadmet-red);
+            border-color: var(--openadmet-red);
+            color: #fff;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .btn-openadmet:hover,
+        .btn-openadmet:focus,
+        .btn-openadmet:active {
+            background-color: var(--openadmet-red-dark);
+            border-color: var(--openadmet-red-dark);
+            color: #fff;
+        }
+
+        .publication-card {
+            background: #fff;
+            border: 0;
+            border-radius: 1rem;
+            box-shadow: 0 .125rem .5rem rgba(0,0,0,.08);
+            height: 100%;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.12);
+        }
+
+        .publication-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--openadmet-red);
+            background-color: rgba(229, 57, 53, 0.08);
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+
+        .publication-source {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .publication-title {
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-black bg-black text-white sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" href="/">OpenADMET</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/about/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/blindchallenges/">Blind Challenges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/datasetsmodels/">Datasets &amp; Models</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/videos/">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/people/">People</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/publications/">Publications</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="publications py-5 section-light">
+    <div class="container px-4 px-lg-5">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 fw-bold mb-3">Publications</h2>
+                <hr class="section-divider">
+                <p class="lead text-dark mb-0">
+                    Publications from the OpenADMET community.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="fw-bold mb-2">OpenADMET</h3>
+                <hr class="subsection-divider">
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Publication</div>
+                    <h5 class="publication-title">Blind Challenges Let Us See the Path Forward for Predictive Models</h5>
+                    <div class="publication-source">PubMed Central</div>
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12933711/"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="fw-bold mb-2">The Avoidome</h3>
+                <hr class="subsection-divider">
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Publication</div>
+                    <h5 class="publication-title">The Avoidome</h5>
+                    <div class="publication-source">Fraser Lab PDF</div>
+                    <a href="http://cdn.fraserlab.com/publications/2024_fraser.pdf"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Preprint</div>
+                    <h5 class="publication-title">OpenADMET: Embracing the Avoid-Ome to Transform Drug Discovery</h5>
+                    <div class="publication-source">Preprints.org</div>
+                    <a href="https://www.preprints.org/manuscript/202512.1202"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="fw-bold mb-2">ASAP Challenge</h3>
+                <hr class="subsection-divider">
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Preprint</div>
+                    <h5 class="publication-title">A Computational Community Blind Challenge on Pan-Coronavirus Drug Discovery Data</h5>
+                    <div class="publication-source">ChemRxiv</div>
+                    <a href="https://chemrxiv.org/engage/chemrxiv/article-details/68d28092f416303770ef7b72"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Publication</div>
+                    <h5 class="publication-title">Data-Driven Priors to Improve Docking for Pose Prediction</h5>
+                    <div class="publication-source">ACS JCIM</div>
+                    <a href="https://pubs.acs.org/doi/full/10.1021/acs.jcim.5c01976"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Preprint</div>
+                    <h5 class="publication-title">Experiments with Data-Augmented Modeling of ADME and Potency Endpoints in the ASAP-Polaris-OpenADMET Antiviral Challenge</h5>
+                    <div class="publication-source">ChemRxiv</div>
+                    <a href="https://chemrxiv.org/engage/chemrxiv/article-details/68bab055728bf9025e90df8d"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Preprint</div>
+                    <h5 class="publication-title">Deep Learning vs Classical Methods in Potency &amp; ADME Prediction: Insights from the Polaris Antiviral Challenge</h5>
+                    <div class="publication-source">ChemRxiv</div>
+                    <a href="https://chemrxiv.org/engage/chemrxiv/article-details/68a4412023be8e43d6e2e7eb"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Preprint</div>
+                    <h5 class="publication-title">Fingerprint-Based Machine Learning for SARS-CoV-2 and MERS-CoV Mpro Inhibition: Highlighting the Potential of Bayesian Neural Networks</h5>
+                    <div class="publication-source">ChemRxiv</div>
+                    <a href="https://chemrxiv.org/engage/chemrxiv/article-details/68a36335728bf9025e03c5fb"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Publication</div>
+                    <h5 class="publication-title">TEMPL: A Template-Based Protein-Ligand Pose Prediction Baseline</h5>
+                    <div class="publication-source">ACS JCIM</div>
+                    <a href="https://pubs.acs.org/doi/full/10.1021/acs.jcim.5c01985"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Publication</div>
+                    <h5 class="publication-title">Robust Prediction of Protein-Ligand Binding Potency with Multi-modal Customized Gate Control</h5>
+                    <div class="publication-source">ACS JCIM</div>
+                    <a href="https://pubs.acs.org/doi/full/10.1021/acs.jcim.5c01668"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="publication-card p-4 d-flex flex-column">
+                    <div class="publication-label">Publication</div>
+                    <h5 class="publication-title">Deep-Learning vs Physics-Based Docking Tools for Future Coronavirus Pandemics</h5>
+                    <div class="publication-source">ACS JCIM</div>
+                    <a href="https://pubs.acs.org/doi/full/10.1021/acs.jcim.5c02029"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View Publication
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-white bg-dark py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 class="text-white">About Us</h4>
+                <p>OpenADMET is an organization with the mission to build open predictive models of safety and toxicity
+                    for small molecules to improve humanity's ability to more reliably, cheaply, and effectively treat
+                    disease.</p>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <p>
+                        <small>© 2026 OpenADMET</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate">
+    <meta content="" name="author">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Blog — OpenAdmet</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --openadmet-red: #c0392b;
+            --openadmet-red-dark: #a93226;
+            --section-light: #f8f9fa;
+            --section-white: #ffffff;
+        }
+
+        .section-light { background-color: var(--section-light); }
+
+        .section-divider {
+            width: 120px;
+            height: 10px;
+            border: none;
+            background-color: var(--openadmet-red);
+            opacity: 1;
+            border-radius: 999px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .subsection-divider {
+            width: 80px;
+            height: 8px;
+            border: none;
+            background-color: var(--openadmet-red);
+            opacity: 1;
+            margin: 0 0 1rem 0;
+            border-radius: 999px;
+        }
+
+        .btn-openadmet {
+            background-color: var(--openadmet-red);
+            border-color: var(--openadmet-red);
+            color: #fff;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .btn-openadmet:hover,
+        .btn-openadmet:focus,
+        .btn-openadmet:active {
+            background-color: var(--openadmet-red-dark);
+            border-color: var(--openadmet-red-dark);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-black bg-black text-white sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" href="/">OpenADMET</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/about/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/blindchallenges/">Blind Challenges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/datasetsmodels/">Datasets &amp; Models</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/videos/">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/people/">People</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/publications/">Publications</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="py-5 section-light">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-10 text-center">
+                <h2 class="display-5 fw-bold mb-3">Latest from our Blog</h2>
+                <hr class="section-divider">
+                <p class="lead text-dark mb-0">
+                    Updates on blind challenges, new models, datasets, and lessons learned from the OpenADMET community.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">April 1, 2026</div>
+                        <h5 class="card-title fw-bold mb-3">Predicting PXR Induction - We have liftoff</h5>
+                        <a href="https://openadmet.ghost.io/predicting-pxr-induction-we-have-liftoff/">
+                            <img src="https://storage.ghost.io/c/3f/51/3f515c22-43d0-4696-a664-031fddd40688/content/images/2026/04/pxr_dataset_sankey-2.png" class="img-fluid rounded-3 mb-3" alt="PXR dataset sankey diagram" style="object-fit: cover; width: 100%; height: 200px;">
+                        </a>
+                        <p class="card-text text-dark flex-grow-1">
+                            Launch details for the PXR induction challenge, including the dataset, rules, and practical guidance for participants.
+                        </p>
+                        <a href="https://openadmet.ghost.io/predicting-pxr-induction-we-have-liftoff/" class="btn btn-openadmet mt-auto align-self-start">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">March 26, 2026</div>
+                        <h5 class="card-title fw-bold mb-3">Lessons Learned from the OpenADMET-ExpansionRx Blind Challenge: Can We Trust Zero-Shot ADMET Predictions?</h5>
+                        <a href="https://openadmet.ghost.io/zero-shot-expansiorx-admet-predictions/">
+                            <img src="https://storage.ghost.io/c/3f/51/3f515c22-43d0-4696-a664-031fddd40688/content/images/2026/03/GTM_plot_logd_chembl_expansion_train_and_test.png" class="img-fluid rounded-3 mb-3" alt="Chemical space GTM plot" style="object-fit: cover; width: 100%; height: 200px;">
+                        </a>
+                        <p class="card-text text-dark flex-grow-1">
+                            Reflections on the ExpansionRx challenge and what the results suggest about zero-shot ADMET prediction in practice.
+                        </p>
+                        <a href="https://openadmet.ghost.io/zero-shot-expansiorx-admet-predictions/" class="btn btn-openadmet mt-auto align-self-start">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">March 17, 2026</div>
+                        <h5 class="card-title fw-bold mb-3">Announcing the next OpenADMET Blind Challenge: Predicting PXR Induction</h5>
+                        <a href="https://openadmet.ghost.io/announcing-the-next-openadmet-blind-challenge-predicting-pxr-induction/">
+                            <img src="https://storage.ghost.io/c/3f/51/3f515c22-43d0-4696-a664-031fddd40688/content/images/2026/03/PXR_DRC_pEC50_combined.png" class="img-fluid rounded-3 mb-3" alt="PXR dose response curves" style="object-fit: cover; width: 100%; height: 200px;">
+                        </a>
+                        <p class="card-text text-dark flex-grow-1">
+                            An introduction to the next blind challenge and why blinded datasets remain important for realistic benchmarking.
+                        </p>
+                        <a href="https://openadmet.ghost.io/announcing-the-next-openadmet-blind-challenge-predicting-pxr-induction/" class="btn btn-openadmet mt-auto align-self-start">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">March 10, 2026</div>
+                        <h5 class="card-title fw-bold mb-3">A Hot, Fresh, &amp; New Clearance Model</h5>
+                        <a href="https://openadmet.ghost.io/a-hot-fresh-new-clearance-model-2/">
+                            <img src="https://storage.ghost.io/c/3f/51/3f515c22-43d0-4696-a664-031fddd40688/content/images/size/w1200/2026/03/cuter_liver_model-3-1-1-1-1.png" class="img-fluid rounded-3 mb-3" alt="Liver clearance model illustration" style="object-fit: cover; width: 100%; height: 200px;">
+                        </a>
+                        <p class="card-text text-dark flex-grow-1">
+                            A look at OpenADMET's clearance modeling work and the broader challenge of generalizing across chemical space.
+                        </p>
+                        <a href="https://openadmet.ghost.io/a-hot-fresh-new-clearance-model-2/" class="btn btn-openadmet mt-auto align-self-start">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">March 1, 2026</div>
+                        <h5 class="card-title fw-bold mb-3">Building the OpenADMET Data Engine</h5>
+                        <a href="https://openadmet.ghost.io/building-the-openadmet-data-engine/">
+                            <img src="https://storage.ghost.io/c/3f/51/3f515c22-43d0-4696-a664-031fddd40688/content/images/2025/09/oADMET-color-2lines-1.png" class="img-fluid rounded-3 mb-3" alt="OpenADMET logo" style="object-fit: contain; width: 100%; height: 200px; background-color: #f8f9fa;">
+                        </a>
+                        <p class="card-text text-dark flex-grow-1">
+                            A behind-the-scenes look at the infrastructure and strategy required to generate useful ADMET datasets at scale.
+                        </p>
+                        <a href="https://openadmet.ghost.io/building-the-openadmet-data-engine/" class="btn btn-openadmet mt-auto align-self-start">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-muted small mb-2">February 4, 2026</div>
+                        <h5 class="card-title fw-bold mb-3">Lessons Learned from the OpenADMET - ExpansionRx Blind Challenge</h5>
+                        <a href="https://openadmet.ghost.io/lessons-learned-from-the-openadmet-expansionrx-blind-challenge/">
+                            <img src="https://storage.ghost.io/c/3f/51/3f515c22-43d0-4696-a664-031fddd40688/content/images/2026/02/radial_plots.png" class="img-fluid rounded-3 mb-3" alt="Radial performance plots" style="object-fit: cover; width: 100%; height: 200px;">
+                        </a>
+                        <p class="card-text text-dark flex-grow-1">
+                            Early takeaways from the ExpansionRx challenge, including what participants and organizers learned from the first round.
+                        </p>
+                        <a href="https://openadmet.ghost.io/lessons-learned-from-the-openadmet-expansionrx-blind-challenge/" class="btn btn-openadmet mt-auto align-self-start">
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="https://openadmet.ghost.io/" class="btn btn-openadmet btn-lg px-4">
+                View All Blog Posts
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer class="text-white bg-dark py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 class="text-white">About Us</h4>
+                <p>OpenADMET is an organization with the mission to build open predictive models of safety and toxicity
+                    for small molecules to improve humanity's ability to more reliably, cheaply, and effectively treat
+                    disease.</p>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <p>
+                        <small>© 2026 OpenADMET</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

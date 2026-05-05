@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate">
+    <meta content="" name="author">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>OpenAdmet</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --openadmet-red: #c0392b;
+            --openadmet-red-dark: #a93226;
+            --section-light: #f8f9fa;
+            --section-white: #ffffff;
+        }
+
+        .section-light {
+            background-color: var(--section-light);
+        }
+
+        .section-white {
+            background-color: var(--section-white);
+        }
+
+        .section-divider {
+            width: 120px;
+            height: 10px;
+            border: none;
+            background-color: var(--openadmet-red);
+            opacity: 1;
+            border-radius: 999px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-openadmet {
+            background-color: var(--openadmet-red);
+            border-color: var(--openadmet-red);
+            color: #fff;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .btn-openadmet:hover,
+        .btn-openadmet:focus,
+        .btn-openadmet:active {
+            background-color: var(--openadmet-red-dark);
+            border-color: var(--openadmet-red-dark);
+            color: #fff;
+        }
+
+        .section-card-header {
+            background-color: #212529;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 1.25rem;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .section-card-header h3 {
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .people-banner {
+            display: block;
+            background-color: #212529;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 1.25rem;
+            border-radius: 1rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.15s ease;
+        }
+
+        .people-banner:hover {
+            background-color: #343a40;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-black bg-black text-white sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" href="/">OpenADMET</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/about/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/blindchallenges/">Blind Challenges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/datasetsmodels/">Datasets &amp; Models</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/videos/">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/people/">People</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/publications/">Publications</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero d-flex justify-content-center align-items-center text-white text-center py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12"></div>
+        </div>
+    </div>
+</div>
+
+<div class="py-5 section-white">
+    <div class="container px-4 px-lg-5">
+
+        <div class="row g-4 mb-4">
+
+            <div class="col-lg-3 col-md-6 d-flex">
+                <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
+                    <div class="section-card-header">
+                        <h3>About</h3>
+                    </div>
+                    <div class="card-body p-4 flex-grow-1">
+                        <h5 class="fw-bold mb-2">Building open ADMET models for drug discovery</h5>
+                        <p class="text-dark mb-0">
+                            An open science effort to improve prediction of safety and toxicity for small molecules through high-quality data, mechanistic insight, and machine learning.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="/about/" class="btn btn-openadmet">More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex">
+                <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
+                    <div class="section-card-header">
+                        <h3>Blind Challenges</h3>
+                    </div>
+                    <div class="card-body p-4 flex-grow-1">
+                        <div class="text-muted small mb-1">Current Challenge</div>
+                        <h5 class="fw-bold mb-2">Predicting PXR Induction</h5>
+                        <p class="text-dark mb-0">
+                            Benchmarking activity and structure prediction on a large dataset of human PXR-active compounds, with both an activity track and a structure track.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="/blindchallenges/" class="btn btn-openadmet">More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex">
+                <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
+                    <div class="section-card-header">
+                        <h3>Datasets &amp; Models</h3>
+                    </div>
+                    <div class="card-body p-4 flex-grow-1">
+                        <div class="text-muted small mb-1">HuggingFace</div>
+                        <h5 class="fw-bold mb-2">4 open models and 7 curated ADMET datasets</h5>
+                        <p class="text-dark mb-0">
+                            Predictive models and experimental datasets from OpenADMET blind challenges and data generation efforts.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="/datasetsmodels/" class="btn btn-openadmet">More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex">
+                <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
+                    <div class="section-card-header">
+                        <h3>Blog</h3>
+                    </div>
+                    <div class="card-body p-4 flex-grow-1">
+                        <div class="text-muted small mb-1">April 1, 2026</div>
+                        <h5 class="fw-bold mb-2">Predicting PXR Induction — We have liftoff</h5>
+                        <p class="text-dark mb-0">
+                            Launch details for the PXR induction challenge, including the dataset, rules, and practical guidance for participants.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="/blog/" class="btn btn-openadmet">More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex">
+                <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
+                    <div class="section-card-header">
+                        <h3>Videos</h3>
+                    </div>
+                    <div class="card-body p-4 flex-grow-1">
+                        <div class="text-muted small mb-1">April 29, 2026</div>
+                        <h5 class="fw-bold mb-2">Andrew Ligeralde, PhareBio — QSAR Modeling for Property Prediction and Generative Design</h5>
+                        <p class="text-dark mb-0">
+                            Science seminars, challenge webinars, and workshop recordings from the OpenADMET community.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="/videos/" class="btn btn-openadmet">More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex">
+                <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
+                    <div class="section-card-header">
+                        <h3>People</h3>
+                    </div>
+                    <div class="card-body p-4 flex-grow-1">
+                        <div class="text-muted small mb-1">Our Team</div>
+                        <h5 class="fw-bold mb-2">Get to Know the OpenADMET Team</h5>
+                        <p class="text-dark mb-0">
+                            See the Open Molecular Software Foundation team and our Governing Board.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="/people/" class="btn btn-openadmet">More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex">
+                <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
+                    <div class="section-card-header">
+                        <h3>Publications</h3>
+                    </div>
+                    <div class="card-body p-4 flex-grow-1">
+                        <div class="text-muted small mb-1">PubMed Central</div>
+                        <h5 class="fw-bold mb-2">Blind Challenges Let Us See the Path Forward for Predictive Models</h5>
+                        <p class="text-dark mb-0">
+                            A perspective on how blind challenges can help the field honestly evaluate and advance predictive modeling in drug discovery.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="/publications/" class="btn btn-openadmet">More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="text-white bg-dark py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 class="text-white">About Us</h4>
+                <p>OpenADMET is an organization with the mission to build open predictive models of safety and toxicity
+                    for small molecules to improve humanity's ability to more reliably, cheaply, and effectively treat
+                    disease.</p>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <p>
+                        <small>© 2026 OpenADMET</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

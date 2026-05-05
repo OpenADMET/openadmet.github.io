@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface|Lato|Nunito+Sans:400,600);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+
+body {
+    font-family: Nunito Sans,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857;
+    color: #585858;
+    background-color: #fff
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Abril Fatface,Times New Roman,Times,serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #000
+}
+
+h1.text-center:after, h2.text-center:after {
+    margin: 20px auto
+}
+
+.navbar .nav-item {
+    margin-right: 30px;
+}
+
+.hero {
+    position: relative;
+    height: 40vh;
+}
+
+.hero::before {
+    content: "";
+    background-image: url('/images/Logo+Tagline.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    filter:brightness(80%);
+}
+
+.hero .title {
+    position: relative;
+    margin-top: -50px;
+    font-size: 72px;
+}
+
+.hero .title::after {
+    content: "";
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.hero .tagline {
+    position: relative;
+    width: 500px;
+    margin: auto;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+.fold-button {
+    background-color: #2f9ddb;
+    border: none;
+}
+
+.timeline {
+    background-color: lightgrey;
+    color: #585858;
+}
+
+.members > div, .supporters > div {
+    height: 125px;
+}
+
+.members img, .supporters img {
+    max-width: 200px;
+}
+
+.section-background {
+    background-image: url("./assets/images/ig.png");
+    background-size: cover;
+}
+
+.rb-item {
+    width: 600px;
+}
+
+.rb-container .rb {
+    padding: 0
+
+}
+.rb-item {
+    list-style: none;
+    margin: auto;
+    margin-left: 5em;
+    min-height: 50px;
+    border-left: 2px dashed #fff;
+    padding: 0 0 70px 50px;
+    position: relative;
+}
+
+.rb-item:last-child {
+    border-left: 0;
+}
+
+.rb-item::before {
+    position: absolute;
+    left: -25px;
+    top: -5px;
+    content: " ";
+    border: 10px solid rgba(255, 255, 255, 1);
+    border-radius: 500%;
+    background: #2f9ddb;
+    height: 50px;
+    width: 50px;
+    transition: all 500ms ease-in-out;
+}
+
+.rb-item .timestamp {
+    color: #2f9ddb;
+    position: relative;
+    width: 150px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.rb-container .item-title {
+    color: #585858;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 992px) {
+    .rb-item {
+        width: 450px;
+        margin-left: 0em;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .hero .title {
+        margin-top: -40px;
+        font-size: 50px;
+    }
+
+    .hero .title::after {
+        width: 300px;
+    }
+
+    .hero .tagline {
+        width: 350px;
+        font-size: 18px;
+    }
+    .titlename {
+        font-size: 72px;
+    }
+
+    .rb-item {
+        width: 400px !important;
+        margin-left: 1em !important;
+    }
+
+    .rb-item .timestamp {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .rb-item {
+        width: 300px !important;
+        margin-left: 0em !important;
+    }
+}
