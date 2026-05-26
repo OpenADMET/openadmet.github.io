@@ -99,6 +99,30 @@
             margin-bottom: 0.75rem;
             line-height: 1.4;
         }
+
+        .publication-card-featured {
+            border-top: 3px solid var(--openadmet-red) !important;
+        }
+
+        .featured-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--openadmet-red);
+            background-color: rgba(192, 57, 43, 0.08);
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .featured-badge::before {
+            content: "★";
+            font-size: 0.7rem;
+        }
     </style>
 </head>
 
@@ -197,7 +221,8 @@
 
         <div class="row g-4 mb-5">
             <div class="col-md-6 col-xl-4">
-                <div class="publication-card p-4 d-flex flex-column">
+                <div class="publication-card publication-card-featured p-4 d-flex flex-column">
+                    <span class="featured-badge">Featured</span>
                     <div class="publication-label">Publication</div>
                     <h5 class="publication-title">Mapping the avoid-ome: a systematic open-science approach to predictive ADMET</h5>
                     <div class="publication-source">Nature Communications</div>
