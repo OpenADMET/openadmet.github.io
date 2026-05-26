@@ -100,28 +100,51 @@
             line-height: 1.4;
         }
 
-        .publication-card-featured {
-            border-top: 3px solid var(--openadmet-red) !important;
+        .feature-spotlight {
+            background: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 40px rgba(192, 57, 43, 0.13), 0 2px 8px rgba(0,0,0,0.06);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .featured-badge {
+        .feature-spotlight::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #c0392b, #e74c3c, #f39c12, #e74c3c, #c0392b);
+            background-size: 300% auto;
+            animation: spotlight-shimmer 4s linear infinite;
+        }
+
+        @keyframes spotlight-shimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 300% center; }
+        }
+
+        .feature-spotlight-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.3rem;
-            font-size: 0.75rem;
+            gap: 0.35rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            color: var(--openadmet-red);
-            background-color: rgba(192, 57, 43, 0.08);
-            padding: 0.25rem 0.65rem;
+            color: #fff;
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            padding: 0.4rem 1rem;
             border-radius: 999px;
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.03em;
+            margin-bottom: 1rem;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
+            box-shadow: 0 2px 10px rgba(192, 57, 43, 0.4);
         }
 
-        .featured-badge::before {
+        .feature-spotlight-badge::before {
             content: "★";
-            font-size: 0.7rem;
+            font-size: 0.72rem;
         }
     </style>
 </head>
@@ -170,23 +193,25 @@
             </div>
         </div>
 
-        <div class="row align-items-center g-4 mb-5">
-            <div class="col-lg-6">
-                <a href="https://www.nature.com/articles/s41467-026-73410-8" target="_blank">
-                    <img src="https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-026-73410-8/MediaObjects/41467_2026_73410_Fig1_HTML.png"
-                         class="img-fluid rounded-4 shadow-sm"
-                         alt="The set of protein anti-targets that comprise the Avoid-ome"
-                         style="object-fit: cover; width: 100%; height: 320px;">
-                </a>
-            </div>
-            <div class="col-lg-6">
-                <span class="badge rounded-pill text-white mb-3" style="background-color: var(--openadmet-red); font-size: 0.85rem; padding: 0.4rem 0.9rem;">New Publication</span>
-                <div class="text-muted small mb-2">May 25, 2026 &middot; Nature Communications</div>
-                <h3 class="fw-bold mb-3">Mapping the avoid-ome: a systematic open-science approach to predictive ADMET</h3>
-                <p class="text-dark mb-4">
-                    A Perspective introducing the "Avoid-ome" — a finite set of anti-target proteins driving drug safety liabilities — and how OpenADMET combines high-throughput structural biology, active learning, and community challenges to build mechanistically grounded predictive models.
-                </p>
-                <a href="https://www.nature.com/articles/s41467-026-73410-8" class="btn btn-openadmet" target="_blank">Read More &rarr;</a>
+        <div class="feature-spotlight mb-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <a href="https://www.nature.com/articles/s41467-026-73410-8" target="_blank">
+                        <img src="https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-026-73410-8/MediaObjects/41467_2026_73410_Fig1_HTML.png"
+                             class="img-fluid rounded-4 shadow-sm"
+                             alt="The set of protein anti-targets that comprise the Avoid-ome"
+                             style="object-fit: cover; width: 100%; height: 320px;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <span class="feature-spotlight-badge">Featured Publication</span>
+                    <div class="text-muted small mb-2">May 25, 2026 &middot; Nature Communications</div>
+                    <h3 class="fw-bold mb-3">Mapping the avoid-ome: a systematic open-science approach to predictive ADMET</h3>
+                    <p class="text-dark mb-4">
+                        A Perspective introducing the "Avoid-ome" — a finite set of anti-target proteins driving drug safety liabilities — and how OpenADMET combines high-throughput structural biology, active learning, and community challenges to build mechanistically grounded predictive models.
+                    </p>
+                    <a href="https://www.nature.com/articles/s41467-026-73410-8" class="btn btn-openadmet" target="_blank">Read More &rarr;</a>
+                </div>
             </div>
         </div>
 
@@ -221,8 +246,7 @@
 
         <div class="row g-4 mb-5">
             <div class="col-md-6 col-xl-4">
-                <div class="publication-card publication-card-featured p-4 d-flex flex-column">
-                    <span class="featured-badge">Featured</span>
+                <div class="publication-card p-4 d-flex flex-column">
                     <div class="publication-label">Publication</div>
                     <h5 class="publication-title">Mapping the avoid-ome: a systematic open-science approach to predictive ADMET</h5>
                     <div class="publication-source">Nature Communications</div>
