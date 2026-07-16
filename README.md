@@ -96,6 +96,14 @@ site within a day of publishing, with no code change.
   If you leave the Excerpt blank, Ghost falls back to scraping the opening
   sentences of the post, which usually reads poorly on a card. Set the Excerpt
   when you publish and that becomes the card copy.
+  - **External-link posts are a special case.** A few Ghost posts are stubs that
+    redirect to a self-hosted article elsewhere (e.g. "Navigating PXR Chemical
+    Space…" redirects to `openadmet.github.io/octant-pxr-htchem-blogpost/`). These
+    have **no body** in the RSS feed, so there is nothing for Ghost to scrape —
+    if such a post is the newest one, the card preview goes **blank** unless you
+    set an Excerpt. Always set the Excerpt on external-link posts. The redirect
+    itself is unaffected: the card links to the Ghost URL, and Ghost forwards to
+    the self-hosted page, so the "More →" button keeps working as before.
 - **Video card** text comes from the video's **description** on YouTube. That
   description is the single place to edit a video card. A video with no
   description falls back to generic text, and the build prints a `WARN` naming the
