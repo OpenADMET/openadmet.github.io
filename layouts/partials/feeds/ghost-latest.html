@@ -1,0 +1,38 @@
+{{/*
+  Returns the most recent Ghost post as a dict: title, url, date, summary.
+
+  The summary comes from the post's Excerpt field in the Ghost editor. If no
+  excerpt is set, Ghost falls back to the opening sentences of the post, which
+  reads poorly on a card — so set the Excerpt when publishing.
+
+  If the feed is unreachable the fallback below is used and the build continues,
+  leaving the card showing its last known content rather than an empty box.
+*/}}
+
+{{ $post := dict
+  "title" "It’s the End of the PXR Challenge as We Know It (and I feel fine)"
+  "url" "https://openadmet.ghost.io/its-the-end-of-the-pxr-challenge-as-we-know-it-and-i-feel-fine/"
+  "date" "July 3, 2026"
+  "summary" "Announcing the results of the PXR Blind Challenge, which released the largest high-quality dataset of PXR induction ever made publicly available, with over 11,000 compounds."
+}}
+
+{{ with try (resources.GetRemote site.Params.ghostFeed) }}
+  {{ with .Err }}
+    {{ warnf "Ghost feed unreachable (%s) — homepage Blog card is using fallback content." . }}
+  {{ else with .Value }}
+    {{ $items := (. | transform.Unmarshal).channel.item }}
+    {{ with $items }}
+      {{ $item := cond (reflect.IsSlice $items) (index $items 0) $items }}
+      {{ $post = dict
+        "title" $item.title
+        "url" $item.link
+        "date" ((time.AsTime $item.pubDate).Format "January 2, 2006")
+        "summary" ($item.description | plainify | strings.ReplaceRE `\s+` " " | strings.TrimSpace | truncate 200)
+      }}
+    {{ else }}
+      {{ warnf "Ghost feed returned no posts — homepage Blog card is using fallback content." }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $post }}

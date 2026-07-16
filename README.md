@@ -81,3 +81,50 @@ summary: |
 ```
 
 To set the job to unavailable, modify the `status` tag to `closed`
+
+### Auto-updating Blog & Videos cards
+
+The homepage **Blog** card, the homepage **Videos** card, and the full
+**`/videos`** gallery are not hand-edited. They are generated at build time from
+live feeds, and the nightly build (see `.github/workflows/build-push.yaml`)
+refreshes them automatically — so a new blog post or YouTube video appears on the
+site within a day of publishing, with no code change.
+
+#### How to control what a card says
+
+- **Blog card** text comes from the post's **Excerpt** field in the Ghost editor.
+  If you leave the Excerpt blank, Ghost falls back to scraping the opening
+  sentences of the post, which usually reads poorly on a card. Set the Excerpt
+  when you publish and that becomes the card copy.
+- **Video card** text comes from the video's **description** on YouTube. That
+  description is the single place to edit a video card. A video with no
+  description falls back to generic text, and the build prints a `WARN` naming the
+  video so you know to add one.
+
+#### Where the feed URLs live
+
+All three feeds are configured under `[params]` in `config.toml`
+(`ghostFeed`, `youtubeFeed`, `youtubeChannel`). Point `youtubeFeed` at a
+different channel by changing its `channel_id`.
+
+#### Known behaviors
+
+- **Dates render in UTC.** A video uploaded late in the Pacific evening will show
+  the next day's date. This is not auto-corrected: Hugo ignores the site timezone
+  once a feed timestamp carries a UTC offset, and the alternative (`.Local`) would
+  make a local build and the CI build disagree.
+- **Only the 15 most recent** YouTube uploads are exposed by the feed; older
+  videos drop off `/videos` on their own once newer ones push them past 15.
+- **Every video on the channel appears**, including older workshop recordings,
+  because the page mirrors the channel rather than a curated list.
+
+#### If a feed is down at build time
+
+- **YouTube unreachable or empty** → the build **fails on purpose** (see the
+  `errorf` in `layouts/_default/videos.html`). Because the build fails, the deploy
+  is skipped and the currently live gallery is left untouched, rather than being
+  replaced by an empty page.
+- **Ghost unreachable** → the build **succeeds** and the Blog card falls back to
+  the last-known content baked into `layouts/partials/feeds/ghost-latest.html`.
+  Update that fallback if the most recent post changes and you want the safety net
+  to match.
