@@ -1,0 +1,56 @@
+{{/*
+  Returns the channel's uploads, newest first, as a slice of dicts:
+  id, title, url, date, summary, thumb.
+
+  The card copy is the video's YouTube description, so that description is the
+  single place to edit it — the site follows whatever is on the video.
+
+  Dates render in UTC, as published by the feed. A video uploaded late in the
+  Pacific evening therefore shows the following day's date. Hugo cannot convert
+  to a fixed zone here: the site timeZone setting is ignored once the timestamp
+  carries an offset, and .Local would follow the build machine, making local and
+  CI builds disagree.
+
+  Returns an empty slice if the feed is unreachable. Callers decide what that
+  means for them; /videos treats it as a build error so a broken feed can never
+  publish an empty gallery over a working one.
+*/}}
+
+{{ $videos := slice }}
+
+{{ with try (resources.GetRemote site.Params.youtubeFeed) }}
+  {{ with .Err }}
+    {{ warnf "YouTube feed unreachable: %s" . }}
+  {{ else with .Value }}
+    {{ $entries := (. | transform.Unmarshal).entry }}
+    {{ with $entries }}
+      {{ range (cond (reflect.IsSlice $entries) $entries (slice $entries)) }}
+        {{/* Match the site's typography: collapse stray spaces, hyphen to em dash. */}}
+        {{ $title := .title | strings.ReplaceRE `\s+` " " | strings.ReplaceRE ` - ` " — " | strings.TrimSpace }}
+        {{/* Long descriptions often carry a timestamp index or link list; keep the lead paragraph only. */}}
+        {{ $summary := "" }}
+        {{ with .group }}
+          {{ $summary = .description | plainify | strings.TrimSpace }}
+          {{ $summary = index (split $summary "\n\n") 0 }}
+          {{ $summary = $summary | strings.ReplaceRE `\s+` " " | strings.TrimSpace | truncate 220 }}
+        {{ end }}
+        {{ if not $summary }}
+          {{ warnf "YouTube video %q has no description, so its card falls back to generic text. Add a description on YouTube to fix it." $title }}
+          {{ $summary = "A recording from the OpenADMET community." }}
+        {{ end }}
+        {{ $videos = $videos | append (dict
+          "id" .videoId
+          "title" $title
+          "url" (printf "https://www.youtube.com/watch?v=%s" .videoId)
+          "thumb" (printf "https://img.youtube.com/vi/%s/hqdefault.jpg" .videoId)
+          "date" ((time.AsTime .published).Format "January 2, 2006")
+          "published" .published
+          "summary" $summary
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* published is ISO 8601, so a string sort is chronological. */}}
+{{ return (sort $videos "published" "desc") }}

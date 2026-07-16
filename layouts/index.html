@@ -219,32 +219,35 @@
                 </div>
             </div>
 
+            {{ $post := partial "feeds/ghost-latest.html" . }}
             <div class="col-lg-3 col-md-6 d-flex">
                 <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
                     <div class="section-card-header">
                         <h3>Blog</h3>
                     </div>
                     <div class="card-body p-4 flex-grow-1">
-                        <div class="text-muted small mb-1">July 3, 2026</div>
-                        <h5 class="fw-bold mb-2">It's the End of the PXR Challenge as We Know It (and I feel fine)</h5>
+                        <div class="text-muted small mb-1">{{ $post.date }}</div>
+                        <h5 class="fw-bold mb-2">{{ $post.title }}</h5>
                         <p class="text-dark mb-0">
-                            Announcing the results of the PXR Blind Challenge, which released the largest high-quality dataset of PXR induction ever made publicly available, with over 11,000 compounds.
+                            {{ $post.summary }}
                         </p>
                     </div>
                     <div class="card-footer bg-white border-0 p-4 pt-0">
-                        <a href="https://openadmet.ghost.io/its-the-end-of-the-pxr-challenge-as-we-know-it-and-i-feel-fine/" class="btn btn-openadmet">More &rarr;</a>
+                        <a href="{{ $post.url }}" class="btn btn-openadmet">More &rarr;</a>
                     </div>
                 </div>
             </div>
 
+            {{/* range over the newest one: renders nothing rather than erroring if the feed is empty */}}
+            {{ range first 1 (partial "feeds/youtube-videos.html" .) }}
             <div class="col-lg-3 col-md-6 d-flex">
                 <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
                     <div class="section-card-header">
                         <h3>Videos</h3>
                     </div>
                     <div class="card-body p-4 flex-grow-1">
-                        <div class="text-muted small mb-1">April 29, 2026</div>
-                        <h5 class="fw-bold mb-2">Andrew Ligeralde, PhareBio — QSAR Modeling for Property Prediction and Generative Design</h5>
+                        <div class="text-muted small mb-1">{{ .date }}</div>
+                        <h5 class="fw-bold mb-2">{{ .title }}</h5>
                         <p class="text-dark mb-0">
                             Science seminars, challenge webinars, and workshop recordings from the OpenADMET community.
                         </p>
@@ -254,6 +257,7 @@
                     </div>
                 </div>
             </div>
+            {{ end }}
 
             <div class="col-lg-3 col-md-6 d-flex">
                 <div class="card border-0 shadow-sm w-100 d-flex flex-column overflow-hidden" style="border-radius: 1rem;">
