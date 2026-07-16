@@ -6,14 +6,16 @@
   reads poorly on a card — so set the Excerpt when publishing.
 
   If the feed is unreachable the fallback below is used and the build continues,
-  leaving the card showing its last known content rather than an empty box.
+  showing a generic evergreen blog card rather than an empty box. It is
+  deliberately dateless and post-agnostic so it never goes stale, no matter when
+  an outage happens. ("date" here is repurposed as a kicker label.)
 */}}
 
 {{ $post := dict
-  "title" "It’s the End of the PXR Challenge as We Know It (and I feel fine)"
-  "url" "https://openadmet.ghost.io/its-the-end-of-the-pxr-challenge-as-we-know-it-and-i-feel-fine/"
-  "date" "July 3, 2026"
-  "summary" "Announcing the results of the PXR Blind Challenge, which released the largest high-quality dataset of PXR induction ever made publicly available, with over 11,000 compounds."
+  "title" "Insights from the OpenADMET team"
+  "url" "https://openadmet.ghost.io/"
+  "date" "OpenADMET Blog"
+  "summary" "Deep dives on open ADMET data, blind-challenge results, and predictive modeling. Read the latest on our blog."
 }}
 
 {{ with try (resources.GetRemote site.Params.ghostFeed) }}
