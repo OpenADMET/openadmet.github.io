@@ -128,10 +128,19 @@ different channel by changing its `channel_id`.
 
 #### If a feed is down at build time
 
-- **YouTube unreachable or empty** → the build **fails on purpose** (see the
-  `errorf` in `layouts/_default/videos.html`). Because the build fails, the deploy
-  is skipped and the currently live gallery is left untouched, rather than being
-  replaced by an empty page.
+- **YouTube unreachable or empty** → the build **succeeds** and the Videos card
+  and `/videos` gallery fall back to the snapshot in
+  `data/videos_fallback.json`, with a `WARN` printed. The YouTube feed
+  (`youtube.com/feeds/videos.xml`) is occasionally flaky even when the channel
+  itself is fine, so this fallback is what actually keeps deploys from being
+  blocked by an unrelated blip. Refresh `data/videos_fallback.json` by hand
+  every so often (or after a new video goes up) so the safety net doesn't drift
+  too far out of date — it's a plain JSON array of the same
+  `id`/`title`/`url`/`thumb`/`published`/`summary` shape the partial builds.
+  The build only fails outright (see the `errorf` in
+  `layouts/_default/videos.html`) if the fallback file itself is missing or
+  empty, which would mean something is actually broken rather than YouTube
+  just being slow.
 - **Ghost unreachable** → the build **succeeds** and the Blog card falls back to
   the last-known content baked into `layouts/partials/feeds/ghost-latest.html`.
   Update that fallback if the most recent post changes and you want the safety net

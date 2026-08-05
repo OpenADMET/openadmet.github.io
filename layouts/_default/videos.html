@@ -109,16 +109,9 @@
             </div>
         </div>
 
-        {{/* The feed is occasionally flaky (transient 404/500), so retry a few times
-             before giving up — each call re-fetches, since failed fetches aren't cached. */}}
         {{ $videos := partial "feeds/youtube-videos.html" . }}
-        {{ range seq 3 }}
-          {{ if not $videos }}
-            {{ $videos = partial "feeds/youtube-videos.html" $ }}
-          {{ end }}
-        {{ end }}
         {{ if not $videos }}
-          {{ errorf "No videos returned from the YouTube feed (%s) after retries. Failing the build so the live gallery is left untouched rather than replaced with an empty one." site.Params.youtubeFeed }}
+          {{ errorf "No videos available from the YouTube feed (%s) or its fallback data/videos_fallback.json. Failing the build so the live gallery is left untouched rather than replaced with an empty one." site.Params.youtubeFeed }}
         {{ end }}
 
         <div class="row g-4">

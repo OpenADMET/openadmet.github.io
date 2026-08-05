@@ -1,0 +1,90 @@
+[
+  {
+    "id": "e1XdacPHlJg",
+    "title": "Karim Ben Hicham, RWTH Aachen — Tabular foundation models for molecular properties",
+    "url": "https://www.youtube.com/watch?v=e1XdacPHlJg",
+    "thumb": "https://img.youtube.com/vi/e1XdacPHlJg/hqdefault.jpg",
+    "published": "2026-07-30T23:34:16+00:00",
+    "summary": "Karim Ben Hicham shares his work on using tabular foundation models (TFMs) for in-context prediction of molecular properties. He covers why TFMs work and demonstrates some impressive results."
+  },
+  {
+    "id": "RZyPo_ETHJ0",
+    "title": "Community Insights on the OpenADMET PXR challenge",
+    "url": "https://www.youtube.com/watch?v=RZyPo_ETHJ0",
+    "thumb": "https://img.youtube.com/vi/RZyPo_ETHJ0/hqdefault.jpg",
+    "published": "2026-07-29T22:59:31+00:00",
+    "summary": "Join us for this webinar featuring two outstanding participants from the OpenADMET PXR Blind Challenge who shared their results and engaged the community!"
+  },
+  {
+    "id": "VzJxd-qRTvs",
+    "title": "David Araripe, University of Leiden — Curating data from ChEMBL with Capricho",
+    "url": "https://www.youtube.com/watch?v=VzJxd-qRTvs",
+    "thumb": "https://img.youtube.com/vi/VzJxd-qRTvs/hqdefault.jpg",
+    "published": "2026-07-21T23:47:21+00:00",
+    "summary": "David Araripe shares his work on Capricho, a package for curating data efficiently from ChEMBL, as well as exploring downstream effects on QSAR model performance."
+  },
+  {
+    "id": "tZeOPcRse8M",
+    "title": "Leveraging Public Data in the OpenADMET ExpansionRx Blind Challenge",
+    "url": "https://www.youtube.com/watch?v=tZeOPcRse8M",
+    "thumb": "https://img.youtube.com/vi/tZeOPcRse8M/hqdefault.jpg",
+    "published": "2026-06-04T00:06:15+00:00",
+    "summary": "Join us for this webinar with two teams from our recent OpenADMET ExpansionRx Blind Challenge. Team shin-chan led by Bart Lenselink and Davide Araripe from StructureTx and University of Groningen respectively, were top…"
+  },
+  {
+    "id": "c_MhLscr9Lw",
+    "title": "Andrew Ligeralde, PhareBio — QSAR Modeling for Property Prediction and Generative Design",
+    "url": "https://www.youtube.com/watch?v=c_MhLscr9Lw",
+    "thumb": "https://img.youtube.com/vi/c_MhLscr9Lw/hqdefault.jpg",
+    "published": "2026-04-29T09:08:14+00:00",
+    "summary": "Andrew Ligeralde from Phare Bio presents on the modelling and generative design strategies used at Phare Bio to develop the next generation of antibiotics."
+  },
+  {
+    "id": "xgTpLLonvh4",
+    "title": "Srijit Seal, University of Cambridge — Making Machine Learning Successful in Drug Discovery",
+    "url": "https://www.youtube.com/watch?v=xgTpLLonvh4",
+    "thumb": "https://img.youtube.com/vi/xgTpLLonvh4/hqdefault.jpg",
+    "published": "2026-04-13T13:00:00+00:00",
+    "summary": "Srijit Seal presents on the pillars of making machine learning successful in drug discovery, as well as some recent results from blind challenges run by OpenADMET."
+  },
+  {
+    "id": "eXE2zz0uQyo",
+    "title": "Applying a Focused Modeling Strategy in the OpenADMET ExpansionRx Blind Challenge",
+    "url": "https://www.youtube.com/watch?v=eXE2zz0uQyo",
+    "thumb": "https://img.youtube.com/vi/eXE2zz0uQyo/hqdefault.jpg",
+    "published": "2026-03-18T22:27:05+00:00",
+    "summary": "Join us for this CDD webinar with Alex Rich from Inductive Bio and Daniel Crusius from deepmirror, top performers in the OpenADMET ExpansionRx Blind Challenge. Alex and Daniel will describe the modeling approaches their…"
+  },
+  {
+    "id": "ukcIjqdzVnA",
+    "title": "Applying Real-World Drug Discovery Experience in the OpenADMET ExpansionRx Blind Challenge",
+    "url": "https://www.youtube.com/watch?v=ukcIjqdzVnA",
+    "thumb": "https://img.youtube.com/vi/ukcIjqdzVnA/hqdefault.jpg",
+    "published": "2026-03-10T04:00:32+00:00",
+    "summary": "Join us for this webinar with CDD, where Jason Wang from Merck & Co and Davide Boldini from EMD Serono/Merck KGaA, from the recent OpenADMET ExpansionRx Blind Challenge, describe how they drew on years of experience in…"
+  },
+  {
+    "id": "uIjUHksd-GM",
+    "title": "Ruel Cedeno, Novalix — OpenADMET Science Seminar",
+    "url": "https://www.youtube.com/watch?v=uIjUHksd-GM",
+    "thumb": "https://img.youtube.com/vi/uIjUHksd-GM/hqdefault.jpg",
+    "published": "2026-02-19T20:29:17+00:00",
+    "summary": "Ruel Cedeno of Novalix presents an OpenADMET Science Seminar on lessons learned on in silico ADME predictions from participating in blind challenges."
+  },
+  {
+    "id": "Rmi_TGM8L-0",
+    "title": "Jackson Burns, MIT — OpenADMET Science Seminar",
+    "url": "https://www.youtube.com/watch?v=Rmi_TGM8L-0",
+    "thumb": "https://img.youtube.com/vi/Rmi_TGM8L-0/hqdefault.jpg",
+    "published": "2026-01-20T04:02:25+00:00",
+    "summary": "Jackson Burns of the Green Lab at MIT presents on the CheMeleon foundation model for molecular property prediction, and how it applies to ADMET modeling."
+  },
+  {
+    "id": "pJlcAlokk3c",
+    "title": "ASAP x PolarisHub x OpenADMET Workshop",
+    "url": "https://www.youtube.com/watch?v=pJlcAlokk3c",
+    "thumb": "https://img.youtube.com/vi/pJlcAlokk3c/hqdefault.jpg",
+    "published": "2025-05-05T16:37:27+00:00",
+    "summary": "A joint hands-on workshop from ASAP, Polaris Hub, and OpenADMET, walking through open tools and benchmarks for building and evaluating predictive ADMET models. Recorded April 30, 2025."
+  }
+]

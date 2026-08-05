@@ -11,9 +11,11 @@
   carries an offset, and .Local would follow the build machine, making local and
   CI builds disagree.
 
-  Returns an empty slice if the feed is unreachable. Callers decide what that
-  means for them; /videos treats it as a build error so a broken feed can never
-  publish an empty gallery over a working one.
+  If the feed is unreachable (or returns no entries), falls back to the
+  snapshot in data/videos_fallback.json — the last known-good fetch, refreshed
+  by hand from time to time — and warns rather than failing the build. A
+  build no longer breaks just because YouTube's feed had a bad moment; the
+  gallery just runs a bit stale until the next successful fetch.
 */}}
 
 {{ $videos := slice }}
@@ -49,6 +51,21 @@
         ) }}
       {{ end }}
     {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not $videos }}
+  {{ warnf "YouTube feed returned no usable entries — falling back to data/videos_fallback.json." }}
+  {{ range site.Data.videos_fallback }}
+    {{ $videos = $videos | append (dict
+      "id" .id
+      "title" .title
+      "url" .url
+      "thumb" .thumb
+      "date" ((time.AsTime .published).Format "January 2, 2006")
+      "published" .published
+      "summary" .summary
+    ) }}
   {{ end }}
 {{ end }}
 
