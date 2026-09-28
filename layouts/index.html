@@ -97,6 +97,73 @@
             color: #fff;
             text-decoration: none;
         }
+        .hero-split {
+            padding: 5rem 0 4rem;
+            background:
+                radial-gradient(circle at 80% 45%, rgba(192, 57, 43, 0.10), transparent 45%),
+                linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .hero-logo {
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .hero-lede {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #333;
+            max-width: 560px;
+        }
+
+        .text-center .hero-lede { margin-left: auto; margin-right: auto; }
+
+        @media (min-width: 992px) {
+            .text-lg-start .hero-lede { margin-left: 0; }
+        }
+
+        .hero-live-dot {
+            display: inline-block;
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 50%;
+            background: var(--openadmet-red);
+            margin-right: 0.45rem;
+            vertical-align: middle;
+            animation: hero-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes hero-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.5); }
+            50% { box-shadow: 0 0 0 0.4rem rgba(192, 57, 43, 0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-live-dot { animation: none; }
+        }
+
+        .hero-figure {
+            text-align: center;
+        }
+
+        .hero-figure img {
+            width: 100%;
+            max-width: 420px;
+            filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-split { padding: 3rem 0; }
+            .hero-figure img { max-width: 260px; }
+        }
+
+        .hero-figure figcaption {
+            font-size: 0.78rem;
+            color: #6c757d;
+            margin-top: 0.75rem;
+        }
+
+        .hero-figure figcaption a { color: inherit; }
     </style>
 
 </head>
@@ -136,13 +203,38 @@
     </div>
 </nav>
 
-<div class="hero d-flex justify-content-center align-items-center text-white text-center py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12"></div>
+<section class="hero-split">
+    <div class="container px-4 px-lg-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <img src="/images/Logo+Tagline.png" alt="OpenADMET: Next generation ADMET modelling for therapeutic development"
+                     class="hero-logo mb-4">
+                <p class="hero-lede mb-4">
+                    Open data, open models, and community blind challenges for predicting how drugs are absorbed,
+                    distributed, metabolised, excreted, and where they turn toxic.
+                </p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-3">
+                    <a href="https://huggingface.co/spaces/openadmet/cyp-challenge" target="_blank" rel="noopener noreferrer"
+                       class="btn btn-openadmet btn-lg">Join the CYP Challenge &rarr;</a>
+                    <a href="/datasetsmodels/" class="btn btn-outline-dark btn-lg rounded-pill">Explore models &amp; data</a>
+                </div>
+                <div class="text-muted small">
+                    <span class="hero-live-dot"></span>CYP Inhibition Blind Challenge is live &middot; final submissions 3 November 2026
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <figure class="hero-figure mb-0">
+                    <img src="/images/cyp3a4_trimer_density.png"
+                         alt="Cryo-EM density map of the CYP3A4 trimer at 3.25 Å resolution">
+                    <figcaption>
+                        CYP3A4 trimer, cryo-EM density at 3.25&nbsp;&Aring; &middot;
+                        <a href="https://doi.org/10.64898/2026.09.01.748687" target="_blank" rel="noopener noreferrer">Orta et al., bioRxiv 2026</a> (CC&nbsp;BY)
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <div class="py-5 section-light">
     <div class="container px-4 px-lg-5">
