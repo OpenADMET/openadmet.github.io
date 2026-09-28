@@ -97,6 +97,73 @@
             color: #fff;
             text-decoration: none;
         }
+        .hero-split {
+            padding: 5rem 0 4rem;
+            background:
+                radial-gradient(circle at 80% 45%, rgba(192, 57, 43, 0.10), transparent 45%),
+                linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .hero-logo {
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .hero-lede {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #333;
+            max-width: 560px;
+        }
+
+        .text-center .hero-lede { margin-left: auto; margin-right: auto; }
+
+        @media (min-width: 992px) {
+            .text-lg-start .hero-lede { margin-left: 0; }
+        }
+
+        .hero-live-dot {
+            display: inline-block;
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 50%;
+            background: var(--openadmet-red);
+            margin-right: 0.45rem;
+            vertical-align: middle;
+            animation: hero-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes hero-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.5); }
+            50% { box-shadow: 0 0 0 0.4rem rgba(192, 57, 43, 0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-live-dot { animation: none; }
+        }
+
+        .hero-figure {
+            text-align: center;
+        }
+
+        .hero-figure img {
+            width: 100%;
+            max-width: 420px;
+            filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-split { padding: 3rem 0; }
+            .hero-figure img { max-width: 260px; }
+        }
+
+        .hero-figure figcaption {
+            font-size: 0.78rem;
+            color: #6c757d;
+            margin-top: 0.75rem;
+        }
+
+        .hero-figure figcaption a { color: inherit; }
     </style>
 
 </head>
@@ -136,25 +203,50 @@
     </div>
 </nav>
 
-<div class="hero d-flex justify-content-center align-items-center text-white text-center py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12"></div>
+<section class="hero-split">
+    <div class="container px-4 px-lg-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <img src="/images/Logo+Tagline.png" alt="OpenADMET: Next generation ADMET modelling for therapeutic development"
+                     class="hero-logo mb-4">
+                <p class="hero-lede mb-4">
+                    Open data, open models, and community blind challenges for predicting drug absorption,
+                    distribution, metabolism, excretion, and toxicity.
+                </p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-3">
+                    <a href="https://huggingface.co/spaces/openadmet/cyp-challenge" target="_blank" rel="noopener noreferrer"
+                       class="btn btn-openadmet btn-lg">Join the CYP Challenge &rarr;</a>
+                    <a href="/datasetsmodels/" class="btn btn-outline-dark btn-lg rounded-pill">Explore models &amp; data</a>
+                </div>
+                <div class="text-muted small">
+                    <span class="hero-live-dot"></span>CYP Inhibition Blind Challenge is live &middot; final submissions 3 November 2026
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <figure class="hero-figure mb-0">
+                    <img src="/images/cyp3a4_trimer_density.png"
+                         alt="Cryo-EM density map of the CYP3A4 trimer at 3.25 Å resolution">
+                    <figcaption>
+                        CYP3A4 trimer, cryo-EM density at 3.25&nbsp;&Aring; &middot;
+                        <a href="https://doi.org/10.64898/2026.09.01.748687" target="_blank" rel="noopener noreferrer">Orta et al., bioRxiv 2026</a> (CC&nbsp;BY)
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <div class="py-5 section-light">
     <div class="container px-4 px-lg-5">
         <div class="row align-items-center g-4">
             <div class="col-12">
                 <span class="badge rounded-pill text-white mb-3" style="background-color: var(--openadmet-red); font-size: 0.85rem; padding: 0.4rem 0.9rem;">New Preprint</span>
-                <div class="text-muted small mb-2">December 2025 &middot; Preprints</div>
-                <h3 class="fw-bold mb-3">OpenADMET: Embracing the Avoid-Ome to Transform Drug Discovery</h3>
+                <div class="text-muted small mb-2">September 2026 &middot; ChemRxiv</div>
+                <h3 class="fw-bold mb-3">Operational Insights from the Front Lines of OpenADMET: Lessons from Our Blind Challenges</h3>
                 <p class="text-dark mb-4">
-                    Fraser, J. S.; Edgar, S.; Handly, L. N.; Kosuri, S.; Chodera, J. D.; Murcko, M.; Walters, W. P. A preprint introducing OpenADMET and the Avoid-Ome framework for transforming drug discovery through open science.
+                    MacDermott-Opeskin, H.; Castellanos, M.; Swain, J. A.; Scheen, J.; Colby, S.; Channing, G.; Simpkins, S.; Warneford-Thompson, R.; Correy, G. J.; Handly, L. N.; Kosuri, S.; Chodera, J. D.; Fraser, J. S.; Walters, W. P. What running OpenADMET&rsquo;s blind challenges has taught us about the gap between reported model performance and using ADMET models in live drug discovery projects.
                 </p>
-                <a href="https://doi.org/10.20944/preprints202512.1202.v1" class="btn btn-openadmet">Read More &rarr;</a>
+                <a href="https://doi.org/10.26434/chemrxiv.15009105/v2" class="btn btn-openadmet" target="_blank" rel="noopener noreferrer">Read More &rarr;</a>
             </div>
         </div>
     </div>
