@@ -102,6 +102,40 @@
             margin-bottom: 0.5rem;
             line-height: 1.4;
         }
+        .resource-scroller {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 0.5rem 0.25rem 1.25rem;
+        }
+
+        .resource-slide {
+            flex: 0 0 85%;
+            scroll-snap-align: start;
+        }
+
+        @media (min-width: 768px) {
+            .resource-slide { flex-basis: calc((100% - 1.5rem) / 2); }
+        }
+
+        @media (min-width: 1200px) {
+            .resource-slide { flex-basis: calc((100% - 3 * 1.5rem) / 4); }
+        }
+
+        .scroll-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: 1px solid #dee2e6;
+            background: #fff;
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        .scroll-btn:hover:not(:disabled) { border-color: var(--openadmet-red); color: var(--openadmet-red); }
+        .scroll-btn:disabled { opacity: 0.35; }
     </style>
 </head>
 
@@ -153,9 +187,15 @@
             </div>
         </div>
 
-        <h3 class="fw-bold mb-4">Models</h3>
-        <div class="row g-4 mb-5">
-            <div class="col-md-6 col-xl-3">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <h3 class="fw-bold mb-0">Models</h3>
+            <div class="d-flex gap-2">
+                <button type="button" class="scroll-btn" data-target="models-scroller" data-dir="-1" aria-label="Scroll models left">&larr;</button>
+                <button type="button" class="scroll-btn" data-target="models-scroller" data-dir="1" aria-label="Scroll models right">&rarr;</button>
+            </div>
+        </div>
+        <div class="resource-scroller mb-5" id="models-scroller">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">CYP Inhibition v1 — CYP1A2, CYP2D6, CYP3A4, CYP2C9</h5>
                     <div class="resource-endpoints">
@@ -170,7 +210,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">PXR Activation v1</h5>
                     <div class="resource-endpoints">
@@ -185,7 +225,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">Microsomal Clearance v1 — HLM, RLM, MLM</h5>
                     <div class="resource-endpoints">
@@ -200,7 +240,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">hERG Inhibition</h5>
                     <div class="resource-endpoints">
@@ -215,7 +255,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">Permeability, LogD &amp; Plasma Protein Binding</h5>
                     <div class="resource-endpoints">
@@ -230,7 +270,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">LogD — Chemprop Foundation (Surrogate)</h5>
                     <div class="resource-endpoints">
@@ -245,7 +285,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">LogD — Chemprop Foundation (Minimol)</h5>
                     <div class="resource-endpoints">
@@ -260,7 +300,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">Mouse Plasma Protein Binding — Chemprop Foundation (Surrogate)</h5>
                     <div class="resource-endpoints">
@@ -275,7 +315,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">Mouse Plasma Protein Binding — Chemprop Foundation (Minimol)</h5>
                     <div class="resource-endpoints">
@@ -290,7 +330,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">Chemprop Foundation Pretraining Weights</h5>
                     <div class="resource-endpoints">
@@ -305,7 +345,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">CYP Inhibition Baseline — CYP1A2, CYP2D6, CYP3A4, CYP2C9</h5>
                     <div class="resource-endpoints">
@@ -320,7 +360,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">PXR Activation Baseline</h5>
                     <div class="resource-endpoints">
@@ -336,9 +376,15 @@
             </div>
         </div>
 
-        <h3 class="fw-bold mb-4">Datasets</h3>
-        <div class="row g-4 mb-5">
-            <div class="col-md-6 col-xl-3">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <h3 class="fw-bold mb-0">Datasets</h3>
+            <div class="d-flex gap-2">
+                <button type="button" class="scroll-btn" data-target="datasets-scroller" data-dir="-1" aria-label="Scroll datasets left">&larr;</button>
+                <button type="button" class="scroll-btn" data-target="datasets-scroller" data-dir="1" aria-label="Scroll datasets right">&rarr;</button>
+            </div>
+        </div>
+        <div class="resource-scroller mb-5" id="datasets-scroller">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">CYP Challenge Train/Test Dataset</h5>
                     <div class="resource-endpoints">
@@ -352,7 +398,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">PXR Challenge Train/Test Dataset</h5>
                     <div class="resource-endpoints">
@@ -366,7 +412,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">Octant CYP Inhibition &amp; Reactivity Dataset</h5>
                     <div class="resource-endpoints">
@@ -380,7 +426,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">ExpansionRx Challenge — Full Post-Challenge Release</h5>
                     <div class="resource-endpoints">
@@ -394,7 +440,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">ASAP-Polaris-OpenADMET Antiviral Challenge Dataset</h5>
                     <div class="resource-endpoints">
@@ -408,7 +454,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">ExpansionRx Challenge — Training Data</h5>
                     <div class="resource-endpoints">
@@ -422,7 +468,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">ExpansionRx Challenge — Blinded Test Data</h5>
                     <div class="resource-endpoints">
@@ -436,7 +482,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">ExpansionRx Challenge — Teaser Data</h5>
                     <div class="resource-endpoints">
@@ -453,6 +499,26 @@
 
     </div>
 </div>
+
+<script>
+    document.querySelectorAll('.resource-scroller').forEach(function (scroller) {
+        var buttons = document.querySelectorAll('.scroll-btn[data-target="' + scroller.id + '"]');
+        function update() {
+            var max = scroller.scrollWidth - scroller.clientWidth - 1;
+            buttons.forEach(function (b) {
+                b.disabled = b.dataset.dir < 0 ? scroller.scrollLeft <= 0 : scroller.scrollLeft >= max;
+            });
+        }
+        buttons.forEach(function (b) {
+            b.addEventListener('click', function () {
+                scroller.scrollBy({ left: b.dataset.dir * scroller.clientWidth });
+            });
+        });
+        scroller.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+    });
+</script>
 
 {{ partial "footer.html" . }}
 </body>
