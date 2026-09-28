@@ -153,7 +153,68 @@
             </div>
         </div>
 
+        <h3 class="fw-bold mb-4">Models</h3>
         <div class="row g-4 mb-5">
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">CYP Inhibition v1 — CYP1A2, CYP2D6, CYP3A4, CYP2C9</h5>
+                    <div class="resource-endpoints">
+                        4-isoform multitask inhibition (pIC50) · ChEMBL 37<br>
+                        CheMeleon · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/openadmet/cyp1a2-cyp2d6-cyp3a4-cyp2c9-chemeleon-v1"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">PXR Activation v1</h5>
+                    <div class="resource-endpoints">
+                        Pregnane X Receptor activation pEC50 · PXR challenge data<br>
+                        CheMeleon single-task · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/openadmet/pxr-chemeleon-v1"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">Microsomal Clearance v1 — HLM, RLM, MLM</h5>
+                    <div class="resource-endpoints">
+                        log₁₀(CLint) · retrained with ASAP-Polaris &amp; ExpansionRx challenge data<br>
+                        CheMeleon multitask · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/openadmet/microsomal-clearance-chemeleon-v1"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">hERG Inhibition</h5>
+                    <div class="resource-endpoints">
+                        hERG pIC50 · ChEMBL 37<br>
+                        CheMeleon single-task · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/openadmet/herg-chemeleon-baseline"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
+
             <div class="col-md-6 col-xl-3">
                 <div class="resource-card p-4 d-flex flex-column">
                     <h5 class="resource-title">Permeability, LogD &amp; Plasma Protein Binding</h5>
@@ -171,7 +232,82 @@
 
             <div class="col-md-6 col-xl-3">
                 <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">CYP Inhibition — CYP1A2, CYP2D6, CYP3A4, CYP2C9</h5>
+                    <h5 class="resource-title">LogD — Chemprop Foundation (Surrogate)</h5>
+                    <div class="resource-endpoints">
+                        LogD · ExpansionRx challenge data<br>
+                        Chemprop pretrained on surrogate data · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/openadmet/logd-chemprop_foundation_surrogate-v1"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">LogD — Chemprop Foundation (Minimol)</h5>
+                    <div class="resource-endpoints">
+                        LogD · ExpansionRx challenge data<br>
+                        Chemprop pretrained on minimol features · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/openadmet/logd-chemprop_foundation_minimol-v1"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">Mouse Plasma Protein Binding — Chemprop Foundation (Surrogate)</h5>
+                    <div class="resource-endpoints">
+                        Mouse PPB · ExpansionRx challenge data<br>
+                        Chemprop pretrained on surrogate data · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/openadmet/mpbp-chemprop_foundation_surrogate-v1"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">Mouse Plasma Protein Binding — Chemprop Foundation (Minimol)</h5>
+                    <div class="resource-endpoints">
+                        Mouse PPB · ExpansionRx challenge data<br>
+                        Chemprop pretrained on minimol features · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/openadmet/mpbp-chemprop_foundation_minimol-v1"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">Chemprop Foundation Pretraining Weights</h5>
+                    <div class="resource-endpoints">
+                        Pretrained weights for fine-tuning with Anvil<br>
+                        Chemprop · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/openadmet/chemprop-foundation-pretraining-weights"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">CYP Inhibition Baseline — CYP1A2, CYP2D6, CYP3A4, CYP2C9</h5>
                     <div class="resource-endpoints">
                         4-isoform multitask inhibition (pIC50)<br>
                         CheMeleon · Apache 2.0
@@ -186,22 +322,7 @@
 
             <div class="col-md-6 col-xl-3">
                 <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">Microsomal Clearance — HLM, RLM, MLM</h5>
-                    <div class="resource-endpoints">
-                        log₁₀(CLint) for human, rat, and mouse liver microsomes<br>
-                        CheMeleon multitask · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/microsomal-clearance-chemeleon-baseline"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-xl-3">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">PXR Activation</h5>
+                    <h5 class="resource-title">PXR Activation Baseline</h5>
                     <div class="resource-endpoints">
                         Pregnane X Receptor activation pEC50<br>
                         CheMeleon single-task · Apache 2.0
@@ -213,7 +334,23 @@
                     </a>
                 </div>
             </div>
+        </div>
 
+        <h3 class="fw-bold mb-4">Datasets</h3>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-xl-3">
+                <div class="resource-card p-4 d-flex flex-column">
+                    <h5 class="resource-title">CYP Challenge Train/Test Dataset</h5>
+                    <div class="resource-endpoints">
+                        35,500 rows · Direct &amp; time-dependent inhibition, single-concentration, Emax &amp; structure tracks · Apache 2.0
+                    </div>
+                    <a href="https://huggingface.co/datasets/openadmet/cyp-challenge-train-test"
+                       class="btn btn-openadmet mt-auto align-self-start"
+                       target="_blank">
+                        View on HuggingFace
+                    </a>
+                </div>
+            </div>
 
             <div class="col-md-6 col-xl-3">
                 <div class="resource-card p-4 d-flex flex-column">
