@@ -1,0 +1,314 @@
+# Publications listed on /publications/, rendered by layouts/_default/publications.html.
+#
+# Each section has a `kind` (overview, structural, organizer or community) that feeds the
+# summary counts at the top of the page. A paper that uses more than one dataset is listed
+# in every relevant section; counts de-duplicate on `url`, so keep it identical across copies.
+#
+# Paper fields: title (HTML allowed), authors, type (label on the card), venue, url,
+# link_text (optional, defaults to "View <type>"), data (optional), notes (optional, Markdown),
+# extra_links (optional list of {text, url}).
+
+updated: "October 2026"
+
+sections:
+  - id: openadmet-overviews
+    title: OpenADMET overviews
+    kind: overview
+    description: Perspectives on the motivation for OpenADMET, the "avoidome," and the role of blind challenges.
+    papers:
+      - title: "Blind challenges let us see the path forward for predictive models"
+        authors: "Chodera, Walters, Kosuri, Fraser"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2026, 66(4), 1947–1949"
+        url: "https://doi.org/10.1021/acs.jcim.6c00205"
+        notes: "Perspective on why blind challenges are essential for evaluating predictive models"
+      - title: "OpenADMET: embracing the avoid-ome to transform drug discovery"
+        authors: "Fraser, Edgar, Handly, Kosuri, Chodera, Murcko, Walters"
+        type: Preprint
+        venue: "Preprints.org, Dec 2025"
+        url: "https://doi.org/10.20944/preprints202512.1202.v1"
+        notes: "The case for OpenADMET and open data on the avoid-ome"
+      - title: "Structure is beauty, but not always truth"
+        authors: "Fraser, Murcko"
+        type: Publication
+        venue: "Cell 2024, 187(3), 517–520"
+        url: "https://doi.org/10.1016/j.cell.2024.01.003"
+        notes: "Commentary introducing the challenge of drug interactions with \"anti-targets\" (the avoidome)"
+
+  - id: structural-biology
+    title: Structural biology
+    kind: structural
+    papers:
+      - title: "Structural plasticity and ligand promiscuity of CYP3A4 revealed by cryo-EM"
+        authors: "Orta, Schäfer, Correy et al."
+        type: Preprint
+        venue: "bioRxiv, Sep 2026"
+        url: "https://doi.org/10.64898/2026.09.01.748687"
+        notes: "Cryo-EM structures of the avoidome target CYP3A4"
+
+  - id: challenge-overview-papers
+    title: Challenge overview papers
+    kind: organizer
+    description: Papers written by the challenge organizers, summarizing results and lessons learned.
+    data_label: Dataset
+    papers:
+      - title: "Assessing the state of the art in ADMET prediction: lessons from the OpenADMET-ExpansionRx community blind challenge"
+        authors: "Castellanos, MacDermott-Opeskin, Ainsley et al."
+        type: Preprint
+        venue: "ChemRxiv, Sep 2026"
+        url: "https://doi.org/10.26434/chemrxiv.15009342/v1"
+        data: "ExpansionRx"
+        notes: "Organizer results paper"
+      - title: "Operational insights from the front lines of OpenADMET: lessons from our blind challenges"
+        authors: "MacDermott-Opeskin, Castellanos, Swain et al."
+        type: Preprint
+        venue: "ChemRxiv, Sep 2026"
+        url: "https://doi.org/10.26434/chemrxiv.15009105/v2"
+        data: "All four challenges"
+        notes: "Perspective on running the challenges; open-sources the challenge infrastructure"
+      - title: "A computational community blind challenge on pan-coronavirus drug discovery data"
+        authors: "MacDermott-Opeskin, Scheen, Wognum et al."
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2026, 66(6), 3129–3149"
+        url: "https://doi.org/10.1021/acs.jcim.5c02106"
+        data: "ASAP-Polaris-OpenADMET"
+        notes: "Organizer paper: pose, potency, and ADMET subchallenge results"
+
+  - id: asap-polaris-openadmet-antiviral-data
+    title: ASAP-Polaris-OpenADMET antiviral data (2025)
+    kind: community
+    data_label: Data used
+    papers:
+      - title: "Mol-JEPA: a multimodal joint embedding predictive architecture for molecules"
+        authors: "Rottach, Schieferdecker et al. (Boehringer Ingelheim)"
+        type: Preprint
+        venue: "arXiv, Sep 2026"
+        url: "https://arxiv.org/abs/2608.22642"
+        data: "ADMET + potency (7 endpoints)"
+        notes: "Benchmark for a pretrained foundation model, using cluster and official splits"
+      - title: "GRASP: graph representation learning with assay supervision for molecular properties"
+        authors: "Srivastava, Gorantla, Chundru, Singh, Mey, Singh"
+        type: Preprint
+        venue: "bioRxiv, Oct 2026"
+        url: "https://doi.org/10.64898/2026.09.28.755019"
+        data: "Potency + ADMET"
+        notes: "Benchmark"
+      - title: "Benchmarking uncertainty and improving risk ranking in multi-task bioactivity prediction"
+        authors: "Wang, Tian, Che"
+        type: Preprint
+        venue: "bioRxiv, Sep 2026"
+        url: "https://doi.org/10.64898/2026.09.15.751772"
+        data: "Potency + ADMET"
+        notes: "Benchmark for multi-task uncertainty estimation"
+      - title: "Benchmarking experiments with external data, domain-specific features, and learning strategies for modeling ADME and potency of coronavirus main protease inhibitors"
+        authors: "Titus, Palaniappan"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2026, 66(19), 12549–12567"
+        url: "https://doi.org/10.1021/acs.jcim.6c00304"
+        extra_links:
+          - text: "Preprint: ChemRxiv, Sep 2025 (Srilakshmi, Titus, Palaniappan)"
+            url: "https://doi.org/10.26434/chemrxiv-2025-1tb2m"
+        data: "ADMET + potency"
+        notes: "Participant: XGBoost on a bespoke 55-descriptor feature space with public-data augmentation; factorial benchmarking of features and learning strategies"
+      - title: "BoltzMol-1: towards reliable virtual screening for fast and cost-effective hit discovery"
+        authors: "Getz, Smith, Colgan et al."
+        type: Preprint
+        venue: "bioRxiv, Jul 2026"
+        url: "https://doi.org/10.64898/2026.07.04.736485"
+        data: "ADMET + potency"
+        notes: "Benchmark"
+      - title: "Surrogate machine learning models for ADME prediction: from synthetic labels to experimental data"
+        authors: "Peteani, Parrondo-Pizarro, Gerebtzoff, Rodríguez-Pérez"
+        type: Preprint
+        venue: "ChemRxiv, Jun 2026"
+        url: "https://doi.org/10.26434/chemrxiv.15005075/v1"
+        data: "ADME"
+        notes: "Exploring surrogate training strategies"
+      - title: "ASTRA: statistically robust model selection from cross-validation"
+        authors: "Treyde, Duarte"
+        type: Publication
+        venue: "ICLR 2026"
+        url: "https://openreview.net/forum?id=Ld90kr48E2"
+        data: "ADMET + potency"
+        notes: "Real-world test case for a cross-validation model-selection method based on statistical hypothesis testing"
+      - title: "XIMP: cross graph inter-message passing for molecular property prediction"
+        authors: "Ehrlich, Kummer, Voracek, Bause, Kriege"
+        type: Preprint
+        venue: "arXiv, Jan 2026"
+        url: "https://arxiv.org/abs/2601.19037"
+        data: "ADMET (5) + potency (2)"
+        notes: "Benchmark for a new GNN architecture, alongside MoleculeNet"
+      - title: "Machine-learning methods for pH-dependent aqueous-solubility prediction"
+        authors: "Mann, Wagen"
+        type: Preprint
+        venue: "ChemRxiv, Jan 2026"
+        url: "https://doi.org/10.26434/chemrxiv-2026-3zgq4"
+        data: "Kinetic solubility"
+        notes: "Benchmark"
+      - title: "Improved ADME prediction by multitask pretraining on predicted data: insights from the ASAP-Polaris-OpenADMET blind challenge"
+        authors: "Pham, Le, Thai"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2026, 66(1), 395–405"
+        url: "https://doi.org/10.1021/acs.jcim.5c02030"
+        data: "ADMET"
+        notes: "Participant (4th on aggregated MAE); pretraining on industry-released predicted labels"
+      - title: "A comparative study of deep learning and classical modeling approaches for protein–ligand binding pose and affinity prediction in coronavirus main proteases"
+        authors: "Liu, Tang, Niu, Wang"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2026, 66(1), 731–743"
+        url: "https://doi.org/10.1021/acs.jcim.5c02481"
+        data: "Ligand poses + potency"
+        notes: "Retrospective comparison; AlphaFold3 performed best on poses"
+      - title: "Deep learning vs classical methods in potency and ADME prediction: insights from a computational blind challenge"
+        authors: "Fischer, Southiratn, Triki, Cedeno"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2025, 65(24), 13115–13131"
+        url: "https://doi.org/10.1021/acs.jcim.5c01982"
+        data: "ADMET + potency"
+        notes: "Participant (1st on SARS-CoV-2 pIC50); retrospective statistical comparison of deep learning vs classical methods"
+      - title: "Fingerprint-based machine learning for SARS-CoV-2 and MERS-CoV M<sup>pro</sup> inhibition: highlighting the potential of Bayesian neural networks"
+        authors: "Doering, Talagayev, Liu, Wolber"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2025, 65(24), 13255–13265"
+        url: "https://doi.org/10.1021/acs.jcim.5c02014"
+        data: "Potency"
+        notes: "Participant: fingerprint-based models, including Bayesian neural networks"
+      - title: "Polaris challenge: data-driven priors to improve docking for pose prediction"
+        authors: "Sun, Wang, Purnomo, Head-Gordon"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2025, 65(21), 12058–12067"
+        url: "https://doi.org/10.1021/acs.jcim.5c01976"
+        data: "Ligand poses"
+        notes: "Participant: Vina-GPU docking with fragment priors, >50% of poses under 2 Å"
+      - title: "Deep-learning vs physics-based docking tools for future coronavirus pandemics"
+        authors: "Ma, Chen"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2025, 65(21), 12006–12013"
+        url: "https://doi.org/10.1021/acs.jcim.5c02029"
+        data: "Ligand poses"
+        notes: "Participant: comparison of deep-learning and physics-based docking"
+      - title: "TEMPL: a template-based protein–ligand pose prediction baseline"
+        authors: "Fülöp, Šícho, Dehaen"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2025, 65(20), 11149–11157"
+        url: "https://doi.org/10.1021/acs.jcim.5c01985"
+        data: "Ligand poses"
+        notes: "Participant: template baseline, 51% (intermediate) / 34% (final) of poses under 2 Å"
+      - title: "Robust prediction of protein–ligand binding potency with multi-modal customized gate control"
+        authors: "Xu, Tang, Muhammad, Yin, Liu, Sun"
+        type: Publication
+        venue: "J. Chem. Inf. Model. 2025, 65(19), 10465–10476"
+        url: "https://doi.org/10.1021/acs.jcim.5c01668"
+        data: "Potency"
+        notes: "Participant: multi-modal potency prediction"
+      - title: "Superior molecular representations from intermediate encoder layers"
+        authors: "Pinto"
+        type: Preprint
+        venue: "arXiv, 2025 (AI4Mat-NeurIPS 2025 workshop)"
+        url: "https://arxiv.org/abs/2506.06443"
+        data: "Potency + ADMET"
+        notes: "Benchmark"
+
+  - id: openadmet-expansionrx-data
+    title: OpenADMET-ExpansionRx data (2025–26)
+    kind: community
+    data_label: Data used
+    papers:
+      - title: "Human intestinal absorption revisited: the 1998 descriptors survive, and the method extends to permeability"
+        authors: "Muskal, Wessel"
+        type: Preprint
+        venue: "bioRxiv, Oct 2026"
+        url: "https://doi.org/10.64898/2026.10.03.756481"
+        data: "Caco-2 permeability (Papp A→B), 3,771 compounds"
+        notes: "One of four datasets for a genetic-algorithm descriptor selection and random forest workflow; extends the method to small-molecule permeability. Models served at [predicthia.ai](https://predicthia.ai)"
+      - title: "GRASP: graph representation learning with assay supervision for molecular properties"
+        authors: "Srivastava, Gorantla, Chundru, Singh, Mey, Singh"
+        type: Preprint
+        venue: "bioRxiv, Oct 2026"
+        url: "https://doi.org/10.64898/2026.09.28.755019"
+        data: "All 9 endpoints, challenge temporal split"
+        notes: "Benchmark"
+      - title: "Evaluating autonomous LLM agents across molecular prediction and optimization benchmarks"
+        authors: "Smbatyan, Ghukasyan, Petrosyan"
+        type: Preprint
+        venue: "bioRxiv, Oct 2026"
+        url: "https://doi.org/10.64898/2026.10.01.755314"
+        data: "OpenADMET-ExpansionRx and PXR datasets"
+        notes: "Evaluating agentic workflows"
+      - title: "Beacon-2: completing the reward function for chemical optimization in drug discovery"
+        authors: "Rich (Inductive Bio)"
+        type: Technical post
+        venue: "Inductive Bio technical post, Sep 2026"
+        url: "https://www.inductive.bio/news/beacon-2"
+        link_text: "View Post"
+        data: "All 9 endpoints, challenge temporal split"
+        notes: "Benchmark for their human dose prediction methodology"
+      - title: "MolLedger: an additive graph neural network with chemically grounded ADME attributions"
+        authors: "Ji (Hamilton College)"
+        type: Preprint
+        venue: "arXiv, Sep 2026"
+        url: "https://arxiv.org/abs/2608.30636"
+        data: "All 9 endpoints (7,608 molecules), merged with Lipophilicity, TDC, and ESOL, then scaffold split"
+        notes: "Primary training and benchmark data for an additive GNN with per-atom attributions. Accuracy matches a pooled GNN (LogD MAE 0.40); attributions are evaluated on matched pairs"
+      - title: "Mol-JEPA: a multimodal joint embedding predictive architecture for molecules"
+        authors: "Rottach, Schieferdecker et al. (Boehringer Ingelheim)"
+        type: Preprint
+        venue: "arXiv, Sep 2026"
+        url: "https://arxiv.org/abs/2608.22642"
+        data: "All 9 endpoints"
+        notes: "Benchmark with cluster splits and the official temporal split (also evaluated on ASAP and PXR data)"
+      - title: "Model validation protocols for machine learning in small molecule drug discovery"
+        authors: "Seal, Zalte, … Ainsley, Ledeboer, Green, Bender, Wognum"
+        type: Preprint
+        venue: "bioRxiv, Aug 2026"
+        url: "https://doi.org/10.64898/2026.08.19.745868"
+        data: "All 9 endpoints, challenge temporal split"
+        notes: "Main case study for a five-recommendation validation framework"
+      - title: "BoltzMol-1: towards reliable virtual screening for fast and cost-effective hit discovery"
+        authors: "Getz, Smith, Colgan et al."
+        type: Preprint
+        venue: "bioRxiv, Jul 2026"
+        url: "https://doi.org/10.64898/2026.07.04.736485"
+        data: "All 9 endpoints, challenge temporal split"
+        notes: "Benchmark"
+      - title: "Probabilistic contrastive pretraining for multi-task ADME property prediction"
+        authors: "Xue, Veccham, Paliwal, Shimko, Livne (NVIDIA)"
+        type: Preprint
+        venue: "arXiv, Jun 2026"
+        url: "https://arxiv.org/abs/2606.11508"
+        data: "All 9 endpoints, challenge temporal split"
+        notes: "Downstream benchmark for Contrastive KERMT"
+      - title: "QuADMET-Former: pre-training on quantum mechanical properties improves ADMET prediction"
+        authors: "Raja, Zhao, Tyrchan, Nittinger, Bronstein, Deane, Morris (Oxford / AstraZeneca)"
+        type: Preprint
+        venue: "ChemRxiv, May 2026"
+        url: "https://doi.org/10.26434/chemrxiv.15002429/v3"
+        data: "All 9 endpoints, re-split with spectral splits"
+        notes: "Part of a 23-dataset benchmark (with TDC and Biogen ADME) for quantum-mechanics-pretrained equivariant transformers; best or near-best MAE on 7 of 9 OpenADMET tasks"
+
+  - id: pxr-challenge-data
+    title: PXR challenge data (2026)
+    kind: community
+    data_label: Data used
+    papers:
+      - title: "Evaluating autonomous LLM agents across molecular prediction and optimization benchmarks"
+        authors: "Smbatyan, Ghukasyan, Petrosyan"
+        type: Preprint
+        venue: "bioRxiv, Oct 2026"
+        url: "https://doi.org/10.64898/2026.10.01.755314"
+        data: "OpenADMET-ExpansionRx and PXR datasets"
+        notes: "Evaluating agentic workflows"
+      - title: "Predicting CYP450 induction and PXR activation with machine learning approaches: challenges and opportunities"
+        authors: "Orsi, Thieme, Gätzner et al. (Roche / Genentech / Univ. Vienna)"
+        type: Preprint
+        venue: "ChemRxiv, Sep 2026"
+        url: "https://doi.org/10.26434/chemrxiv.15006350/v3"
+        data: "Single-concentration screen, 10,870 compounds (2-fold threshold, 25% positive)"
+        notes: "Public counterpart to Roche internal PXR and CYP induction data"
+      - title: "Mol-JEPA: a multimodal joint embedding predictive architecture for molecules"
+        authors: "Rottach, Schieferdecker et al. (Boehringer Ingelheim)"
+        type: Preprint
+        venue: "arXiv, Sep 2026"
+        url: "https://arxiv.org/abs/2608.22642"
+        data: "pEC50 activity, ~4,300 compounds"
+        notes: "Benchmark on cluster splits and the official challenge split"
