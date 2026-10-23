@@ -224,11 +224,11 @@ a.funder:focus-visible::before {
     display: none;
 }
 
-/* Homepage acknowledgement band: funders tier above a smaller supporters tier */
+/* Homepage acknowledgement band, just under the hero: funders tier above a smaller supporters tier */
 .ack-band {
-    padding: 3rem 0 2.5rem;
-    background: var(--pl-bench);
-    border-top: 1px solid var(--pl-rule);
+    padding: 2.5rem 0 2rem;
+    background: var(--pl-paper);
+    border-bottom: 1px solid var(--pl-rule);
     text-align: center;
 }
 .ack-label {
