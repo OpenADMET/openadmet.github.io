@@ -71,9 +71,34 @@
             color: #000;
         }
 
+        /* Logos sit in a fixed-height band so names and captions line up across tiles */
+        .funder-logo {
+            display: flex;
+            align-items: center;
+            height: 48px;
+        }
+
+        /* A fixed height (not max-height) so SVGs without width/height still render */
+        .funder-logo img {
+            height: 36px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
         .row-supporters .funder {
             justify-content: center;
-            text-align: center;
+            align-items: center;
+            padding: 1rem 0.75rem;
+        }
+
+        .row-supporters .funder-logo {
+            height: 60px;
+        }
+
+        /* Each supporter logo sets --logo-h so marks of different shapes carry similar weight */
+        .row-supporters .funder-logo img {
+            height: var(--logo-h, 32px);
         }
 
         .funder-what {
@@ -152,20 +177,21 @@
         <div class="row justify-content-center g-4">
             <div class="col-sm-6 col-lg-3">
                 <a href="https://openadmet.ghost.io/what-is-openadmet/" target="_blank" rel="noopener noreferrer" class="funder">
-                    <span class="funder-name">ARPA-H</span>
+                    <span class="funder-logo funder-name">ARPA-H</span>
                     <span class="funder-what">Our founding grant, through the AVOID-OME program.</span>
                     <span class="funder-link">Read the post</span>
                 </a>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <a href="https://openadmet.ghost.io/putting-the-t-in-admet-tackling-toxicity-with-new-funding/" target="_blank" rel="noopener noreferrer" class="funder">
-                    <span class="funder-name">Gates Foundation</span>
+                    <span class="funder-logo"><img src="/images/partners/gates-foundation.svg" alt="Gates Foundation"></span>
                     <span class="funder-what">Closing toxicity data gaps for hERG and aminergic GPCRs.</span>
                     <span class="funder-link">Read the post</span>
                 </a>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <a href="https://openadmet.ghost.io/scaling-blind-challenges-a-new-partnership-with-radial-and-the-astera-institute/" target="_blank" rel="noopener noreferrer" class="funder">
+                    <span class="funder-logo"><img src="/images/partners/astera.svg" alt="Astera Institute"></span>
                     <span class="funder-name">Radial</span>
                     <span class="funder-what">Astera's life science division, funding open infrastructure for running blind challenges.</span>
                     <span class="funder-link">Read the post</span>
@@ -173,7 +199,7 @@
             </div>
             <div class="col-sm-6 col-lg-3">
                 <a href="https://openadmet.ghost.io/mapping-transporters-and-blood-brain-barrier-penetration-with-the-openai-foundation/" target="_blank" rel="noopener noreferrer" class="funder">
-                    <span class="funder-name">OpenAI Foundation</span>
+                    <span class="funder-logo"><img src="/images/partners/openai-foundation.svg" alt="OpenAI Foundation"></span>
                     <span class="funder-what">Large-scale in vitro datasets on physicochemical properties and transporters.</span>
                     <span class="funder-link">Read the post</span>
                 </a>
@@ -186,27 +212,27 @@
         <div class="row row-supporters justify-content-center g-4">
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="funder">
-                    <span class="funder-name">Enamine</span>
+                    <span class="funder-logo"><img style="--logo-h: 52px" src="/images/partners/enamine.svg" alt="Enamine"></span>
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="funder">
-                    <span class="funder-name">HuggingFace</span>
+                    <span class="funder-logo"><img style="--logo-h: 32px" src="/images/partners/huggingface.svg" alt="HuggingFace"></span>
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="funder">
-                    <span class="funder-name">OpenEye</span>
+                    <span class="funder-logo"><img style="--logo-h: 36px" src="/images/partners/openeye.svg" alt="OpenEye"></span>
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="funder">
-                    <span class="funder-name">CDD Vault</span>
+                    <span class="funder-logo"><img style="--logo-h: 36px" src="/images/partners/cdd-vault.png" alt="CDD Vault"></span>
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="funder">
-                    <span class="funder-name">Discovery Life Sciences</span>
+                    <span class="funder-logo"><img style="--logo-h: 28px" src="/images/partners/discovery-life-sciences.svg" alt="Discovery Life Sciences"></span>
                 </div>
             </div>
         </div>
