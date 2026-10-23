@@ -11,11 +11,12 @@
   carries an offset, and .Local would follow the build machine, making local and
   CI builds disagree.
 
-  If the feed is unreachable (or returns no entries), falls back to the
-  snapshot in data/videos_fallback.json — the last known-good fetch, refreshed
-  by hand from time to time — and warns rather than failing the build. A
-  build no longer breaks just because YouTube's feed had a bad moment; the
-  gallery just runs a bit stale until the next successful fetch.
+  YouTube's feed only carries the 15 newest uploads, so the feed is merged with
+  data/videos_archive.json, which keeps every video the feed has ever shown.
+  The archive is grown nightly by scripts/refresh_feed_snapshots.py (see
+  .github/workflows/refresh-feed-snapshots.yaml). Where both have a video the
+  feed wins, so edits on YouTube still show up. If the feed is unreachable the
+  build warns and serves the archive alone rather than failing.
 */}}
 
 {{ $videos := slice }}
@@ -55,8 +56,13 @@
 {{ end }}
 
 {{ if not $videos }}
-  {{ warnf "YouTube feed returned no usable entries — falling back to data/videos_fallback.json." }}
-  {{ range site.Data.videos_fallback }}
+  {{ warnf "YouTube feed returned no usable entries — serving data/videos_archive.json alone." }}
+{{ end }}
+
+{{ $seen := slice }}
+{{ range $videos }}{{ $seen = $seen | append .id }}{{ end }}
+{{ range site.Data.videos_archive }}
+  {{ if not (in $seen .id) }}
     {{ $videos = $videos | append (dict
       "id" .id
       "title" .title

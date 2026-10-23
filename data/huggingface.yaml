@@ -1,0 +1,103 @@
+# Curated cards for /datasetsmodels/, pulled live from Hugging Face at build time
+# (layouts/partials/feeds/huggingface.html).
+#
+# Each list sets the display order. Repos listed here use the title and lines
+# given; any repo on huggingface.co/openadmet that isn't listed still appears,
+# after these, newest first, with its title and summary taken from its card.
+# Add `hide: true` to keep a repo off the site.
+
+models:
+  - id: openadmet/cyp1a2-cyp2d6-cyp3a4-cyp2c9-chemeleon-v1
+    title: "CYP Inhibition v1 — CYP1A2, CYP2D6, CYP3A4, CYP2C9"
+    lines:
+      - "4-isoform multitask inhibition (pIC50) · ChEMBL 37"
+      - "CheMeleon · Apache 2.0"
+  - id: openadmet/pxr-chemeleon-v1
+    title: "PXR Activation v1"
+    lines:
+      - "Pregnane X Receptor activation pEC50 · PXR challenge data"
+      - "CheMeleon single-task · Apache 2.0"
+  - id: openadmet/microsomal-clearance-chemeleon-v1
+    title: "Microsomal Clearance v1 — HLM, RLM, MLM"
+    lines:
+      - "log₁₀(CLint) · retrained with ASAP-Polaris & ExpansionRx challenge data"
+      - "CheMeleon multitask · Apache 2.0"
+  - id: openadmet/herg-chemeleon-baseline
+    title: "hERG Inhibition"
+    lines:
+      - "hERG pIC50 · ChEMBL 37"
+      - "CheMeleon single-task · Apache 2.0"
+  - id: openadmet/permeability-logd-ppb-chemeleon-baseline
+    title: "Permeability, LogD & Plasma Protein Binding"
+    lines:
+      - "Caco-2 Papp A→B & B→A · LogD · Mouse & Human PPB"
+      - "CheMeleon multitask · Apache 2.0"
+  - id: openadmet/logd-chemprop_foundation_surrogate-v1
+    title: "LogD — Chemprop Foundation (Surrogate)"
+    lines:
+      - "LogD · ExpansionRx challenge data"
+      - "Chemprop pretrained on surrogate data · Apache 2.0"
+  - id: openadmet/logd-chemprop_foundation_minimol-v1
+    title: "LogD — Chemprop Foundation (Minimol)"
+    lines:
+      - "LogD · ExpansionRx challenge data"
+      - "Chemprop pretrained on minimol features · Apache 2.0"
+  - id: openadmet/mpbp-chemprop_foundation_surrogate-v1
+    title: "Mouse Plasma Protein Binding — Chemprop Foundation (Surrogate)"
+    lines:
+      - "Mouse PPB · ExpansionRx challenge data"
+      - "Chemprop pretrained on surrogate data · Apache 2.0"
+  - id: openadmet/mpbp-chemprop_foundation_minimol-v1
+    title: "Mouse Plasma Protein Binding — Chemprop Foundation (Minimol)"
+    lines:
+      - "Mouse PPB · ExpansionRx challenge data"
+      - "Chemprop pretrained on minimol features · Apache 2.0"
+  - id: openadmet/chemprop-foundation-pretraining-weights
+    title: "Chemprop Foundation Pretraining Weights"
+    lines:
+      - "Pretrained weights for fine-tuning with Anvil"
+      - "Chemprop · Apache 2.0"
+  - id: openadmet/cyp1a2-cyp2d6-cyp3a4-cyp3c9-chemeleon-baseline
+    title: "CYP Inhibition Baseline — CYP1A2, CYP2D6, CYP3A4, CYP2C9"
+    lines:
+      - "4-isoform multitask inhibition (pIC50)"
+      - "CheMeleon · Apache 2.0"
+  - id: openadmet/pxr-chemeleon-baseline
+    title: "PXR Activation Baseline"
+    lines:
+      - "Pregnane X Receptor activation pEC50"
+      - "CheMeleon single-task · Apache 2.0"
+
+datasets:
+  - id: openadmet/cyp-challenge-train-test
+    title: "CYP Challenge Train/Test Dataset"
+    lines:
+      - "35,500 rows · Direct & time-dependent inhibition, single-concentration, Emax & structure tracks · Apache 2.0"
+  - id: openadmet/pxr-challenge-train-test
+    title: "PXR Challenge Train/Test Dataset"
+    lines:
+      - "28,700 rows · Activity & structure tracks · Apache 2.0"
+  - id: openadmet/Octant_CYP_inhibition_reactivity_blog_release
+    title: "Octant CYP Inhibition & Reactivity Dataset"
+    lines:
+      - "51,400 rows · CYP3A4/CYP2J2 inhibition & substrate depletion · Apache 2.0"
+  - id: openadmet/openadmet-expansionrx-challenge-data
+    title: "ExpansionRx Challenge — Full Post-Challenge Release"
+    lines:
+      - "15,200 rows · 9 ADMET endpoints · Expansion Therapeutics compounds · CC-BY-4.0"
+  - id: openadmet/ASAP_Polaris_OpenADMET_challenge
+    title: "ASAP-Polaris-OpenADMET Antiviral Challenge Dataset"
+    lines:
+      - "Potency, ADMET & crystallography · SARS-CoV-2 & MERS-CoV Mpro · MIT"
+  - id: openadmet/openadmet-expansionrx-challenge-train-data
+    title: "ExpansionRx Challenge — Training Data"
+    lines:
+      - "10,700 rows · 9 ADMET endpoints · training split"
+  - id: openadmet/openadmet-expansionrx-challenge-test-data-blinded
+    title: "ExpansionRx Challenge — Blinded Test Data"
+    lines:
+      - "2,280 rows · 9 ADMET endpoints · blinded test split"
+  - id: openadmet/openadmet-expansionrx-challenge-teaser
+    title: "ExpansionRx Challenge — Teaser Data"
+    lines:
+      - "532 rows · 9 ADMET endpoints · early preview release · CC0-1.0"

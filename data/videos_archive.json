@@ -1,5 +1,53 @@
 [
   {
+    "id": "c7ZmuRlx_PM",
+    "title": "Hugo MacDermott-Opeskin, OpenADMET: A Machine Learning First Approach to ADMET and Drug Discovery",
+    "url": "https://www.youtube.com/watch?v=c7ZmuRlx_PM",
+    "thumb": "https://img.youtube.com/vi/c7ZmuRlx_PM/hqdefault.jpg",
+    "published": "2026-10-12T10:03:08+00:00",
+    "summary": "A seminar from our very own Hugo MacDermott-Opeskin sponsored by MedChem Australia at WEHI Melbourne."
+  },
+  {
+    "id": "7cMm1DZ0yzU",
+    "title": "Brian Wylie, SuperCowPowers — ML Factories: Create, Deploy, and Manage 1,000 ADMET Models,",
+    "url": "https://www.youtube.com/watch?v=7cMm1DZ0yzU",
+    "thumb": "https://img.youtube.com/vi/7cMm1DZ0yzU/hqdefault.jpg",
+    "published": "2026-09-25T05:29:44+00:00",
+    "summary": "Brian from SuperCowPowers discusses engineering challenges and strategies that he uses to makes large-scale ADMET ML on AWS practical."
+  },
+  {
+    "id": "1GvDFtW0s8c",
+    "title": "Chris Taylor, QCWare — Lessons from tackling the OpenADMET challenges with Promethium",
+    "url": "https://www.youtube.com/watch?v=1GvDFtW0s8c",
+    "thumb": "https://img.youtube.com/vi/1GvDFtW0s8c/hqdefault.jpg",
+    "published": "2026-09-07T23:03:58+00:00",
+    "summary": "Chris and the folks at QCWare share their use of the Promethium platform for QM and DFT derived approaches in the recent OpenADMET challenges"
+  },
+  {
+    "id": "VMq7pW4r0Xg",
+    "title": "Matt Robinson, PostEra — Confusion Without Measure",
+    "url": "https://www.youtube.com/watch?v=VMq7pW4r0Xg",
+    "thumb": "https://img.youtube.com/vi/VMq7pW4r0Xg/hqdefault.jpg",
+    "published": "2026-09-04T03:39:03+00:00",
+    "summary": "Matt Robinson from PostEra presents on his paper exploring unit confusion in ADMET: Confusion Without Measure: Units, Assumptions, and Best Practices in Reporting Preclinical ADME/PK Data."
+  },
+  {
+    "id": "37uWVspQ5Do",
+    "title": "Predicting PXR Induction — Learnings From Top Performers in Our Blind Challenge",
+    "url": "https://www.youtube.com/watch?v=37uWVspQ5Do",
+    "thumb": "https://img.youtube.com/vi/37uWVspQ5Do/hqdefault.jpg",
+    "published": "2026-09-03T03:26:04+00:00",
+    "summary": "Duncan Muir (Inductive Bio), Yanjun Li (University of Florida) and Asa Barth-Maron (Antares Therapeutics) detail the computational pipelines behind their top Activity Track submissions, their modeling strategies for PXR…"
+  },
+  {
+    "id": "jPVOv_7SmKk",
+    "title": "Lessons in PXR structure from the OpenADMET PXR blind challenge",
+    "url": "https://www.youtube.com/watch?v=jPVOv_7SmKk",
+    "thumb": "https://img.youtube.com/vi/jPVOv_7SmKk/hqdefault.jpg",
+    "published": "2026-08-17T21:56:31+00:00",
+    "summary": "Join us for this webinar featuring the winners of the structure track of our PXR blind challenge"
+  },
+  {
     "id": "e1XdacPHlJg",
     "title": "Karim Ben Hicham, RWTH Aachen — Tabular foundation models for molecular properties",
     "url": "https://www.youtube.com/watch?v=e1XdacPHlJg",

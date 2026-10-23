@@ -39,38 +39,92 @@
             margin-right: auto;
             margin-bottom: 1.5rem;
         }
+
+        .funder {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            height: 100%;
+            padding: 1.5rem;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 3px solid var(--openadmet-red);
+            border-radius: 0.75rem;
+            color: inherit;
+            text-align: left;
+            text-decoration: none;
+            transition: border-color 0.15s ease;
+        }
+
+        a.funder:hover,
+        a.funder:focus-visible {
+            border-color: #000;
+            border-top-color: var(--openadmet-red);
+            color: inherit;
+        }
+
+        .funder-name {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #000;
+        }
+
+        .row-supporters .funder {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .funder-what {
+            flex-grow: 1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .funder-link {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--openadmet-red);
+        }
+
+        a.funder:hover .funder-link { text-decoration: underline; }
     </style>
+    <link href="/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-black bg-black text-white sticky-top">
+<nav class="navbar navbar-expand sticky-top site-nav">
     <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="/">OpenADMET</a>
+        <a class="navbar-brand" href="/" aria-label="OpenADMET home">
+            <img src="/images/logo-nav.png" alt="" height="32">
+        </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/about/">About</a>
+                    <a class="nav-link" href="/about/" aria-current="page">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/blindchallenges/">Blind Challenges</a>
+                    <a class="nav-link" href="/blindchallenges/">Blind Challenges</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/datasetsmodels/">Datasets &amp; Models</a>
+                    <a class="nav-link" href="/datasetsmodels/">Datasets &amp; Models</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="https://openadmet.ghost.io/">Blog</a>
+                    <a class="nav-link" href="https://openadmet.ghost.io/">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/videos/">Videos</a>
+                    <a class="nav-link" href="/videos/">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/people/">People</a>
+                    <a class="nav-link" href="/people/">People</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/publications/">Publications</a>
+                    <a class="nav-link" href="/publications/">Publications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/policies/">Community Policies</a>
+                    <a class="nav-link" href="/policies/">Community Policies</a>
                 </li>
             </ul>
         </div>
@@ -93,10 +147,69 @@
             </div>
         </div>
 
-        <div class="row justify-content-center mb-4">
-            <div class="col-lg-10 col-xl-9">
-                <img src="/about.jpg" alt="About OpenADMET" class="img-fluid rounded-4 d-block mx-auto" style="object-fit: contain; aspect-ratio: 1/1; width: 40%;">
+        <div class="mt-5 mb-5">
+            <h3 class="h2 fw-bold text-center mb-4">Funding</h3>
+        <div class="row justify-content-center g-4">
+            <div class="col-sm-6 col-lg-3">
+                <a href="https://openadmet.ghost.io/what-is-openadmet/" target="_blank" rel="noopener noreferrer" class="funder">
+                    <span class="funder-name">ARPA-H</span>
+                    <span class="funder-what">Our founding grant, through the AVOID-OME program.</span>
+                    <span class="funder-link">Read the post</span>
+                </a>
             </div>
+            <div class="col-sm-6 col-lg-3">
+                <a href="https://openadmet.ghost.io/putting-the-t-in-admet-tackling-toxicity-with-new-funding/" target="_blank" rel="noopener noreferrer" class="funder">
+                    <span class="funder-name">Gates Foundation</span>
+                    <span class="funder-what">Closing toxicity data gaps for hERG and aminergic GPCRs.</span>
+                    <span class="funder-link">Read the post</span>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <a href="https://openadmet.ghost.io/scaling-blind-challenges-a-new-partnership-with-radial-and-the-astera-institute/" target="_blank" rel="noopener noreferrer" class="funder">
+                    <span class="funder-name">Radial</span>
+                    <span class="funder-what">Astera's life science division, funding open infrastructure for running blind challenges.</span>
+                    <span class="funder-link">Read the post</span>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <a href="https://openadmet.ghost.io/mapping-transporters-and-blood-brain-barrier-penetration-with-the-openai-foundation/" target="_blank" rel="noopener noreferrer" class="funder">
+                    <span class="funder-name">OpenAI Foundation</span>
+                    <span class="funder-what">Large-scale in vitro datasets on physicochemical properties and transporters.</span>
+                    <span class="funder-link">Read the post</span>
+                </a>
+            </div>
+        </div>
+        </div>
+
+        <div class="mb-5">
+            <h3 class="h2 fw-bold text-center mb-4">Supporters</h3>
+        <div class="row row-supporters justify-content-center g-4">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="funder">
+                    <span class="funder-name">Enamine</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="funder">
+                    <span class="funder-name">HuggingFace</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="funder">
+                    <span class="funder-name">OpenEye</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="funder">
+                    <span class="funder-name">CDD Vault</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="funder">
+                    <span class="funder-name">Discovery Life Sciences</span>
+                </div>
+            </div>
+        </div>
         </div>
 
         <div class="row justify-content-center">
@@ -116,57 +229,6 @@
                     </p>
                     <a href="https://openadmet.ghost.io/what-is-openadmet/" target="_blank" rel="noopener noreferrer"
                        class="btn btn-dark rounded-pill px-4">Read the full post</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Funding</h2>
-            <hr class="section-divider">
-        </div>
-        <div class="row justify-content-center g-4">
-            <div class="col-sm-6 col-lg-3">
-                <a href="https://openadmet.ghost.io/what-is-openadmet/" target="_blank" rel="noopener noreferrer"
-                   class="d-block bg-white shadow-sm rounded-4 p-4 text-center h-100 text-decoration-none text-reset">
-                    <h5 class="fw-bold mb-0">ARPA-H</h5>
-                </a>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <a href="https://openadmet.ghost.io/putting-the-t-in-admet-tackling-toxicity-with-new-funding/" target="_blank" rel="noopener noreferrer"
-                   class="d-block bg-white shadow-sm rounded-4 p-4 text-center h-100 text-decoration-none text-reset">
-                    <h5 class="fw-bold mb-0">Gates Foundation</h5>
-                </a>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <a href="https://openadmet.ghost.io/scaling-blind-challenges-a-new-partnership-with-radial-and-the-astera-institute/" target="_blank" rel="noopener noreferrer"
-                   class="d-block bg-white shadow-sm rounded-4 p-4 text-center h-100 text-decoration-none text-reset">
-                    <h5 class="fw-bold mb-0">Astera</h5>
-                </a>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <a href="https://openadmet.ghost.io/mapping-transporters-and-blood-brain-barrier-penetration-with-the-openai-foundation/" target="_blank" rel="noopener noreferrer"
-                   class="d-block bg-white shadow-sm rounded-4 p-4 text-center h-100 text-decoration-none text-reset">
-                    <h5 class="fw-bold mb-0">OpenAI Foundation</h5>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Supporters</h2>
-            <hr class="section-divider">
-        </div>
-        <div class="row justify-content-center g-4">
-            <div class="col-sm-6 col-lg-3">
-                <div class="bg-white shadow-sm rounded-4 p-4 text-center h-100">
-                    <h5 class="fw-bold mb-0">Enamine</h5>
                 </div>
             </div>
         </div>

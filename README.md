@@ -121,27 +121,46 @@ different channel by changing its `channel_id`.
   the next day's date. This is not auto-corrected: Hugo ignores the site timezone
   once a feed timestamp carries a UTC offset, and the alternative (`.Local`) would
   make a local build and the CI build disagree.
-- **Only the 15 most recent** YouTube uploads are exposed by the feed; older
-  videos drop off `/videos` on their own once newer ones push them past 15.
+- **Only the 15 most recent** YouTube uploads are exposed by the feed. Older
+  videos stay on `/videos` because the feed is merged with
+  `data/videos_archive.json`, which the nightly
+  `.github/workflows/refresh-feed-snapshots.yaml` grows with every video the
+  feed has shown (via `scripts/refresh_feed_snapshots.py`; run it by hand to
+  refresh locally). Where a video is in both, the feed's copy wins, so edits on
+  YouTube still come through. To drop an old video, delete it from the archive.
 - **Every video on the channel appears**, including older workshop recordings,
   because the page mirrors the channel rather than a curated list.
 
 #### If a feed is down at build time
 
 - **YouTube unreachable or empty** → the build **succeeds** and the Videos card
-  and `/videos` gallery fall back to the snapshot in
-  `data/videos_fallback.json`, with a `WARN` printed. The YouTube feed
-  (`youtube.com/feeds/videos.xml`) is occasionally flaky even when the channel
-  itself is fine, so this fallback is what actually keeps deploys from being
-  blocked by an unrelated blip. Refresh `data/videos_fallback.json` by hand
-  every so often (or after a new video goes up) so the safety net doesn't drift
-  too far out of date — it's a plain JSON array of the same
-  `id`/`title`/`url`/`thumb`/`published`/`summary` shape the partial builds.
-  The build only fails outright (see the `errorf` in
-  `layouts/_default/videos.html`) if the fallback file itself is missing or
-  empty, which would mean something is actually broken rather than YouTube
-  just being slow.
+  and `/videos` gallery are served from `data/videos_archive.json` alone, with a
+  `WARN` printed. The YouTube feed (`youtube.com/feeds/videos.xml`) is
+  occasionally flaky even when the channel itself is fine (stray 404s and 500s),
+  so this is what keeps deploys from being blocked by an unrelated blip. The
+  build only fails outright (see the `errorf` in `layouts/_default/videos.html`)
+  if the archive itself is missing or empty, which would mean something is
+  actually broken rather than YouTube just being slow.
+- **Hugging Face unreachable** → the build **succeeds** and `/datasetsmodels`
+  and the homepage counts use `data/huggingface_snapshot.json`, the last good
+  listing saved by the nightly refresh, with a `WARN` printed.
 - **Ghost unreachable** → the build **succeeds** and the Blog card falls back to
   the last-known content baked into `layouts/partials/feeds/ghost-latest.html`.
   Update that fallback if the most recent post changes and you want the safety net
   to match.
+
+### Datasets & Models from Hugging Face
+
+`/datasetsmodels` and the homepage counts are built from the live list of repos
+under [huggingface.co/openadmet](https://huggingface.co/openadmet)
+(`layouts/partials/feeds/huggingface.html`), so a new model or dataset appears
+on the next build without touching the site.
+
+- **Card text and order** live in `data/huggingface.yaml`. Each `models` and
+  `datasets` entry gives a repo `id`, a `title` and the `lines` under it, and
+  the list order is the display order.
+- **New repos** not listed there still appear, after the curated ones and newest
+  first, titled from the dataset card's `pretty_name` (or the repo name) with the
+  card's opening sentence and licence underneath. Add them to the YAML to give
+  them proper copy.
+- **To hide a repo**, list it with `hide: true`. Private repos never appear.
