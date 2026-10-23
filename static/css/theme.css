@@ -224,43 +224,58 @@ a.funder:focus-visible::before {
     display: none;
 }
 
-/* Homepage acknowledgement band, just under the hero: funders tier above a smaller supporters tier */
+/* Homepage acknowledgement strip, just under the hero: one row of funders then
+   supporters, rolling slowly. The track holds two copies of the list and slides by
+   half its width, so the loop is seamless. Pauses on hover/focus; static if the
+   visitor prefers reduced motion. */
 .ack-band {
-    padding: 2.5rem 0 2rem;
     background: var(--pl-paper);
     border-bottom: 1px solid var(--pl-rule);
-    text-align: center;
+    overflow: hidden;
+}
+.ack-marquee {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.ack-track {
+    display: flex;
+    width: max-content;
+    animation: ack-roll 50s linear infinite;
+}
+.ack-marquee:hover .ack-track,
+.ack-marquee:focus-within .ack-track {
+    animation-play-state: paused;
+}
+@keyframes ack-roll {
+    to { transform: translateX(-50%); }
+}
+.ack-list {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin: 0;
+    /* trailing padding matches the gap so the seam between copies is even */
+    padding: 1.1rem 4rem 1.1rem 0;
+    list-style: none;
+}
+.ack-list li {
+    flex-shrink: 0;
 }
 .ack-label {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin: 0 0 1.25rem;
-    font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 600;
     color: #555;
+    white-space: nowrap;
 }
 .ack-label::before {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     background: var(--pl-red);
-}
-.ack-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem 3rem;
-    margin: 0 0 2.25rem;
-    padding: 0;
-    list-style: none;
-}
-.ack-list-supporters {
-    gap: 1rem 2.5rem;
-    margin-bottom: 1.5rem;
 }
 .ack-list a {
     display: inline-flex;
@@ -270,19 +285,19 @@ a.funder:focus-visible::before {
 }
 /* Each logo sets --logo-h so marks of different shapes carry similar weight */
 .ack-list img {
-    height: var(--logo-h, 28px);
+    display: block;
+    height: var(--logo-h, 24px);
     width: auto;
-    max-width: 100%;
 }
 .ack-text {
     font-family: var(--font-heading);
-    font-size: 1.45rem;
+    font-size: 1.65rem;
     font-weight: 600;
     line-height: 1;
 }
 .ack-stack {
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.1rem;
 }
 .ack-caption {
     font-size: 0.8rem;
@@ -298,13 +313,25 @@ a.funder:focus-visible::before {
     outline-offset: 6px;
     border-radius: 4px;
 }
-.ack-more {
-    margin: 0;
-    font-size: 0.88rem;
-}
-.ack-more a {
-    color: var(--pl-red);
-    font-weight: 600;
+@media (prefers-reduced-motion: reduce) {
+    .ack-marquee {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+    .ack-track {
+        width: auto;
+        animation: none;
+    }
+    .ack-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 2.5rem;
+        width: 100%;
+        padding: 1.1rem 1rem;
+    }
+    .ack-list[aria-hidden="true"] {
+        display: none;
+    }
 }
 
 /* People page: open grid of portraits set in plate wells */
