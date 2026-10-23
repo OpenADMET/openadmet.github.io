@@ -101,6 +101,23 @@
             height: var(--logo-h, 32px);
         }
 
+        .funder-logo .logo-chip img {
+            height: 24px;
+        }
+
+        .funder-parent {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        .funder-parent img {
+            height: 18px;
+            width: auto;
+        }
+
         .funder-what {
             flex-grow: 1;
             font-size: 0.95rem;
@@ -191,9 +208,9 @@
             </div>
             <div class="col-sm-6 col-lg-3">
                 <a href="https://openadmet.ghost.io/scaling-blind-challenges-a-new-partnership-with-radial-and-the-astera-institute/" target="_blank" rel="noopener noreferrer" class="funder">
-                    <span class="funder-logo"><img src="/images/partners/astera.svg" alt="Astera Institute"></span>
-                    <span class="funder-name">Radial</span>
+                    <span class="funder-logo"><span class="logo-chip"><img src="/images/partners/radial.svg" alt="Radial"></span></span>
                     <span class="funder-what">Astera's life science division, funding open infrastructure for running blind challenges.</span>
+                    <span class="funder-parent">Part of <img src="/images/partners/astera.svg" alt="the Astera Institute"></span>
                     <span class="funder-link">Read the post</span>
                 </a>
             </div>

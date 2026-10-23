@@ -295,17 +295,7 @@ a.funder:focus-visible::before {
     font-weight: 600;
     line-height: 1;
 }
-.ack-stack {
-    flex-direction: column;
-    gap: 0.1rem;
-}
-.ack-caption {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #555;
-}
-.ack-list a:hover .ack-text,
-.ack-list a:hover .ack-caption {
+.ack-list a:hover .ack-text {
     text-decoration: underline;
 }
 .ack-list a:focus-visible {
@@ -332,6 +322,15 @@ a.funder:focus-visible::before {
     .ack-list[aria-hidden="true"] {
         display: none;
     }
+}
+
+/* Radial's logo is light cyan made for dark backgrounds, so it sits on Radial's own slate */
+.logo-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    background: #4a5760;
 }
 
 /* People page: open grid of portraits set in plate wells */
