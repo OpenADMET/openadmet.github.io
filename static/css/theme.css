@@ -116,6 +116,11 @@ h1, h2, h3, h4, h5 {
 .section-white {
     background: var(--pl-paper);
 }
+/* Keep anchored sections (e.g. /about/#funding) clear of the sticky nav */
+#funding,
+#supporters {
+    scroll-margin-top: 5rem;
+}
 /* hr.* to outrank Bootstrap's hr:not([size]) { height: 1px } */
 hr.section-divider {
     width: 13px;
@@ -217,6 +222,89 @@ a.funder:focus-visible::before {
 }
 .row-supporters .funder::before {
     display: none;
+}
+
+/* Homepage acknowledgement band: funders tier above a smaller supporters tier */
+.ack-band {
+    padding: 3rem 0 2.5rem;
+    background: var(--pl-bench);
+    border-top: 1px solid var(--pl-rule);
+    text-align: center;
+}
+.ack-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1.25rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #555;
+}
+.ack-label::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--pl-red);
+}
+.ack-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem 3rem;
+    margin: 0 0 2.25rem;
+    padding: 0;
+    list-style: none;
+}
+.ack-list-supporters {
+    gap: 1rem 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.ack-list a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--pl-ink);
+    text-decoration: none;
+}
+/* Each logo sets --logo-h so marks of different shapes carry similar weight */
+.ack-list img {
+    height: var(--logo-h, 28px);
+    width: auto;
+    max-width: 100%;
+}
+.ack-text {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1;
+}
+.ack-stack {
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.ack-caption {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+}
+.ack-list a:hover .ack-text,
+.ack-list a:hover .ack-caption {
+    text-decoration: underline;
+}
+.ack-list a:focus-visible {
+    outline: 2px solid var(--pl-red);
+    outline-offset: 6px;
+    border-radius: 4px;
+}
+.ack-more {
+    margin: 0;
+    font-size: 0.88rem;
+}
+.ack-more a {
+    color: var(--pl-red);
+    font-weight: 600;
 }
 
 /* People page: open grid of portraits set in plate wells */
