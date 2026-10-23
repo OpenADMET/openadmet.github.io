@@ -116,6 +116,11 @@ h1, h2, h3, h4, h5 {
 .section-white {
     background: var(--pl-paper);
 }
+/* Keep anchored sections (e.g. /about/#funding) clear of the sticky nav */
+#funding,
+#supporters {
+    scroll-margin-top: 5rem;
+}
 /* hr.* to outrank Bootstrap's hr:not([size]) { height: 1px } */
 hr.section-divider {
     width: 13px;
@@ -217,6 +222,115 @@ a.funder:focus-visible::before {
 }
 .row-supporters .funder::before {
     display: none;
+}
+
+/* Homepage acknowledgement strip, just under the hero: one row of funders then
+   supporters, rolling slowly. The track holds two copies of the list and slides by
+   half its width, so the loop is seamless. Pauses on hover/focus; static if the
+   visitor prefers reduced motion. */
+.ack-band {
+    background: var(--pl-paper);
+    border-bottom: 1px solid var(--pl-rule);
+    overflow: hidden;
+}
+.ack-marquee {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.ack-track {
+    display: flex;
+    width: max-content;
+    animation: ack-roll 50s linear infinite;
+}
+.ack-marquee:hover .ack-track,
+.ack-marquee:focus-within .ack-track {
+    animation-play-state: paused;
+}
+@keyframes ack-roll {
+    to { transform: translateX(-50%); }
+}
+.ack-list {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin: 0;
+    /* trailing padding matches the gap so the seam between copies is even */
+    padding: 1.1rem 4rem 1.1rem 0;
+    list-style: none;
+}
+.ack-list li {
+    flex-shrink: 0;
+}
+.ack-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #555;
+    white-space: nowrap;
+}
+.ack-label::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--pl-red);
+}
+.ack-list a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--pl-ink);
+    text-decoration: none;
+}
+/* Each logo sets --logo-h so marks of different shapes carry similar weight */
+.ack-list img {
+    display: block;
+    height: var(--logo-h, 24px);
+    width: auto;
+}
+.ack-text {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-weight: 600;
+    line-height: 1;
+}
+.ack-list a:hover .ack-text {
+    text-decoration: underline;
+}
+.ack-list a:focus-visible {
+    outline: 2px solid var(--pl-red);
+    outline-offset: 6px;
+    border-radius: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .ack-marquee {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+    .ack-track {
+        width: auto;
+        animation: none;
+    }
+    .ack-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 2.5rem;
+        width: 100%;
+        padding: 1.1rem 1rem;
+    }
+    .ack-list[aria-hidden="true"] {
+        display: none;
+    }
+}
+
+/* Radial's logo is light cyan made for dark backgrounds, so it sits on Radial's own slate */
+.logo-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    background: #4a5760;
 }
 
 /* People page: open grid of portraits set in plate wells */
