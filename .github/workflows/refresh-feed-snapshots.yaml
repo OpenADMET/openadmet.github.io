@@ -1,0 +1,38 @@
+name: Refresh feed snapshots
+
+# Grows data/videos_archive.json and refreshes data/huggingface_snapshot.json
+# (see scripts/refresh_feed_snapshots.py), an hour before the nightly site
+# build in build-push.yaml, and commits only when something changed.
+
+on:
+  schedule:
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh snapshots
+        run: python scripts/refresh_feed_snapshots.py
+
+      - name: Commit changes
+        run: |
+          git add data/videos_archive.json data/huggingface_snapshot.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh video archive and Hugging Face snapshot"
+          git push

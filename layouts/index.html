@@ -99,9 +99,6 @@
         }
         .hero-split {
             padding: 5rem 0 4rem;
-            background:
-                radial-gradient(circle at 80% 45%, rgba(192, 57, 43, 0.10), transparent 45%),
-                linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
         }
 
         .hero-logo {
@@ -142,61 +139,45 @@
             .hero-live-dot { animation: none; }
         }
 
-        .hero-figure {
-            text-align: center;
-        }
-
-        .hero-figure img {
-            width: 100%;
-            max-width: 420px;
-            filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
-        }
-
         @media (max-width: 991.98px) {
             .hero-split { padding: 3rem 0; }
-            .hero-figure img { max-width: 260px; }
         }
-
-        .hero-figure figcaption {
-            font-size: 0.78rem;
-            color: #6c757d;
-            margin-top: 0.75rem;
-        }
-
-        .hero-figure figcaption a { color: inherit; }
     </style>
 
+    <link href="/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-black bg-black text-white sticky-top">
+<nav class="navbar navbar-expand sticky-top site-nav">
     <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="/">OpenADMET</a>
+        <a class="navbar-brand" href="/" aria-label="OpenADMET home">
+            <img src="/images/logo-nav.png" alt="" height="32">
+        </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/about/">About</a>
+                    <a class="nav-link" href="/about/">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/blindchallenges/">Blind Challenges</a>
+                    <a class="nav-link" href="/blindchallenges/">Blind Challenges</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/datasetsmodels/">Datasets &amp; Models</a>
+                    <a class="nav-link" href="/datasetsmodels/">Datasets &amp; Models</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="https://openadmet.ghost.io/">Blog</a>
+                    <a class="nav-link" href="https://openadmet.ghost.io/">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/videos/">Videos</a>
+                    <a class="nav-link" href="/videos/">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/people/">People</a>
+                    <a class="nav-link" href="/people/">People</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/publications/">Publications</a>
+                    <a class="nav-link" href="/publications/">Publications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/policies/">Community Policies</a>
+                    <a class="nav-link" href="/policies/">Community Policies</a>
                 </li>
             </ul>
         </div>
@@ -219,22 +200,13 @@
                     <a href="/datasetsmodels/" class="btn btn-outline-dark btn-lg rounded-pill">Explore models &amp; data</a>
                 </div>
                 <div class="text-muted small">
-                    <span class="hero-live-dot"></span>CYP Inhibition Blind Challenge is live &middot; final submissions 3 November 2026
+                    <span class="hero-live-dot"></span>CYP Inhibition Blind Challenge is live
                 </div>
-            </div>
-            <div class="col-lg-5">
-                <figure class="hero-figure mb-0">
-                    <img src="/images/cyp3a4_trimer_density.png"
-                         alt="Cryo-EM density map of the CYP3A4 trimer at 3.25 Å resolution">
-                    <figcaption>
-                        CYP3A4 trimer, cryo-EM density at 3.25&nbsp;&Aring; &middot;
-                        <a href="https://doi.org/10.64898/2026.09.01.748687" target="_blank" rel="noopener noreferrer">Orta et al., bioRxiv 2026</a> (CC&nbsp;BY)
-                    </figcaption>
-                </figure>
             </div>
         </div>
     </div>
 </section>
+<script src="/js/plate-hero.js" defer></script>
 
 <div class="py-5 section-light">
     <div class="container px-4 px-lg-5">
@@ -299,7 +271,8 @@
                     </div>
                     <div class="card-body p-4 flex-grow-1">
                         <div class="text-muted small mb-1">HuggingFace</div>
-                        <h5 class="fw-bold mb-2">12 open models and 8 curated ADMET datasets</h5>
+                        {{ $hf := partial "feeds/huggingface.html" . }}
+                        <h5 class="fw-bold mb-2">{{ len $hf.models }} open models and {{ len $hf.datasets }} curated ADMET datasets</h5>
                         <p class="text-dark mb-0">
                             Predictive models and experimental datasets from OpenADMET blind challenges and data generation efforts.
                         </p>

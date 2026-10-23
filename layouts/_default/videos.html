@@ -67,37 +67,40 @@
             color: #fff;
         }
     </style>
+    <link href="/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-black bg-black text-white sticky-top">
+<nav class="navbar navbar-expand sticky-top site-nav">
     <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="/">OpenADMET</a>
+        <a class="navbar-brand" href="/" aria-label="OpenADMET home">
+            <img src="/images/logo-nav.png" alt="" height="32">
+        </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/about/">About</a>
+                    <a class="nav-link" href="/about/">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/blindchallenges/">Blind Challenges</a>
+                    <a class="nav-link" href="/blindchallenges/">Blind Challenges</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/datasetsmodels/">Datasets &amp; Models</a>
+                    <a class="nav-link" href="/datasetsmodels/">Datasets &amp; Models</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="https://openadmet.ghost.io/">Blog</a>
+                    <a class="nav-link" href="https://openadmet.ghost.io/">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/videos/">Videos</a>
+                    <a class="nav-link" href="/videos/" aria-current="page">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/people/">People</a>
+                    <a class="nav-link" href="/people/">People</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/publications/">Publications</a>
+                    <a class="nav-link" href="/publications/">Publications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/policies/">Community Policies</a>
+                    <a class="nav-link" href="/policies/">Community Policies</a>
                 </li>
             </ul>
         </div>
@@ -118,7 +121,7 @@
 
         {{ $videos := partial "feeds/youtube-videos.html" . }}
         {{ if not $videos }}
-          {{ errorf "No videos available from the YouTube feed (%s) or its fallback data/videos_fallback.json. Failing the build so the live gallery is left untouched rather than replaced with an empty one." site.Params.youtubeFeed }}
+          {{ errorf "No videos available from the YouTube feed (%s) or the archive data/videos_archive.json. Failing the build so the live gallery is left untouched rather than replaced with an empty one." site.Params.youtubeFeed }}
         {{ end }}
 
         <div class="row g-4">

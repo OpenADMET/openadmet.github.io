@@ -1,0 +1,78 @@
+{{/*
+  Returns the openadmet models and datasets on Hugging Face as
+  dict "models" (slice) "datasets" (slice), each item a dict: id, url, title, lines.
+
+  The listings come live from the Hugging Face API, so a new upload shows up on
+  the next build. data/huggingface.yaml sets the order, titles and lines for
+  curated repos and can hide repos; anything not listed there is added after
+  the curated ones, newest first, titled and summarised from its own card.
+
+  If the API is unreachable the build warns and uses the last good listing in
+  data/huggingface_snapshot.json (refreshed nightly by
+  scripts/refresh_feed_snapshots.py) rather than failing.
+*/}}
+
+{{ $licenses := dict
+  "apache-2.0" "Apache 2.0"
+  "mit" "MIT"
+  "cc-by-4.0" "CC-BY-4.0"
+  "cc-by-nc-4.0" "CC-BY-NC-4.0"
+  "cc0-1.0" "CC0-1.0"
+}}
+
+{{ $result := dict }}
+{{ range $kind := slice "models" "datasets" }}
+
+  {{ $live := slice }}
+  {{ $url := printf "https://huggingface.co/api/%s?author=openadmet&full=true&cardData=true&limit=500" $kind }}
+  {{ with try (resources.GetRemote $url) }}
+    {{ with .Err }}
+      {{ warnf "Hugging Face %s listing unreachable (%s) — using data/huggingface_snapshot.json." $kind . }}
+    {{ else with .Value }}
+      {{ $live = . | transform.Unmarshal }}
+    {{ end }}
+  {{ end }}
+  {{ if not $live }}
+    {{ $live = index site.Data.huggingface_snapshot $kind }}
+  {{ end }}
+
+  {{ $public := slice }}
+  {{ range $live }}
+    {{ if not .private }}{{ $public = $public | append .id }}{{ end }}
+  {{ end }}
+  {{ $base := cond (eq $kind "datasets") "https://huggingface.co/datasets/" "https://huggingface.co/" }}
+
+  {{ $items := slice }}
+  {{ $listed := slice }}
+  {{ range index site.Data.huggingface $kind }}
+    {{ $listed = $listed | append .id }}
+    {{ if not .hide }}
+      {{ if in $public .id }}
+        {{ $items = $items | append (dict "id" .id "url" (print $base .id) "title" .title "lines" (.lines | default slice)) }}
+      {{ else }}
+        {{ warnf "data/huggingface.yaml lists %s %q, but it isn't public on Hugging Face — skipping it." $kind .id }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Uncurated repos: default card from the repo's own metadata. */}}
+  {{ range sort $live "lastModified" "desc" }}
+    {{ if and (not .private) (not (in $listed .id)) }}
+      {{ $card := .cardData | default dict }}
+      {{ $name := index (split .id "/") 1 }}
+      {{ $title := $card.pretty_name | default ($name | replaceRE `[-_]+` " " | humanize) }}
+      {{ $lines := slice }}
+      {{/* Dataset descriptions open with the card's heading; drop it and keep the lead sentence or two. */}}
+      {{ with .description }}
+        {{ $summary := . | plainify | strings.ReplaceRE `\s+` " " | strings.TrimSpace | strings.TrimPrefix $title | strings.TrimSpace | truncate 140 }}
+        {{ with $summary }}{{ $lines = $lines | append . }}{{ end }}
+      {{ end }}
+      {{ with $card.license }}{{ $lines = $lines | append (index $licenses . | default (upper .)) }}{{ end }}
+      {{ $items = $items | append (dict "id" .id "url" (print $base .id) "title" $title "lines" $lines) }}
+    {{ end }}
+  {{ end }}
+
+  {{ $result = merge $result (dict $kind $items) }}
+{{ end }}
+
+{{ return $result }}

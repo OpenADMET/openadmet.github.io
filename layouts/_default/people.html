@@ -30,6 +30,9 @@
 
         .profile-container { text-align: center; }
 
+        /* Portraits link to the person's LinkedIn where they have one */
+        a.circular-image { display: block; }
+
         .circular-image img {
             border-radius: 50%;
             width: 100%;
@@ -88,37 +91,40 @@
             }
         }
     </style>
+    <link href="/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-black bg-black text-white sticky-top">
+<nav class="navbar navbar-expand sticky-top site-nav">
     <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="/">OpenADMET</a>
+        <a class="navbar-brand" href="/" aria-label="OpenADMET home">
+            <img src="/images/logo-nav.png" alt="" height="32">
+        </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/about/">About</a>
+                    <a class="nav-link" href="/about/">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/blindchallenges/">Blind Challenges</a>
+                    <a class="nav-link" href="/blindchallenges/">Blind Challenges</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/datasetsmodels/">Datasets &amp; Models</a>
+                    <a class="nav-link" href="/datasetsmodels/">Datasets &amp; Models</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="https://openadmet.ghost.io/">Blog</a>
+                    <a class="nav-link" href="https://openadmet.ghost.io/">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/videos/">Videos</a>
+                    <a class="nav-link" href="/videos/">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/people/">People</a>
+                    <a class="nav-link" href="/people/" aria-current="page">People</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/publications/">Publications</a>
+                    <a class="nav-link" href="/publications/">Publications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/policies/">Community Policies</a>
+                    <a class="nav-link" href="/policies/">Community Policies</a>
                 </li>
             </ul>
         </div>
@@ -145,9 +151,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#castellanosModal">
-                                <img src="/images/people/maria_castellanos.jpeg" alt="Maria Castellanos">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/mariacastellanos1/" target="_blank" rel="noopener noreferrer" aria-label="Maria Castellanos on LinkedIn">
+                                <img src="/images/people/maria_castellanos.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Maria Castellanos, Ph. D.</strong><br>
                                 Research Software Engineer
@@ -161,9 +167,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#colbyModal">
-                                <img src="/images/people/sean_colby.jpeg" alt="Sean Colby">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/sean-m-colby/" target="_blank" rel="noopener noreferrer" aria-label="Sean Colby on LinkedIn">
+                                <img src="/images/people/sean_colby.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Sean Colby, M. Sc.</strong><br>
                                 Senior Scientist
@@ -177,9 +183,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#huddlestonModal">
-                                <img src="/images/people/kate_huddleston.jpg" alt="Kate Huddleston">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/khuddzu/" target="_blank" rel="noopener noreferrer" aria-label="Kate Huddleston on LinkedIn">
+                                <img src="/images/people/kate_huddleston.jpg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Kate Huddleston, Ph. D.</strong><br>
                                 Research Software Engineer
@@ -193,9 +199,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#macdermottModal">
-                                <img src="/images/people/hugo_macdermott_opeskin.jpeg" alt="Hugo MacDermott-Opeskin">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/hugo-macdermott-opeskin/" target="_blank" rel="noopener noreferrer" aria-label="Hugo MacDermott-Opeskin on LinkedIn">
+                                <img src="/images/people/hugo_macdermott_opeskin.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Hugo MacDermott-Opeskin, Ph. D.</strong><br>
                                 Technical Lead
@@ -209,9 +215,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#swainModal">
-                                <img src="/images/people/jonathan_swain.jpeg" alt="Jonathan Swain">
-                            </div>
+                            <a class="circular-image" href="https://linkedin.com/in/jonathan-swain/?skipRedirect=true" target="_blank" rel="noopener noreferrer" aria-label="Jonathan Swain on LinkedIn">
+                                <img src="/images/people/jonathan_swain.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Jonathan Swain, Ph. D.</strong><br>
                                 Research Software Engineer
@@ -225,9 +231,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#malloryModal">
-                                <img src="/images/people/mallory_tollefson.jpg" alt="Mallory Tollefson">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/mallory-tollefson-ph-d-5ba812149/" target="_blank" rel="noopener noreferrer" aria-label="Mallory Tollefson on LinkedIn">
+                                <img src="/images/people/mallory_tollefson.jpg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Mallory Tollefson, Ph. D.</strong><br>
                                 Business and Project Manager
@@ -241,9 +247,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#westModal">
-                                <img src="/images/people/devany_west.jpg" alt="Devany West">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/devany-west-08b534123/" target="_blank" rel="noopener noreferrer" aria-label="Devany West on LinkedIn">
+                                <img src="/images/people/devany_west.jpg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Devany West, Ph. D.</strong><br>
                                 Research Software Engineer
@@ -257,9 +263,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#xuModal">
-                                <img src="/images/people/cynthia_xu.jpeg" alt="Cynthia Xu">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/cynthiaxuxu/" target="_blank" rel="noopener noreferrer" aria-label="Cynthia Xu on LinkedIn">
+                                <img src="/images/people/cynthia_xu.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Cynthia Xu, M. Sc.</strong><br>
                                 Research Software Engineer
@@ -281,7 +287,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#falcioniModal">
+                            <div class="circular-image">
                                 <img src="/images/people/marco_falcioni.jpeg" alt="Marco Falcioni" style="object-position: center top;">
                             </div>
                             <div class="name">
@@ -297,9 +303,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#handlyModal">
-                                <img src="/images/people/naomi_handly.jpg" alt="Naomi Handly">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/lnaomihandly/" target="_blank" rel="noopener noreferrer" aria-label="Naomi Handly on LinkedIn">
+                                <img src="/images/people/naomi_handly.jpg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Naomi Handly, Ph. D.</strong><br>
                                 VP Platform
@@ -313,9 +319,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#jiangModal">
-                                <img src="/images/people/brian_jiang.jpg" alt="Bryan Jiang" style="object-position: 75% top;">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/jiangbryan/" target="_blank" rel="noopener noreferrer" aria-label="Bryan Jiang on LinkedIn">
+                                <img src="/images/people/brian_jiang.jpg" alt="" style="object-position: 75% top;">
+                            </a>
                             <div class="name">
                                 <strong>Bryan Jiang</strong><br>
                                 Research Associate
@@ -329,9 +335,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#lindahlModal">
-                                <img src="/images/people/ana_lindahl.jpg" alt="Ana Lindahl" style="object-position: center top;">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/anastasia-lindahl-641682191" target="_blank" rel="noopener noreferrer" aria-label="Ana Lindahl on LinkedIn">
+                                <img src="/images/people/ana_lindahl.jpg" alt="" style="object-position: center top;">
+                            </a>
                             <div class="name">
                                 <strong>Ana Lindahl, Ph. D.</strong><br>
                                 Analytical Scientist
@@ -345,9 +351,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#louModal">
-                                <img src="/images/people/terry_lou.jpg" alt="Terry Lou">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/terry-lou-2296a17a/" target="_blank" rel="noopener noreferrer" aria-label="Terry Lou on LinkedIn">
+                                <img src="/images/people/terry_lou.jpg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Terry Lou, Ph. D.</strong><br>
                                 Synthetic Chemistry Methodologist
@@ -361,9 +367,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#orrModal">
-                                <img src="/images/people/lauren_orr.jpg" alt="Lauren Orr">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/lauren-orr-a591b0156/" target="_blank" rel="noopener noreferrer" aria-label="Lauren Orr on LinkedIn">
+                                <img src="/images/people/lauren_orr.jpg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Lauren Orr, Ph. D.</strong><br>
                                 Analytical Scientist
@@ -377,9 +383,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#sabaatModal">
-                                <img src="/images/people/sam_sabaat.jpg" alt="Sam Sabaat" style="object-position: center top;">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/sabaat/" target="_blank" rel="noopener noreferrer" aria-label="Sam Sabaat on LinkedIn">
+                                <img src="/images/people/sam_sabaat.jpg" alt="" style="object-position: center top;">
+                            </a>
                             <div class="name">
                                 <strong>Sam Sabaat</strong><br>
                                 Research Associate
@@ -393,9 +399,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#simpkinsModal">
-                                <img src="/images/people/scott_simpkins.jpg" alt="Scott Simpkins" style="object-position: center top;">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/swsimpkins/" target="_blank" rel="noopener noreferrer" aria-label="Scott Simpkins on LinkedIn">
+                                <img src="/images/people/scott_simpkins.jpg" alt="" style="object-position: center top;">
+                            </a>
                             <div class="name">
                                 <strong>Scott Simpkins, Ph. D.</strong><br>
                                 Data Scientist
@@ -405,27 +411,12 @@
                 </div>
             </div>
 
-            <div class="col-fifth mb-5">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#warnefordModal">
-                                <img src="/images/people/robert_warneford_thompson.jpeg" alt="Robert Warneford-Thomson" style="object-position: center top;">
-                            </div>
-                            <div class="name">
-                                <strong>Robert Warneford-Thomson, Ph. D.</strong><br>
-                                Team Lead
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-fifth mb-5">
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#cameronModal">
+                            <div class="circular-image">
                                 <img src="/images/people/julia_cameron.png" alt="Julia Cameron">
                             </div>
                             <div class="name">
@@ -441,7 +432,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#yardenyModal">
+                            <div class="circular-image">
                                 <img src="/images/people/noah_yardeny.png" alt="Noah Yardeny">
                             </div>
                             <div class="name">
@@ -465,9 +456,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#choudhurysModal">
-                                <img src="/images/people/promisree_choudhury.jpeg" alt="Promisree Choudhury" style="object-position: center 20%;">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/promisree-choudhury-44b4596b/" target="_blank" rel="noopener noreferrer" aria-label="Promisree Choudhury on LinkedIn">
+                                <img src="/images/people/promisree_choudhury.jpeg" alt="" style="object-position: center 20%;">
+                            </a>
                             <div class="name">
                                 <strong>Promisree Choudhury</strong><br>
                                 Scientific Program Manager
@@ -481,7 +472,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#correyModal">
+                            <div class="circular-image">
                                 <img src="/images/people/galen_correy.jpg" alt="Galen Correy">
                             </div>
                             <div class="name">
@@ -497,7 +488,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#coyoteMaestasModal">
+                            <div class="circular-image">
                                 <img src="/images/people/willow_coyote_maestas.jpg" alt="Willow Coyote-Maestas">
                             </div>
                             <div class="name">
@@ -513,9 +504,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#saliModal">
-                                <img src="/images/people/andrej_sali.jpeg" alt="Andrej Sali">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/andrej-sali-113470273/" target="_blank" rel="noopener noreferrer" aria-label="Andrej Sali on LinkedIn">
+                                <img src="/images/people/andrej_sali.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Andrej Sali, Ph. D.</strong><br>
                                 Professor
@@ -529,9 +520,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#savicModal">
-                                <img src="/images/people/rada_savic.jpeg" alt="Rada Savic" style="object-position: center 20%;">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/rada-savic-9748459/" target="_blank" rel="noopener noreferrer" aria-label="Rada Savic on LinkedIn">
+                                <img src="/images/people/rada_savic.jpeg" alt="" style="object-position: center 20%;">
+                            </a>
                             <div class="name">
                                 <strong>Rada Savic, Ph. D.</strong><br>
                                 Professor
@@ -545,7 +536,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#shoichetModal">
+                            <div class="circular-image">
                                 <img src="/images/people/brian_shoichet.jpeg" alt="Brian Shoichet">
                             </div>
                             <div class="name">
@@ -561,7 +552,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#manglikModal">
+                            <div class="circular-image">
                                 <img src="/images/people/aashish_manglik.png" alt="Aashish Manglik">
                             </div>
                             <div class="name">
@@ -577,7 +568,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#gartnerModal">
+                            <div class="circular-image">
                                 <img src="/images/people/zev_gartner.jpg" alt="Zev Gartner">
                             </div>
                             <div class="name">
@@ -601,9 +592,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#choderaModal">
-                                <img src="/images/people/john_chodera.jpeg" alt="John D. Chodera">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/john-chodera-5287a8120/" target="_blank" rel="noopener noreferrer" aria-label="John D. Chodera on LinkedIn">
+                                <img src="/images/people/john_chodera.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>John D. Chodera, Ph. D.</strong><br>
                                 Memorial Sloan Kettering Cancer Center
@@ -617,9 +608,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#fraserModal">
-                                <img src="/images/people/james_fraser.jpeg" alt="James Fraser">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/jamessfraser/" target="_blank" rel="noopener noreferrer" aria-label="James Fraser on LinkedIn">
+                                <img src="/images/people/james_fraser.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>James Fraser, Ph. D.</strong><br>
                                 University of California San Francisco
@@ -633,9 +624,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#kosuriModal">
-                                <img src="/images/people/sri_kosuri.jpeg" alt="Sri Kosuri">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/sri-kosuri-14486a142/" target="_blank" rel="noopener noreferrer" aria-label="Sri Kosuri on LinkedIn">
+                                <img src="/images/people/sri_kosuri.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Sri Kosuri, Ph. D.</strong><br>
                                 Octant
@@ -649,9 +640,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#murckoModal">
-                                <img src="/images/people/mark_murcko.jpeg" alt="Mark Murcko">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/mark-murcko-18b2b22/" target="_blank" rel="noopener noreferrer" aria-label="Mark Murcko on LinkedIn">
+                                <img src="/images/people/mark_murcko.jpeg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Mark Murcko, Ph. D.</strong><br>
                                 Disruptive Biomedical, LLC
@@ -665,9 +656,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="profile-container">
-                            <div class="circular-image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#waltersModal">
-                                <img src="/images/people/pat_walters.jpg" alt="Pat Walters">
-                            </div>
+                            <a class="circular-image" href="https://www.linkedin.com/in/wpwalters/" target="_blank" rel="noopener noreferrer" aria-label="Pat Walters on LinkedIn">
+                                <img src="/images/people/pat_walters.jpg" alt="">
+                            </a>
                             <div class="name">
                                 <strong>Pat Walters, Ph. D.</strong><br>
                                 OpenADMET
@@ -682,660 +673,36 @@
 
 {{ partial "footer.html" . }}
 
-<!-- OMSF Modals -->
-<div class="modal fade" id="castellanosModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/maria_castellanos.jpeg" alt="Maria Castellanos">
-                </div>
-                <h5 class="fw-bold mb-1">Maria Castellanos, Ph. D.</h5>
-                <p class="text-muted mb-3">Research Software Engineer</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/mariacastellanos1/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="colbyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/sean_colby.jpeg" alt="Sean Colby">
-                </div>
-                <h5 class="fw-bold mb-1">Sean Colby, M. Sc.</h5>
-                <p class="text-muted mb-3">Senior Scientist</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/sean-m-colby/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="huddlestonModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/kate_huddleston.jpg" alt="Kate Huddleston">
-                </div>
-                <h5 class="fw-bold mb-1">Kate Huddleston, Ph. D.</h5>
-                <p class="text-muted mb-3">Research Software Engineer</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/khuddzu/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="macdermottModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/hugo_macdermott_opeskin.jpeg" alt="Hugo MacDermott-Opeskin">
-                </div>
-                <h5 class="fw-bold mb-1">Hugo MacDermott-Opeskin, Ph. D.</h5>
-                <p class="text-muted mb-3">Technical Lead</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/hugo-macdermott-opeskin/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="swainModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/jonathan_swain.jpeg" alt="Jonathan Swain">
-                </div>
-                <h5 class="fw-bold mb-1">Jonathan Swain, Ph. D.</h5>
-                <p class="text-muted mb-3">Research Software Engineer</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://linkedin.com/in/jonathan-swain/?skipRedirect=true" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="malloryModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/mallory_tollefson.jpg" alt="Mallory Tollefson">
-                </div>
-                <h5 class="fw-bold mb-1">Mallory Tollefson, Ph. D.</h5>
-                <p class="text-muted mb-3">Business and Project Manager</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/mallory-tollefson-ph-d-5ba812149/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="westModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/devany_west.jpg" alt="Devany West">
-                </div>
-                <h5 class="fw-bold mb-1">Devany West, Ph. D.</h5>
-                <p class="text-muted mb-3">Research Software Engineer</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/devany-west-08b534123/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="xuModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/cynthia_xu.jpeg" alt="Cynthia Xu">
-                </div>
-                <h5 class="fw-bold mb-1">Cynthia Xu, M. Sc.</h5>
-                <p class="text-muted mb-3">Research Software Engineer</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/cynthiaxuxu/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Octant Modals -->
-<div class="modal fade" id="falcioniModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/marco_falcioni.jpeg" alt="Marco Falcioni">
-                </div>
-                <h5 class="fw-bold mb-1">Marco Falcioni, Ph. D.</h5>
-                <p class="text-muted mb-3">Software Engineer</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="handlyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/naomi_handly.jpg" alt="Naomi Handly">
-                </div>
-                <h5 class="fw-bold mb-1">Naomi Handly, Ph. D.</h5>
-                <p class="text-muted mb-3">VP Platform</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/lnaomihandly/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="jiangModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/brian_jiang.jpg" alt="Bryan Jiang">
-                </div>
-                <h5 class="fw-bold mb-1">Bryan Jiang</h5>
-                <p class="text-muted mb-3">Research Associate</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/jiangbryan/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="lindahlModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/ana_lindahl.jpg" alt="Ana Lindahl">
-                </div>
-                <h5 class="fw-bold mb-1">Ana Lindahl, Ph. D.</h5>
-                <p class="text-muted mb-3">Analytical Scientist</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/anastasia-lindahl-641682191" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="louModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/terry_lou.jpg" alt="Terry Lou">
-                </div>
-                <h5 class="fw-bold mb-1">Terry Lou, Ph. D.</h5>
-                <p class="text-muted mb-3">Synthetic Chemistry Methodologist</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/terry-lou-2296a17a/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="orrModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/lauren_orr.jpg" alt="Lauren Orr">
-                </div>
-                <h5 class="fw-bold mb-1">Lauren Orr, Ph. D.</h5>
-                <p class="text-muted mb-3">Analytical Scientist</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/lauren-orr-a591b0156/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="sabaatModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/sam_sabaat.jpg" alt="Sam Sabaat">
-                </div>
-                <h5 class="fw-bold mb-1">Sam Sabaat</h5>
-                <p class="text-muted mb-3">Research Associate</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/sabaat/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="simpkinsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/scott_simpkins.jpg" alt="Scott Simpkins">
-                </div>
-                <h5 class="fw-bold mb-1">Scott Simpkins, Ph. D.</h5>
-                <p class="text-muted mb-3">Data Scientist</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/swsimpkins/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="warnefordModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/robert_warneford_thompson.jpeg" alt="Robert Warneford-Thomson">
-                </div>
-                <h5 class="fw-bold mb-1">Robert Warneford-Thomson, Ph. D.</h5>
-                <p class="text-muted mb-3">Team Lead</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/robert-warneford-thomson-51b274253/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Governing Board Modals -->
-<div class="modal fade" id="choderaModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/john_chodera.jpeg" alt="John D. Chodera">
-                </div>
-                <h5 class="fw-bold mb-1">John D. Chodera, Ph. D.</h5>
-                <p class="text-muted mb-1">Memorial Sloan Kettering Cancer Center</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/john-chodera-5287a8120/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="fraserModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/james_fraser.jpeg" alt="James Fraser">
-                </div>
-                <h5 class="fw-bold mb-1">James Fraser, Ph. D.</h5>
-                <p class="text-muted mb-1">University of California San Francisco</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/jamessfraser/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="kosuriModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/sri_kosuri.jpeg" alt="Sri Kosuri">
-                </div>
-                <h5 class="fw-bold mb-1">Sri Kosuri, Ph. D.</h5>
-                <p class="text-muted mb-1">Octant</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/sri-kosuri-14486a142/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="murckoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/mark_murcko.jpeg" alt="Mark Murcko">
-                </div>
-                <h5 class="fw-bold mb-1">Mark Murcko, Ph. D.</h5>
-                <p class="text-muted mb-1">Disruptive Biomedical, LLC</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/mark-murcko-18b2b22/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="waltersModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/pat_walters.jpg" alt="Pat Walters">
-                </div>
-                <h5 class="fw-bold mb-1">Pat Walters, Ph. D.</h5>
-                <p class="text-muted mb-1">Open Molecular Software Foundation</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/wpwalters/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="cameronModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/julia_cameron.png" alt="Julia Cameron">
-                </div>
-                <h5 class="fw-bold mb-1">Julia Cameron</h5>
-                <p class="text-muted mb-3">Apprentice</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="yardenyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/noah_yardeny.png" alt="Noah Yardeny">
-                </div>
-                <h5 class="fw-bold mb-1">Noah Yardeny</h5>
-                <p class="text-muted mb-3">Scientist</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- UCSF Modals -->
-<div class="modal fade" id="correyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/galen_correy.jpg" alt="Galen Correy">
-                </div>
-                <h5 class="fw-bold mb-1">Galen Correy, Ph. D.</h5>
-                <p class="text-muted mb-1">Assistant Adjunct Professor BTS</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="shoichetModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/brian_shoichet.jpeg" alt="Brian Shoichet">
-                </div>
-                <h5 class="fw-bold mb-1">Brian Shoichet, Ph. D.</h5>
-                <p class="text-muted mb-1">University of California San Francisco</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="saliModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/andrej_sali.jpeg" alt="Andrej Sali">
-                </div>
-                <h5 class="fw-bold mb-1">Andrej Sali, Ph. D.</h5>
-                <p class="text-muted mb-1">University of California San Francisco</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/andrej-sali-113470273/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="savicModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/rada_savic.jpeg" alt="Rada Savic">
-                </div>
-                <h5 class="fw-bold mb-1">Rada Savic, Ph. D.</h5>
-                <p class="text-muted mb-1">University of California San Francisco</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/rada-savic-9748459/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="coyoteMaestasModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/willow_coyote_maestas.jpg" alt="Willow Coyote-Maestas">
-                </div>
-                <h5 class="fw-bold mb-1">Willow Coyote-Maestas, Ph. D.</h5>
-                <p class="text-muted mb-1">University of California San Francisco</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="choudhurysModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/promisree_choudhury.jpeg" alt="Promisree Choudhury">
-                </div>
-                <h5 class="fw-bold mb-1">Promisree Choudhury</h5>
-                <p class="text-muted mb-1">University of California San Francisco</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-                <a href="https://www.linkedin.com/in/promisree-choudhury-44b4596b/" target="_blank">
-                    <img src="/images/linkedin-icon.png" alt="LinkedIn" style="width: 36px; height: 36px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="manglikModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/aashish_manglik.png" alt="Aashish Manglik">
-                </div>
-                <h5 class="fw-bold mb-1">Aashish Manglik, Ph. D.</h5>
-                <p class="text-muted mb-1">University of California San Francisco</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="gartnerModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center px-4 pb-4">
-                <div class="circular-image mb-3" style="display: inline-block;">
-                    <img src="/images/people/zev_gartner.jpg" alt="Zev Gartner">
-                </div>
-                <h5 class="fw-bold mb-1">Zev Gartner, Ph. D.</h5>
-                <p class="text-muted mb-1">University of California San Francisco</p>
-                <p class="mb-4"><!-- Add bio here --></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
 </body>
 </html>

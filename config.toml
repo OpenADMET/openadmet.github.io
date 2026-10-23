@@ -8,5 +8,5 @@ publishDir = "public"
   # The nightly build in .github/workflows/build-push.yaml re-reads these.
   ghostFeed = "https://openadmet.ghost.io/rss/"
   youtubeChannel = "https://www.youtube.com/@OpenADMET"
-  # RSS only exposes the 15 most recent uploads; older videos drop off the page.
+  # RSS only exposes the 15 most recent uploads; data/videos_archive.json keeps the rest.
   youtubeFeed = "https://www.youtube.com/feeds/videos.xml?channel_id=UCzwhDb8h5Lgi-AcT4vccS_Q"

@@ -1,0 +1,222 @@
+{
+  "models": [
+    {
+      "id": "openadmet/chemprop-foundation-pretraining-weights",
+      "lastModified": "2026-08-17T14:12:46.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/cyp1a2-cyp2d6-cyp3a4-cyp2c9-chemeleon-v1",
+      "lastModified": "2026-06-16T19:17:19.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/cyp1a2-cyp2d6-cyp3a4-cyp3c9-chemeleon-baseline",
+      "lastModified": "2026-05-06T18:15:21.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/herg-chemeleon-baseline",
+      "lastModified": "2026-06-16T19:18:44.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/logd-chemprop_foundation_minimol-v1",
+      "lastModified": "2026-08-12T19:25:41.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/logd-chemprop_foundation_surrogate-v1",
+      "lastModified": "2026-08-12T19:22:24.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/microsomal-clearance-chemeleon-v1",
+      "lastModified": "2026-07-28T20:57:49.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/mpbp-chemprop_foundation_minimol-v1",
+      "lastModified": "2026-08-12T19:20:11.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/mpbp-chemprop_foundation_surrogate-v1",
+      "lastModified": "2026-08-12T19:18:01.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/permeability-logd-ppb-chemeleon-baseline",
+      "lastModified": "2026-06-18T15:33:10.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/pxr-chemeleon-baseline",
+      "lastModified": "2026-05-06T18:23:33.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/pxr-chemeleon-v1",
+      "lastModified": "2026-07-07T22:54:47.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    }
+  ],
+  "datasets": [
+    {
+      "id": "openadmet/ahr-induction",
+      "lastModified": "2026-10-02T17:29:14.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "OpenADMET AHR Induction",
+        "license": "cc-by-4.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tOpenADMET AHR Induction\n\t\n\nExperimental measurements of aryl hydrocarbon receptor (AHR) induction, produced by OpenADMET\nfrom Octant Bio cell-based reporter assays. AHR is a ligand-activated bHLH-PAS transcription\nfactor; agonists drive expression of CYP1A1/CYP1A2/CYP1B1 and related genes, which makes AHR\nactivation relevant to drug-drug interactions and to off-target toxicity.\nThe dataset covers three assay tiers from the same screening campaign: a single-concentration\nprimary… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/ahr-induction."
+    },
+    {
+      "id": "openadmet/ASAP_Polaris_OpenADMET_challenge",
+      "lastModified": "2026-01-12T02:17:38.000Z",
+      "private": false,
+      "cardData": {
+        "license": "mit"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tRaw datasets for the ASAP-Polaris-OpenADMET blind challenge.\n\t\n\nThis repo contains the datasets used in the ASAP-Polaris-OpenADMET challenge, comprising Potency, ADMET and crystallography data from ASAP Discovery's SARS-CoV-2 / MERS-CoV main protease inhibitor program. \nMore detail on the competition and its design can be found at the relevant preprint. \nData is assigned to a train or test split based on criteria laid out in the above preprint. For the tabular data (Potency and… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/ASAP_Polaris_Ope"
+    },
+    {
+      "id": "openadmet/cyp-challenge-train-test",
+      "lastModified": "2026-09-23T21:56:05.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "OpenADMET CYP Inhibition Blind Challenge",
+        "license": "apache-2.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tCYP Challenge Train/Test Dataset\n\t\n\nA high-quality experimental dataset for predicting inhibition of the major drug-metabolizing Cytochrome P450 enzymes (CYP1A2, CYP2C9, CYP2D6, CYP3A4), released as part of the OpenADMET CYP Inhibition Blind Challenge.\nBlog post: Announcing OpenADMET’s CYP inhibition blind challenge\nChallenge Space: OpenADMET CYP Inhibition Blind Challenge\nChallenge period: August 17, 2026 - November 3, 2026\nProduced by: OpenADMET\n\n\t\n\t\t\n\t\n\t\n\t\tCHANGELOG\n\t\n\n\nUpdated… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/cyp-challenge"
+    },
+    {
+      "id": "openadmet/Octant_CYP_inhibition_reactivity_blog_release",
+      "lastModified": "2026-08-06T10:50:25.000Z",
+      "private": false,
+      "cardData": {
+        "license": "cc-by-4.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tOpenADMET Octant CYP Inhibition & Reactivity\n\t\n\nData release from the OpenADMET consortium, generated by Octant Bio.\nThis dataset accompanies the blog post Building the OpenADMET Data Engine.\nSource code, assay protocols, and raw TSV files are on GitHub.\n\n\t\n\t\t\n\t\n\t\n\t\tOverview\n\t\n\nCytochrome P450 (CYP) enzymes drive the oxidative metabolism of most drugs and are a primary cause of drug-drug interactions (DDIs).\nDespite their importance, public CYP datasets are sparse, noisy, and… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/Octant_CYP_inhibit"
+    },
+    {
+      "id": "openadmet/openadmet-expansionrx-challenge-data",
+      "lastModified": "2026-01-27T03:10:43.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "openadmet-expansion-challenge-data",
+        "license": "cc-by-4.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tOpenADMET-ExpansionRx Challenge FULL dataset\n\t\n\nThis is the full dataset used in the OpenADMET-ExpansionRx blind challenge, which finalized in January 19th, 2026. \nOriginally split in a train and blinded test set, we now release the full dataset, which contains real-work ADMET data from a recently prosecuted series of drug discovery campaigns by Expansion Therapeutics on RNA mediated diseases. \nWhile optimising candidate molecules for their preclinical programs Expansion collected… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/openadmet-exp"
+    },
+    {
+      "id": "openadmet/openadmet-expansionrx-challenge-teaser",
+      "lastModified": "2025-10-08T05:47:53.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "openadmet-challenge-teaser",
+        "license": "cc0-1.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tOpenADMET-ExpansionRx Challenge TEASER dataset\n\t\n\nThis dataset contains real-work ADMET data from a recently prosecuted series of drug discovery campaigns by Expansion Therapeutics on RNA mediated diseases. While optimising candidate molecules for their preclinical programs Expansion collected a variety of ADMET data for off-targets and properties of interest in the traditional game of “whack-a-mole” familiar to all drug hunters. Now, they’ve made the bold and generous decision to… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/openadmet-exp"
+    },
+    {
+      "id": "openadmet/openadmet-expansionrx-challenge-test-data-blinded",
+      "lastModified": "2025-10-27T02:23:01.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "openadmet-expansionrx-test-data-blinded",
+        "license": "cc0-1.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tOpenADMET-ExpansionRx Challenge blinded test dataset\n\t\n\nThis dataset contains real-work ADMET data from a recently prosecuted series of drug discovery campaigns by Expansion Therapeutics on RNA mediated diseases. While optimising candidate molecules for their preclinical programs Expansion collected a variety of ADMET data for off-targets and properties of interest in the traditional game of “whack-a-mole” familiar to all drug hunters. Now, they’ve made the bold and generous… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/openadmet-expansion"
+    },
+    {
+      "id": "openadmet/openadmet-expansionrx-challenge-train-data",
+      "lastModified": "2025-12-05T20:46:45.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "openadmet-challenge-train-data",
+        "license": "cc-by-4.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tOpenADMET-ExpansionRx Challenge training dataset\n\t\n\nThis dataset contains real-work ADMET data from a recently prosecuted series of drug discovery campaigns by Expansion Therapeutics on RNA mediated diseases. While optimising candidate molecules for their preclinical programs Expansion collected a variety of ADMET data for off-targets and properties of interest in the traditional game of “whack-a-mole” familiar to all drug hunters. Now, they’ve made the bold and generous decision… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/openadmet-expa"
+    },
+    {
+      "id": "openadmet/openbind-blind-challenge-1",
+      "lastModified": "2026-10-06T18:57:02.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "OpenBind Blind Challenge 1 — Test Set",
+        "license": "apache-2.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tOpenBind Blind Challenge 1 — Test Set\n\t\n\nTarget: Zika virus (ZIKV) NS2B-NS3 protease\nChallenge: OpenBind Blind Challenge 1, run by OpenBind in partnership with OpenADMET and the ASAP Discovery Consortium\nSubmission portal: huggingface.co/spaces/openadmet/openbind-blind-challenge-1\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nThis dataset provides the compound list for the first OpenBind Blind Challenge: 400\nsmall molecules, ranging from fragments to lead-like compounds, each with an… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/openbind-blind-challenge-"
+    },
+    {
+      "id": "openadmet/pka-modeling-data",
+      "lastModified": "2026-10-09T17:33:52.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "OpenADMET pKa (SiriusT3)",
+        "license": "cc-by-4.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tOpenADMET pKa (SiriusT3)\n\t\n\nExperimentally measured aqueous pKa values for 717 small molecules, produced through the\nOpenADMET-Schrodinger collaboration.\npKa describes the pH-dependent equilibrium between protonation states differing by a single proton,\nand is one of the most fundamental descriptors of a small molecule — it shapes expectations for\nsolubility, permeability and broader ADME behaviour. The compound set was chosen deliberately to\ninclude chemistry where prediction is… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/pka-modeling-d"
+    },
+    {
+      "id": "openadmet/pxr-challenge-train-test",
+      "lastModified": "2026-09-28T22:25:50.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "OpenADMET PXR Induction Blind Challenge",
+        "license": "cc-by-4.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tPXR Challenge Train/Test Dataset\n\t\n\nA high-quality experimental dataset for predicting human Pregnane-X Receptor (PXR) induction, comprising over 11,000 compounds screened using a high-fidelity in-house assay. This is the largest publicly available PXR activity dataset, released as part of the OpenADMET PXR Induction Blind Challenge.\nBlog post: Announcing the Next OpenADMET Blind Challenge: Predicting PXR Induction\nChallenge Space: openadmet/pxr-challenge\nChallenge period: April 1… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/pxr-challenge"
+    }
+  ]
+}

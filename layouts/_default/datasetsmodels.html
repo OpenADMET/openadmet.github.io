@@ -137,37 +137,40 @@
         .scroll-btn:hover:not(:disabled) { border-color: var(--openadmet-red); color: var(--openadmet-red); }
         .scroll-btn:disabled { opacity: 0.35; }
     </style>
+    <link href="/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-black bg-black text-white sticky-top">
+<nav class="navbar navbar-expand sticky-top site-nav">
     <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="/">OpenADMET</a>
+        <a class="navbar-brand" href="/" aria-label="OpenADMET home">
+            <img src="/images/logo-nav.png" alt="" height="32">
+        </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/about/">About</a>
+                    <a class="nav-link" href="/about/">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/blindchallenges/">Blind Challenges</a>
+                    <a class="nav-link" href="/blindchallenges/">Blind Challenges</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/datasetsmodels/">Datasets &amp; Models</a>
+                    <a class="nav-link" href="/datasetsmodels/" aria-current="page">Datasets &amp; Models</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="https://openadmet.ghost.io/">Blog</a>
+                    <a class="nav-link" href="https://openadmet.ghost.io/">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/videos/">Videos</a>
+                    <a class="nav-link" href="/videos/">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/people/">People</a>
+                    <a class="nav-link" href="/people/">People</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/publications/">Publications</a>
+                    <a class="nav-link" href="/publications/">Publications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/policies/">Community Policies</a>
+                    <a class="nav-link" href="/policies/">Community Policies</a>
                 </li>
             </ul>
         </div>
@@ -187,6 +190,8 @@
             </div>
         </div>
 
+        {{ $hf := partial "feeds/huggingface.html" . }}
+
         <div class="d-flex align-items-center justify-content-between mb-2">
             <h3 class="fw-bold mb-0">Models</h3>
             <div class="d-flex gap-2">
@@ -195,185 +200,23 @@
             </div>
         </div>
         <div class="resource-scroller mb-5" id="models-scroller">
+            {{ range $hf.models }}
             <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">CYP Inhibition v1 — CYP1A2, CYP2D6, CYP3A4, CYP2C9</h5>
+                    <h5 class="resource-title">{{ .title }}</h5>
+                    {{ with .lines }}
                     <div class="resource-endpoints">
-                        4-isoform multitask inhibition (pIC50) · ChEMBL 37<br>
-                        CheMeleon · Apache 2.0
+                        {{ range $i, $line := . }}{{ if $i }}<br>{{ end }}{{ $line }}{{ end }}
                     </div>
-                    <a href="https://huggingface.co/openadmet/cyp1a2-cyp2d6-cyp3a4-cyp2c9-chemeleon-v1"
+                    {{ end }}
+                    <a href="{{ .url }}"
                        class="btn btn-openadmet mt-auto align-self-start"
                        target="_blank">
                         View on HuggingFace
                     </a>
                 </div>
             </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">PXR Activation v1</h5>
-                    <div class="resource-endpoints">
-                        Pregnane X Receptor activation pEC50 · PXR challenge data<br>
-                        CheMeleon single-task · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/pxr-chemeleon-v1"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">Microsomal Clearance v1 — HLM, RLM, MLM</h5>
-                    <div class="resource-endpoints">
-                        log₁₀(CLint) · retrained with ASAP-Polaris &amp; ExpansionRx challenge data<br>
-                        CheMeleon multitask · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/microsomal-clearance-chemeleon-v1"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">hERG Inhibition</h5>
-                    <div class="resource-endpoints">
-                        hERG pIC50 · ChEMBL 37<br>
-                        CheMeleon single-task · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/herg-chemeleon-baseline"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">Permeability, LogD &amp; Plasma Protein Binding</h5>
-                    <div class="resource-endpoints">
-                        Caco-2 Papp A→B &amp; B→A · LogD · Mouse &amp; Human PPB<br>
-                        CheMeleon multitask · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/permeability-logd-ppb-chemeleon-baseline"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">LogD — Chemprop Foundation (Surrogate)</h5>
-                    <div class="resource-endpoints">
-                        LogD · ExpansionRx challenge data<br>
-                        Chemprop pretrained on surrogate data · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/logd-chemprop_foundation_surrogate-v1"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">LogD — Chemprop Foundation (Minimol)</h5>
-                    <div class="resource-endpoints">
-                        LogD · ExpansionRx challenge data<br>
-                        Chemprop pretrained on minimol features · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/logd-chemprop_foundation_minimol-v1"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">Mouse Plasma Protein Binding — Chemprop Foundation (Surrogate)</h5>
-                    <div class="resource-endpoints">
-                        Mouse PPB · ExpansionRx challenge data<br>
-                        Chemprop pretrained on surrogate data · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/mpbp-chemprop_foundation_surrogate-v1"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">Mouse Plasma Protein Binding — Chemprop Foundation (Minimol)</h5>
-                    <div class="resource-endpoints">
-                        Mouse PPB · ExpansionRx challenge data<br>
-                        Chemprop pretrained on minimol features · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/mpbp-chemprop_foundation_minimol-v1"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">Chemprop Foundation Pretraining Weights</h5>
-                    <div class="resource-endpoints">
-                        Pretrained weights for fine-tuning with Anvil<br>
-                        Chemprop · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/chemprop-foundation-pretraining-weights"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">CYP Inhibition Baseline — CYP1A2, CYP2D6, CYP3A4, CYP2C9</h5>
-                    <div class="resource-endpoints">
-                        4-isoform multitask inhibition (pIC50)<br>
-                        CheMeleon · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/cyp1a2-cyp2d6-cyp3a4-cyp3c9-chemeleon-baseline"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">PXR Activation Baseline</h5>
-                    <div class="resource-endpoints">
-                        Pregnane X Receptor activation pEC50<br>
-                        CheMeleon single-task · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/openadmet/pxr-chemeleon-baseline"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
+            {{ end }}
         </div>
 
         <div class="d-flex align-items-center justify-content-between mb-2">
@@ -384,117 +227,23 @@
             </div>
         </div>
         <div class="resource-scroller mb-5" id="datasets-scroller">
+            {{ range $hf.datasets }}
             <div class="resource-slide">
                 <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">CYP Challenge Train/Test Dataset</h5>
+                    <h5 class="resource-title">{{ .title }}</h5>
+                    {{ with .lines }}
                     <div class="resource-endpoints">
-                        35,500 rows · Direct &amp; time-dependent inhibition, single-concentration, Emax &amp; structure tracks · Apache 2.0
+                        {{ range $i, $line := . }}{{ if $i }}<br>{{ end }}{{ $line }}{{ end }}
                     </div>
-                    <a href="https://huggingface.co/datasets/openadmet/cyp-challenge-train-test"
+                    {{ end }}
+                    <a href="{{ .url }}"
                        class="btn btn-openadmet mt-auto align-self-start"
                        target="_blank">
                         View on HuggingFace
                     </a>
                 </div>
             </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">PXR Challenge Train/Test Dataset</h5>
-                    <div class="resource-endpoints">
-                        28,700 rows · Activity &amp; structure tracks · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/datasets/openadmet/pxr-challenge-train-test"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">Octant CYP Inhibition &amp; Reactivity Dataset</h5>
-                    <div class="resource-endpoints">
-                        51,400 rows · CYP3A4/CYP2J2 inhibition &amp; substrate depletion · Apache 2.0
-                    </div>
-                    <a href="https://huggingface.co/datasets/openadmet/Octant_CYP_inhibition_reactivity_blog_release"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">ExpansionRx Challenge — Full Post-Challenge Release</h5>
-                    <div class="resource-endpoints">
-                        15,200 rows · 9 ADMET endpoints · Expansion Therapeutics compounds · CC-BY-4.0
-                    </div>
-                    <a href="https://huggingface.co/datasets/openadmet/openadmet-expansionrx-challenge-data"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">ASAP-Polaris-OpenADMET Antiviral Challenge Dataset</h5>
-                    <div class="resource-endpoints">
-                        Potency, ADMET &amp; crystallography · SARS-CoV-2 &amp; MERS-CoV Mpro · MIT
-                    </div>
-                    <a href="https://huggingface.co/datasets/openadmet/ASAP_Polaris_OpenADMET_challenge"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">ExpansionRx Challenge — Training Data</h5>
-                    <div class="resource-endpoints">
-                        10,700 rows · 9 ADMET endpoints · training split
-                    </div>
-                    <a href="https://huggingface.co/datasets/openadmet/openadmet-expansionrx-challenge-train-data"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">ExpansionRx Challenge — Blinded Test Data</h5>
-                    <div class="resource-endpoints">
-                        2,280 rows · 9 ADMET endpoints · blinded test split
-                    </div>
-                    <a href="https://huggingface.co/datasets/openadmet/openadmet-expansionrx-challenge-test-data-blinded"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-slide">
-                <div class="resource-card p-4 d-flex flex-column">
-                    <h5 class="resource-title">ExpansionRx Challenge — Teaser Data</h5>
-                    <div class="resource-endpoints">
-                        532 rows · 9 ADMET endpoints · early preview release · CC0-1.0
-                    </div>
-                    <a href="https://huggingface.co/datasets/openadmet/openadmet-expansionrx-challenge-teaser"
-                       class="btn btn-openadmet mt-auto align-self-start"
-                       target="_blank">
-                        View on HuggingFace
-                    </a>
-                </div>
-            </div>
+            {{ end }}
         </div>
 
     </div>
