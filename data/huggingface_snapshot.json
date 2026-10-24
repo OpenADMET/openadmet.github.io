@@ -28,6 +28,24 @@
       "description": ""
     },
     {
+      "id": "openadmet/fxr-chemeleon-v1",
+      "lastModified": "2026-10-23T19:37:46.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/fxr-tabpfn-munroe-v1",
+      "lastModified": "2026-10-23T19:41:57.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
       "id": "openadmet/herg-chemeleon-baseline",
       "lastModified": "2026-06-16T19:18:44.000Z",
       "private": false,
@@ -48,6 +66,24 @@
     {
       "id": "openadmet/logd-chemprop_foundation_surrogate-v1",
       "lastModified": "2026-08-12T19:22:24.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/lxr-chemeleon-v1",
+      "lastModified": "2026-10-23T19:47:10.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
+      "id": "openadmet/lxr-tabpfn-munroe-v1",
+      "lastModified": "2026-10-23T19:49:41.000Z",
       "private": false,
       "cardData": {
         "license": "apache-2.0"
