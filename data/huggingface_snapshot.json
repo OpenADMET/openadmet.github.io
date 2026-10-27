@@ -1,6 +1,15 @@
 {
   "models": [
     {
+      "id": "openadmet/5ht2-chemeleon-baseline",
+      "lastModified": "2026-10-22T19:51:00.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
       "id": "openadmet/chemprop-foundation-pretraining-weights",
       "lastModified": "2026-08-17T14:12:46.000Z",
       "private": false,
