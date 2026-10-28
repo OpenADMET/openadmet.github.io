@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-  # SCHEDULE AND WORKFLOW DISPATCH ARE FOR TESTING
+  # The nightly build is how live content reaches the site without a code change:
+  # new blog posts (/blog, from Ghost), YouTube videos, and Hugging Face repos.
+  # It runs an hour after refresh-feed-snapshots.yaml. Don't remove it.
+  # workflow_dispatch allows a manual rebuild, e.g. right after publishing a post.
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
