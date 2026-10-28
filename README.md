@@ -82,28 +82,51 @@ summary: |
 
 To set the job to unavailable, modify the `status` tag to `closed`
 
-### Auto-updating Blog & Videos cards
+### Auto-updating Blog & Videos
 
-The homepage **Blog** card, the homepage **Videos** card, and the full
-**`/videos`** gallery are not hand-edited. They are generated at build time from
-live feeds, and the nightly build (see `.github/workflows/build-push.yaml`)
-refreshes them automatically — so a new blog post or YouTube video appears on the
-site within a day of publishing, with no code change.
+The **`/blog`** section, the homepage **Blog** card, the homepage **Videos**
+card, and the full **`/videos`** gallery are not hand-edited. They are generated
+at build time from live feeds, and the nightly build (see
+`.github/workflows/build-push.yaml`) refreshes them automatically — so a new
+blog post or YouTube video appears on the site within a day of publishing, with
+no code change.
+
+#### The blog
+
+Posts are still written and published in Ghost (openadmet.ghost.io). At build
+time `content/blog/_content.gotmpl` pulls every published post from Ghost's
+Content API and rebuilds it as `/blog/<slug>/`, in the site's own nav and
+styling, so readers stay on the site. `layouts/blog/list.html` is the index and
+`layouts/blog/single.html` the post page.
+
+- **Edits in Ghost show up on the next build.** The post body, title, excerpt,
+  cover image, primary tag and **post-level code injection (head)** are copied
+  across, so KaTeX and similar per-post scripts keep working. Code injection
+  that styles Ghost's own theme (e.g. widening `.gh-content`) has no effect on
+  the site's copy.
+- **Each page's canonical URL is the Ghost post**, so search engines treat Ghost
+  as the original and the two copies don't compete.
+- **Links between posts** that point at `openadmet.ghost.io/<slug>/` are
+  rewritten to `/blog/<slug>/`.
+- **Subscribing stays on Ghost.** The Subscribe buttons open Ghost's signup.
+- The config (`ghostSite`, `ghostContentKey`) is under `[params]` in
+  `config.toml`. The key is Ghost's public, read-only Content API key, the same
+  one the Ghost site sends to every visitor, so it is safe to commit.
 
 #### How to control what a card says
 
-- **Blog card** text comes from the post's **Excerpt** field in the Ghost editor.
+- **Blog card** text (homepage and `/blog`) comes from the post's **Excerpt** field in the Ghost editor.
   If you leave the Excerpt blank, Ghost falls back to scraping the opening
   sentences of the post, which usually reads poorly on a card. Set the Excerpt
   when you publish and that becomes the card copy.
   - **External-link posts are a special case.** A few Ghost posts are stubs that
     redirect to a self-hosted article elsewhere (e.g. "Navigating PXR Chemical
     Space…" redirects to `openadmet.github.io/octant-pxr-htchem-blogpost/`). These
-    have **no body** in the RSS feed, so there is nothing for Ghost to scrape —
-    if such a post is the newest one, the card preview goes **blank** unless you
-    set an Excerpt. Always set the Excerpt on external-link posts. The redirect
-    itself is unaffected: the card links to the Ghost URL, and Ghost forwards to
-    the self-hosted page, so the "More →" button keeps working as before.
+    have **no body** (or only a meta-refresh HTML card), so there is nothing for
+    Ghost to scrape — the card preview goes **blank** unless you set an Excerpt.
+    Always set the Excerpt on external-link posts. These posts get no
+    `/blog/<slug>/` page: their card links straight to the destination (or to
+    the Ghost URL, which forwards there).
 - **Video card** text comes from the video's **description** on YouTube. That
   description is the single place to edit a video card. A video with no
   description falls back to generic text, and the build prints a `WARN` naming the
@@ -111,8 +134,8 @@ site within a day of publishing, with no code change.
 
 #### Where the feed URLs live
 
-All three feeds are configured under `[params]` in `config.toml`
-(`ghostFeed`, `youtubeFeed`, `youtubeChannel`). Point `youtubeFeed` at a
+All feeds are configured under `[params]` in `config.toml`
+(`ghostSite`, `ghostContentKey`, `youtubeFeed`, `youtubeChannel`). Point `youtubeFeed` at a
 different channel by changing its `channel_id`.
 
 #### Known behaviors
@@ -144,10 +167,10 @@ different channel by changing its `channel_id`.
 - **Hugging Face unreachable** → the build **succeeds** and `/datasetsmodels`
   and the homepage counts use `data/huggingface_snapshot.json`, the last good
   listing saved by the nightly refresh, with a `WARN` printed.
-- **Ghost unreachable** → the build **succeeds** and the Blog card falls back to
-  the last-known content baked into `layouts/partials/feeds/ghost-latest.html`.
-  Update that fallback if the most recent post changes and you want the safety net
-  to match.
+- **Ghost unreachable** → the build **fails** (see the `errorf` in
+  `content/blog/_content.gotmpl`), so the deployed site, blog included, stays as
+  it was rather than going out with an empty `/blog`. Re-run the build once
+  Ghost is back.
 
 ### Datasets & Models from Hugging Face
 

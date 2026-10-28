@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="{{ .Params.description | default .Params.excerpt }}" name="description">
+    <meta name="google" content="notranslate">
+    <meta content="OpenADMET" name="author">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>{{ .Title }} — OpenADMET</title>
+    {{/* Ghost is the original; point search engines there so the two copies don't compete */}}
+    <link rel="canonical" href="{{ .Params.ghostUrl }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{ .Params.description | default .Params.excerpt }}">
+    {{ with .Params.featureImage }}<meta property="og:image" content="{{ . }}">{{ end }}
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --openadmet-red: #c0392b;
+            --openadmet-red-dark: #a93226;
+            --section-light: #f8f9fa;
+        }
+
+        .btn-openadmet {
+            background-color: var(--openadmet-red);
+            border-color: var(--openadmet-red);
+            color: #fff;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .btn-openadmet:hover,
+        .btn-openadmet:focus,
+        .btn-openadmet:active {
+            background-color: var(--openadmet-red-dark);
+            border-color: var(--openadmet-red-dark);
+            color: #fff;
+        }
+
+        .post-header,
+        .post-body {
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-back {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .post-back:hover { color: var(--openadmet-red); }
+
+        .post-cover img {
+            width: 100%;
+            border-radius: 0.75rem;
+        }
+        .post-cover figcaption,
+        .post-body figcaption {
+            text-align: center;
+            font-size: 0.88rem;
+            color: #6c757d;
+            margin-top: 0.6rem;
+        }
+
+        /* Post bodies are Ghost editor HTML: give its cards and plain elements a reading layout */
+        .post-body {
+            font-size: 1.08rem;
+            line-height: 1.75;
+            overflow-wrap: break-word;
+        }
+        .post-body h1, .post-body h2, .post-body h3, .post-body h4 {
+            margin-top: 2.2rem;
+            margin-bottom: 0.9rem;
+            font-weight: 700;
+        }
+        .post-body h1 { font-size: 1.9rem; }
+        .post-body h2 { font-size: 1.6rem; }
+        .post-body h3 { font-size: 1.3rem; }
+        .post-body h4 { font-size: 1.1rem; }
+        .post-body a { color: var(--openadmet-red); }
+        .post-body img {
+            max-width: 100%;
+            height: auto;
+        }
+        .post-body figure,
+        .post-body .kg-card {
+            margin: 2rem 0;
+        }
+        .post-body .kg-image-card img {
+            display: block;
+            margin: 0 auto;
+        }
+        @media (min-width: 992px) {
+            .post-body .kg-width-wide {
+                margin-left: -8rem;
+                margin-right: -8rem;
+            }
+        }
+        .post-body .kg-width-wide img { width: 100%; }
+        .post-body .kg-gallery-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .post-body .kg-gallery-row {
+            display: flex;
+            gap: 0.75rem;
+        }
+        .post-body .kg-gallery-image { flex: 1 1 0; }
+        .post-body .kg-gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .post-body blockquote {
+            border-left: 3px solid var(--openadmet-red);
+            padding-left: 1.2rem;
+            color: #444;
+            font-style: italic;
+        }
+        .post-body pre {
+            background: var(--section-light);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        .post-body :not(pre) > code {
+            background: var(--section-light);
+            color: inherit;
+            padding: 0.1em 0.35em;
+            border-radius: 0.25rem;
+        }
+        .post-body table {
+            display: block;
+            overflow-x: auto;
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin: 1.5rem 0;
+        }
+        .post-body th,
+        .post-body td {
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            padding: 0.45rem 0.7rem;
+        }
+        .post-body th { background: var(--section-light); }
+        .post-body hr {
+            margin: 2.5rem auto;
+            width: 40%;
+        }
+
+        .post-footer {
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+        }
+    </style>
+    <link href="/css/theme.css" rel="stylesheet">
+    {{/* Per-post code injection from Ghost, e.g. KaTeX for the maths posts */}}
+    {{ .Params.headInjection | safeHTML }}
+</head>
+
+<body>
+<nav class="navbar navbar-expand sticky-top site-nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" aria-label="OpenADMET home">
+            <img src="/images/logo-nav.png" alt="" height="32">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blindchallenges/">Blind Challenges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/datasetsmodels/">Datasets &amp; Models</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/" aria-current="page">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/videos/">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/people/">People</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/publications/">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/policies/">Community Policies</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<article class="py-5">
+    <div class="container px-4">
+        <header class="post-header mb-4">
+            <a href="/blog/" class="post-back">&larr; All posts</a>
+            <div class="text-muted small mt-4 mb-2">
+                {{ .Date.Format "January 2, 2006" }}{{ with .Params.tag }} · {{ . }}{{ end }}{{ with .Params.readingTime }} · {{ . }} min read{{ end }}
+            </div>
+            <h1 class="display-6 fw-bold mb-3">{{ .Title }}</h1>
+            {{ with .Params.excerpt }}
+            <p class="lead text-dark mb-0">{{ . }}</p>
+            {{ end }}
+        </header>
+
+        {{ with .Params.featureImage }}
+        <figure class="post-cover post-header mb-5">
+            <img src="{{ . }}" alt="{{ $.Params.featureImageAlt }}">
+            {{ with $.Params.featureImageCaption }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
+        </figure>
+        {{ end }}
+
+        <div class="post-body">
+            {{ .Params.html | safeHTML }}
+        </div>
+
+        <footer class="post-footer post-body mt-5 pt-4 d-flex flex-wrap gap-3 align-items-center justify-content-between">
+            <span class="text-dark">Get new posts from the OpenADMET team by email.</span>
+            <span class="d-flex flex-wrap gap-2">
+                <a href="{{ site.Params.ghostSite }}#/portal/signup" class="btn btn-openadmet" target="_blank" rel="noopener">Subscribe</a>
+                <a href="/blog/" class="btn btn-outline-dark rounded-pill">More posts</a>
+            </span>
+        </footer>
+    </div>
+</article>
+
+{{ partial "footer.html" . }}
+</body>
+</html>

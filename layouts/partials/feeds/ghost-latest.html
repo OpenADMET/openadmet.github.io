@@ -1,42 +1,19 @@
 {{/*
-  Returns the most recent Ghost post as a dict: title, url, date, summary.
+  Returns the most recent blog post as a dict: title, url, date, summary.
+
+  Posts come from Ghost via content/blog/_content.gotmpl, which fails the build
+  if Ghost is unreachable, so there is always a newest post here.
 
   The summary comes from the post's Excerpt field in the Ghost editor. If no
   excerpt is set, Ghost falls back to the opening sentences of the post, which
   reads poorly on a card — so set the Excerpt when publishing.
-
-  If the feed is unreachable the fallback below is used and the build continues,
-  showing a generic evergreen blog card rather than an empty box. It is
-  deliberately dateless and post-agnostic so it never goes stale, no matter when
-  an outage happens. ("date" here is repurposed as a kicker label.)
 */}}
 
-{{ $post := dict
-  "title" "Insights from the OpenADMET team"
-  "url" "https://openadmet.ghost.io/"
-  "date" "OpenADMET Blog"
-  "summary" "Deep dives on open ADMET data, blind-challenge results, and predictive modeling. Read the latest on our blog."
+{{ $latest := index (site.GetPage "/blog").Pages.ByDate.Reverse 0 }}
+
+{{ return dict
+  "title" $latest.Title
+  "url" ($latest.Params.external | default $latest.RelPermalink)
+  "date" ($latest.Date.Format "January 2, 2006")
+  "summary" ($latest.Params.excerpt | truncate 200)
 }}
-
-{{ with try (resources.GetRemote site.Params.ghostFeed) }}
-  {{ with .Err }}
-    {{ warnf "Ghost feed unreachable (%s) — homepage Blog card is using fallback content." . }}
-  {{ else with .Value }}
-    {{/* Ghost passes control characters from post bodies straight into the feed, which is invalid XML */}}
-    {{ $xml := .Content | strings.ReplaceRE `[\x00-\x08\x0B\x0C\x0E-\x1F]` "" }}
-    {{ $items := (resources.FromString "ghost-feed.xml" $xml | transform.Unmarshal).channel.item }}
-    {{ with $items }}
-      {{ $item := cond (reflect.IsSlice $items) (index $items 0) $items }}
-      {{ $post = dict
-        "title" $item.title
-        "url" $item.link
-        "date" ((time.AsTime $item.pubDate).Format "January 2, 2006")
-        "summary" ($item.description | plainify | strings.ReplaceRE `\s+` " " | strings.TrimSpace | truncate 200)
-      }}
-    {{ else }}
-      {{ warnf "Ghost feed returned no posts — homepage Blog card is using fallback content." }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{ return $post }}
