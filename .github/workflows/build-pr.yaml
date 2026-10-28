@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.141.0
+      HUGO_PARAMS_GHOSTCONTENTKEY: ${{ secrets.HUGO_PARAMS_GHOSTCONTENTKEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

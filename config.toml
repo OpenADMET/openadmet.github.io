@@ -6,7 +6,10 @@ publishDir = "public"
 [params]
   # Feeds fetched at build time to keep the homepage cards and /videos current.
   # The nightly build in .github/workflows/build-push.yaml re-reads these.
-  ghostFeed = "https://openadmet.ghost.io/rss/"
+  # Blog posts are pulled from Ghost's Content API and rebuilt as /blog/<slug>/
+  # pages (content/blog/_content.gotmpl). The read-only Content API key comes
+  # from the HUGO_PARAMS_GHOSTCONTENTKEY environment variable (a repo secret in CI).
+  ghostSite = "https://openadmet.ghost.io/"
   youtubeChannel = "https://www.youtube.com/@OpenADMET"
   # RSS only exposes the 15 most recent uploads; data/videos_archive.json keeps the rest.
   youtubeFeed = "https://www.youtube.com/feeds/videos.xml?channel_id=UCzwhDb8h5Lgi-AcT4vccS_Q"
