@@ -99,11 +99,15 @@
     }
     function onMove(e) { pointer = localPoint(e); kick(); }
     function onLeave() { pointer = null; kick(); }
+    // clicks where the plate is visible, i.e. not on a link or faded out under the copy
+    function onPlate(e) {
+        return !e.target.closest("a, button") && localPoint(e).x >= canvas.clientWidth * 0.55;
+    }
+    // stop the press starting a text selection, which swaps out the crosshair cursor
+    function onDown(e) { if (onPlate(e)) e.preventDefault(); }
     function onClick(e) {
-        if (e.target.closest("a, button")) return;
+        if (!onPlate(e)) return;
         var p = localPoint(e);
-        // ignore clicks where the plate is faded out under the copy
-        if (p.x < canvas.clientWidth * 0.55) return;
         var c = Math.floor(p.x / PITCH), r = Math.floor(p.y / PITCH);
         if (c < 0 || c >= cols || r < 0 || r >= rows) return;
         var i = c * rows + r;
@@ -125,6 +129,7 @@
         hero.prepend(canvas);
         hero.addEventListener("pointermove", onMove);
         hero.addEventListener("pointerleave", onLeave);
+        hero.addEventListener("mousedown", onDown);
         hero.addEventListener("click", onClick);
         new ResizeObserver(layout).observe(hero);
         sweepStart = performance.now();

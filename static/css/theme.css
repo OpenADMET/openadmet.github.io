@@ -84,13 +84,6 @@ h1, h2, h3, h4, h5 {
     isolation: isolate;
     background: var(--pl-paper);
     border-bottom: 1px solid var(--pl-ink);
-    cursor: crosshair;
-}
-.hero-split .hero-lede {
-    cursor: auto;
-}
-.hero-split a {
-    cursor: pointer;
 }
 .plate-hero-canvas {
     position: absolute;
@@ -121,6 +114,8 @@ hr.section-divider {
     width: 13px;
     height: 13px;
     border-radius: 50%;
+    /* a row of three wells: the hr is the middle one, shadows draw its neighbours */
+    box-shadow: -21px 0 0 var(--pl-red), 21px 0 0 var(--pl-red);
 }
 
 /* Cards read as labelled plate columns: thin outline, header is a row label with a well */
