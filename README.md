@@ -109,9 +109,12 @@ styling, so readers stay on the site. `layouts/blog/list.html` is the index and
 - **Links between posts** that point at `openadmet.ghost.io/<slug>/` are
   rewritten to `/blog/<slug>/`.
 - **Subscribing stays on Ghost.** The Subscribe buttons open Ghost's signup.
-- The config (`ghostSite`, `ghostContentKey`) is under `[params]` in
-  `config.toml`. The key is Ghost's public, read-only Content API key, the same
-  one the Ghost site sends to every visitor, so it is safe to commit.
+- `ghostSite` is under `[params]` in `config.toml`. The Ghost **Content API
+  key** (read-only, from a custom integration in Ghost Admin → Settings →
+  Integrations) is read from the `HUGO_PARAMS_GHOSTCONTENTKEY` environment
+  variable, which CI fills from the repo secret of the same name. To build
+  locally, export it first:
+  `HUGO_PARAMS_GHOSTCONTENTKEY=<key> hugo server`. Without it the build fails.
 
 #### How to control what a card says
 
@@ -135,7 +138,8 @@ styling, so readers stay on the site. `layouts/blog/list.html` is the index and
 #### Where the feed URLs live
 
 All feeds are configured under `[params]` in `config.toml`
-(`ghostSite`, `ghostContentKey`, `youtubeFeed`, `youtubeChannel`). Point `youtubeFeed` at a
+(`ghostSite`, `youtubeFeed`, `youtubeChannel`; the Ghost key comes from the
+environment, see above). Point `youtubeFeed` at a
 different channel by changing its `channel_id`.
 
 #### Known behaviors

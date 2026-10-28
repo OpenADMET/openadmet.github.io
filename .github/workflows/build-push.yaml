@@ -16,6 +16,7 @@ env:
   HUGO_SOURCE_DIR: "."
   HUGO_BASE_URL: ""
   HUGO_OUTPUT_DIR: "public"
+  HUGO_PARAMS_GHOSTCONTENTKEY: ${{ secrets.HUGO_PARAMS_GHOSTCONTENTKEY }}
 
 jobs:
   build:

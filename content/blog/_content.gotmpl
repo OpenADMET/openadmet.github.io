@@ -14,6 +14,10 @@
   rather than replaced with an empty one.
 */}}
 
+{{ if not site.Params.ghostContentKey }}
+  {{ errorf "No Ghost Content API key. Set HUGO_PARAMS_GHOSTCONTENTKEY (a repo secret in CI; see README) to build the blog." }}
+{{ end }}
+
 {{ $api := printf "%sghost/api/content/posts/?key=%s&limit=all&include=tags&formats=html" site.Params.ghostSite site.Params.ghostContentKey }}
 {{ $posts := slice }}
 {{ with try (resources.GetRemote $api) }}
