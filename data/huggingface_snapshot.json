@@ -38,7 +38,7 @@
     },
     {
       "id": "openadmet/fxr-chemeleon-v1",
-      "lastModified": "2026-10-23T19:37:46.000Z",
+      "lastModified": "2026-10-29T19:52:38.000Z",
       "private": false,
       "cardData": {
         "license": "apache-2.0"
@@ -47,7 +47,7 @@
     },
     {
       "id": "openadmet/fxr-tabpfn-monroe-v1",
-      "lastModified": "2026-10-23T19:41:57.000Z",
+      "lastModified": "2026-10-29T19:36:33.000Z",
       "private": false,
       "cardData": {
         "license": "apache-2.0"
@@ -65,7 +65,7 @@
     },
     {
       "id": "openadmet/logd-chemprop_foundation_minimol-v1",
-      "lastModified": "2026-10-27T17:22:40.000Z",
+      "lastModified": "2026-10-29T19:51:48.000Z",
       "private": false,
       "cardData": {
         "license": "apache-2.0"
@@ -74,7 +74,7 @@
     },
     {
       "id": "openadmet/logd-chemprop_foundation_surrogate-v1",
-      "lastModified": "2026-10-27T17:23:44.000Z",
+      "lastModified": "2026-10-29T19:54:23.000Z",
       "private": false,
       "cardData": {
         "license": "apache-2.0"
@@ -83,7 +83,7 @@
     },
     {
       "id": "openadmet/lxr-chemeleon-v1",
-      "lastModified": "2026-10-23T19:47:10.000Z",
+      "lastModified": "2026-10-29T19:51:03.000Z",
       "private": false,
       "cardData": {
         "license": "apache-2.0"
@@ -92,7 +92,7 @@
     },
     {
       "id": "openadmet/lxr-tabpfn-monroe-v1",
-      "lastModified": "2026-10-23T19:49:41.000Z",
+      "lastModified": "2026-10-29T19:38:34.000Z",
       "private": false,
       "cardData": {
         "license": "apache-2.0"
@@ -110,7 +110,7 @@
     },
     {
       "id": "openadmet/mpbp-chemprop_foundation_minimol-v1",
-      "lastModified": "2026-08-12T19:20:11.000Z",
+      "lastModified": "2026-10-29T19:50:03.000Z",
       "private": false,
       "cardData": {
         "license": "apache-2.0"
@@ -119,7 +119,7 @@
     },
     {
       "id": "openadmet/mpbp-chemprop_foundation_surrogate-v1",
-      "lastModified": "2026-08-12T19:18:01.000Z",
+      "lastModified": "2026-10-29T20:06:22.000Z",
       "private": false,
       "cardData": {
         "license": "apache-2.0"
