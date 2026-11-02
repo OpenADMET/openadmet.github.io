@@ -166,6 +166,16 @@
       "description": "\n\t\n\t\t\n\t\n\t\n\t\tOpenADMET AHR Induction\n\t\n\nExperimental measurements of aryl hydrocarbon receptor (AHR) induction, produced by OpenADMET\nfrom Octant Bio cell-based reporter assays. AHR is a ligand-activated bHLH-PAS transcription\nfactor; agonists drive expression of CYP1A1/CYP1A2/CYP1B1 and related genes, which makes AHR\nactivation relevant to drug-drug interactions and to off-target toxicity.\nThe dataset covers three assay tiers from the same screening campaign: a single-concentration\nprimary… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/ahr-induction."
     },
     {
+      "id": "openadmet/alchemistry-2027-antiviral-blind-challenge",
+      "lastModified": "2026-10-27T14:20:29.000Z",
+      "private": false,
+      "cardData": {
+        "pretty_name": "Alchemistry 2027 Antiviral Blind Challenge — Test Set",
+        "license": "cc-by-4.0"
+      },
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tAlchemistry 2027 Antiviral Blind Challenge — Test Set\n\t\n\nThe blinded test set for the Alchemistry 2027 Antiviral Blind Challenge:\npredicting binding free energies for 54 compounds against the dengue virus\nserotype 2 NS2B-NS3 protease.\nThe compounds come from the ASAP Discovery Consortium's open pan-flavivirus\nantiviral programme and were explored during hit-to-lead and lead optimisation.\nThey are a congeneric series sharing a common scaffold. Every measurement was \nmade in-house… See the full description on the dataset page: https://huggingface.co/datasets/openadmet/alchemistry-202"
+    },
+    {
       "id": "openadmet/ASAP_Polaris_OpenADMET_challenge",
       "lastModified": "2026-01-12T02:17:38.000Z",
       "private": false,
