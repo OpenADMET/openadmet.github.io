@@ -1,0 +1,95 @@
+name: Check Ghost for new posts
+
+# Gets new or edited blog posts onto the site within ~15-30 minutes instead of
+# waiting for the nightly build. Every 15 minutes it asks Ghost for the most
+# recent post change and, only if that is newer than the start of the last
+# successful "Build Hugo site from push" run, dispatches that build (which then
+# deploys through prod-cloudflare.yaml as usual). Nothing to do = no build, no
+# deploy.
+#
+# Unpublished or deleted posts don't bump any timestamp the Content API shows,
+# so they still wait for the nightly build (or a manual run of build-push.yaml).
+# If the build is failing (e.g. Ghost was down), this keeps retrying every
+# check until one succeeds.
+
+on:
+  schedule:
+    # Off the top of the hour, when GitHub's scheduler is busiest.
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write   # to dispatch build-push.yaml and list its runs
+  contents: read
+
+concurrency:
+  group: check-ghost-updates
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.repository == vars.MAIN_REPO
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GHOST_KEY: ${{ secrets.HUGO_PARAMS_GHOSTCONTENTKEY }}
+      BUILD_WORKFLOW: build-push.yaml
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: config.toml
+          sparse-checkout-cone-mode: false
+
+      - name: Check Ghost and dispatch a build if needed
+        run: |
+          set -euo pipefail
+
+          if [ -z "$GHOST_KEY" ]; then
+            echo "::error::HUGO_PARAMS_GHOSTCONTENTKEY secret is not set."
+            exit 1
+          fi
+
+          # Don't pile up builds: an in-flight one will pick up anything that
+          # changed before it started, and the next check catches the rest.
+          active=$(gh run list --workflow "$BUILD_WORKFLOW" --branch main --limit 20 \
+            --json status --jq '[.[] | select(.status != "completed")] | length')
+          if [ "$active" -gt 0 ]; then
+            echo "A site build is already queued or running; skipping."
+            exit 0
+          fi
+
+          # ghostSite from config.toml, e.g. https://openadmet.ghost.io/
+          ghost_site=$(sed -n 's/^[[:space:]]*ghostSite[[:space:]]*=[[:space:]]*"\(.*\)"/\1/p' config.toml | head -n1)
+          ghost_site="${ghost_site%/}/"
+          api="${ghost_site}ghost/api/content/posts/?key=${GHOST_KEY}&limit=1&fields=updated_at,published_at"
+
+          # Newest change: the most recently edited post, or the most recently
+          # published one (covers scheduled posts going live).
+          # Ghost timestamps carry an offset (e.g. +00:00), so let date parse them.
+          latest=0
+          while read -r ts; do
+            t=$(date -d "$ts" +%s 2>/dev/null || echo 0)
+            [ "$t" -gt "$latest" ] && latest=$t
+          done < <(
+            { curl -fsS "${api}&order=updated_at%20desc"; curl -fsS "${api}&order=published_at%20desc"; } \
+              | jq -r '.posts[] | .updated_at, .published_at | select(. != null)'
+          )
+          if [ "$latest" -eq 0 ]; then
+            echo "::warning::Couldn't read any post timestamps from Ghost; skipping."
+            exit 0
+          fi
+
+          last_build=$(gh run list --workflow "$BUILD_WORKFLOW" --branch main --status success --limit 1 \
+            --json createdAt --jq '.[0].createdAt // empty')
+          last_build_epoch=$( [ -n "$last_build" ] && date -d "$last_build" +%s || echo 0 )
+
+          echo "Latest Ghost change:  $(date -u -d "@$latest" +%FT%TZ)"
+          echo "Last successful build started: ${last_build:-never}"
+
+          if [ "$latest" -gt "$last_build_epoch" ]; then
+            echo "Ghost has changed since the last build; dispatching $BUILD_WORKFLOW."
+            gh workflow run "$BUILD_WORKFLOW" --ref main
+          else
+            echo "No Ghost changes since the last build."
+          fi

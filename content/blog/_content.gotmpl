@@ -1,14 +1,15 @@
 {{/*
-  Builds /blog/<slug>/ from every published post on Ghost, fetched from the
-  Content API at build time, so the nightly build picks up new posts and edits.
+  Lists every published post on Ghost on /blog, fetched from the Content API at
+  build time, so new posts and edits show up on the next build.
 
-  Each post's body, cover image and head code injection (KaTeX on the maths
-  posts) are kept as params and rendered by layouts/blog/single.html.
+  Posts are read on Ghost, not here, so Ghost's analytics count every read:
+  each card links to the post on Ghost (the "link" param). The /blog/<slug>/
+  page each post still gets (layouts/blog/single.html) is only a redirect to
+  Ghost, kept so links to the on-site copies we hosted in Oct 2026 still work.
 
   External-link posts are stubs on Ghost that forward to an article hosted
   elsewhere: an empty body (Ghost redirects the URL) or an HTML card with a meta
-  refresh. They are listed on /blog but not rendered; their card links to the
-  destination instead.
+  refresh. Their card links straight to the destination, and they get no page.
 
   If Ghost can't be reached the build fails, so the live blog is left as it was
   rather than replaced with an empty one.
@@ -33,15 +34,6 @@
 
 {{ $refreshRE := `<meta http-equiv="refresh" content="\d+;\s*url=([^"]+)"` }}
 
-{{/* Links between posts point at Ghost; send the ones we host to their /blog page instead */}}
-{{ $hosted := slice }}
-{{ range $posts }}
-  {{ if and (strings.TrimSpace (.html | default "")) (not (findRE $refreshRE .html)) }}
-    {{ $hosted = $hosted | append .slug }}
-  {{ end }}
-{{ end }}
-{{ $ghostLinkRE := printf `%s(%s)/` (replace site.Params.ghostSite "." `\.`) (delimit $hosted "|") }}
-
 {{ range $posts }}
   {{ $html := .html | default "" }}
   {{ $external := "" }}
@@ -59,18 +51,12 @@
     "title" .title
     "dates" (dict "date" (time.AsTime .published_at) "lastmod" (time.AsTime .updated_at))
     "params" (dict
-      "ghostUrl" .url
-      "external" $external
-      "html" (replaceRE $ghostLinkRE "/blog/$1/" $html)
+      "link" ($external | default .url)
       "excerpt" (.custom_excerpt | default .excerpt | default "" | plainify | strings.ReplaceRE `\s+` " " | strings.TrimSpace)
-      "description" (.meta_description | default .custom_excerpt | default "")
       "featureImage" (.feature_image | default "")
-      "featureImageAlt" (.feature_image_alt | default .title)
-      "featureImageCaption" (.feature_image_caption | default "")
       "tag" $tag
-      "readingTime" .reading_time
-      "headInjection" (.codeinjection_head | default "")
     )
+    "sitemap" (dict "disable" true)
   }}
   {{ if $external }}
     {{ $page = merge $page (dict "build" (dict "render" "never" "list" "always")) }}
