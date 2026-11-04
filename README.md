@@ -88,26 +88,28 @@ The **`/blog`** section, the homepage **Blog** card, the homepage **Videos**
 card, and the full **`/videos`** gallery are not hand-edited. They are generated
 at build time from live feeds, and the nightly build (see
 `.github/workflows/build-push.yaml`) refreshes them automatically — so a new
-blog post or YouTube video appears on the site within a day of publishing, with
-no code change.
+YouTube video appears on the site within a day of publishing, with no code
+change. New or edited **blog posts** go out faster: every 15 minutes
+`.github/workflows/check-ghost-updates.yaml` asks Ghost whether any post has
+changed since the last successful build and, if so, starts one, so a post is
+usually live within ~30 minutes. (Unpublishing or deleting a post still waits
+for the nightly build; run "Build Hugo site from push" by hand to speed that up.)
 
 #### The blog
 
-Posts are still written and published in Ghost (openadmet.ghost.io). At build
-time `content/blog/_content.gotmpl` pulls every published post from Ghost's
-Content API and rebuilds it as `/blog/<slug>/`, in the site's own nav and
-styling, so readers stay on the site. `layouts/blog/list.html` is the index and
-`layouts/blog/single.html` the post page.
+Posts are written, published **and read** on Ghost (openadmet.ghost.io). At
+build time `content/blog/_content.gotmpl` pulls every published post from
+Ghost's Content API and lists it on `/blog` (`layouts/blog/list.html`) and in
+the homepage Blog card. Every card links out to the post on Ghost, so Ghost's
+analytics (views, clicks, signups) see every read.
 
-- **Edits in Ghost show up on the next build.** The post body, title, excerpt,
-  cover image, primary tag and **post-level code injection (head)** are copied
-  across, so KaTeX and similar per-post scripts keep working. Code injection
-  that styles Ghost's own theme (e.g. widening `.gh-content`) has no effect on
-  the site's copy.
-- **Each page's canonical URL is the Ghost post**, so search engines treat Ghost
-  as the original and the two copies don't compete.
-- **Links between posts** that point at `openadmet.ghost.io/<slug>/` are
-  rewritten to `/blog/<slug>/`.
+- **Edits in Ghost show up on the next build**: title, excerpt, cover image,
+  primary tag and publish date are what the cards use.
+- **`/blog/<slug>/` pages only redirect to Ghost.** In late Oct 2026 the site
+  briefly hosted full copies of each post at these URLs; we went back to
+  reading on Ghost so its analytics stay whole. `layouts/blog/single.html` now
+  just forwards those old links to the Ghost post (and is left out of the
+  sitemap). Link to posts by their Ghost URL, not `/blog/<slug>/`.
 - **Subscribing stays on Ghost.** The Subscribe buttons open Ghost's signup.
 - `ghostSite` is under `[params]` in `config.toml`. The Ghost **Content API
   key** (read-only, from a custom integration in Ghost Admin → Settings →

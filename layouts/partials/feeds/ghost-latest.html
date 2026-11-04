@@ -13,7 +13,7 @@
 
 {{ return dict
   "title" $latest.Title
-  "url" ($latest.Params.external | default $latest.RelPermalink)
+  "url" $latest.Params.link
   "date" ($latest.Date.Format "January 2, 2006")
   "summary" ($latest.Params.excerpt | truncate 200)
 }}

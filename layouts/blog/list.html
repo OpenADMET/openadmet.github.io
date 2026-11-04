@@ -126,10 +126,9 @@
 
         <div class="row g-4">
             {{ range .Pages.ByDate.Reverse }}
-            {{ $external := .Params.external }}
             <div class="col-md-6 col-xl-4">
-                <a href="{{ $external | default .RelPermalink }}" class="post-card card h-100 border-0 shadow-sm rounded-4"
-                   {{ if $external }}target="_blank" rel="noopener"{{ end }}>
+                <a href="{{ .Params.link }}" class="post-card card h-100 border-0 shadow-sm rounded-4"
+                   target="_blank" rel="noopener">
                     <div class="card-body d-flex flex-column p-4">
                         <div class="text-muted small mb-2">
                             {{ .Date.Format "January 2, 2006" }}{{ with .Params.tag }} · {{ . }}{{ end }}
@@ -142,7 +141,7 @@
                             {{ .Params.excerpt | truncate 200 }}
                         </p>
                         <span class="btn btn-openadmet mt-auto align-self-start">
-                            Read{{ if $external }} ↗{{ else }} &rarr;{{ end }}
+                            Read ↗
                         </span>
                     </div>
                 </a>
