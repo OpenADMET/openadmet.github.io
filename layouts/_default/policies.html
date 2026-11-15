@@ -27,6 +27,12 @@
 
         .section-light { background-color: var(--section-light); }
 
+        #open-science, #code-of-conduct { scroll-margin-top: 5rem; }
+        .policy-anchor { color: inherit; text-decoration: none; }
+        .policy-anchor:hover, .policy-anchor:focus { color: var(--openadmet-red); }
+        .policy-anchor .anchor-hash { opacity: 0; margin-left: 0.4rem; color: var(--openadmet-red); transition: opacity 0.15s; }
+        .policy-anchor:hover .anchor-hash, .policy-anchor:focus .anchor-hash { opacity: 1; }
+
         .policy-card h3 { font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
         .policy-card h3:first-child { margin-top: 0; }
         .policy-card h4 { font-weight: 700; font-size: 1.2rem; margin-top: 1.75rem; margin-bottom: 0.75rem; }
@@ -109,7 +115,7 @@
         <div class="row justify-content-center" id="open-science">
             <div class="col-lg-10 col-xl-9">
                 <div class="text-center mb-4">
-                    <h2 class="fw-bold mb-2">Open Science Policy</h2>
+                    <h2 class="fw-bold mb-2"><a class="policy-anchor" href="#open-science" title="Link to this section">Open Science Policy<span class="anchor-hash" aria-hidden="true">#</span></a></h2>
                     <p class="text-muted mb-1">Version 0: 2026-09-28</p>
                     <p class="text-muted mb-0">
                         DOI: <a href="https://doi.org/10.5281/zenodo.23003997" target="_blank" rel="noopener noreferrer"
@@ -272,7 +278,7 @@
         <div class="row justify-content-center mt-5" id="code-of-conduct">
             <div class="col-lg-10 col-xl-9">
                 <div class="text-center mb-4">
-                    <h2 class="fw-bold mb-2">Code of Conduct</h2>
+                    <h2 class="fw-bold mb-2"><a class="policy-anchor" href="#code-of-conduct" title="Link to this section">Code of Conduct<span class="anchor-hash" aria-hidden="true">#</span></a></h2>
                     <p class="text-muted mb-1">
                         Adopted from the
                         <a href="https://omsf.io/resources/conduct/" target="_blank" rel="noopener noreferrer" style="color: var(--openadmet-red);">Open Molecular Software Foundation Code of Conduct</a>
