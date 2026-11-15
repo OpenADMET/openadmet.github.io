@@ -45,6 +45,8 @@ jobs:
         run: |
           set -euo pipefail
 
+          # Secrets pasted with a trailing newline break the URL.
+          GHOST_KEY=$(printf '%s' "$GHOST_KEY" | tr -d '[:space:]')
           if [ -z "$GHOST_KEY" ]; then
             echo "::error::HUGO_PARAMS_GHOSTCONTENTKEY secret is not set."
             exit 1
@@ -76,8 +78,8 @@ jobs:
               | jq -r '.posts[] | .updated_at, .published_at | select(. != null)'
           )
           if [ "$latest" -eq 0 ]; then
-            echo "::warning::Couldn't read any post timestamps from Ghost; skipping."
-            exit 0
+            echo "::error::Couldn't read any post timestamps from Ghost (${ghost_site})."
+            exit 1
           fi
 
           last_build=$(gh run list --workflow "$BUILD_WORKFLOW" --branch main --status success --limit 1 \
