@@ -28,6 +28,15 @@
       "description": ""
     },
     {
+      "id": "openadmet/cyp1a2-cyp2d6-cyp3a4-cyp2c9-cyp2b6-cyp2c8-cyp2c19-chemeleon-v2",
+      "lastModified": "2026-11-17T20:35:54.000Z",
+      "private": false,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "description": ""
+    },
+    {
       "id": "openadmet/cyp1a2-cyp2d6-cyp3a4-cyp3c9-chemeleon-baseline",
       "lastModified": "2026-05-06T18:15:21.000Z",
       "private": false,
